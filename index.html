@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f1720">
+<title>股價通知</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --card: #ffffff; --ink: #0f1720; --muted: #667085; --line: #e4e7ec;
+    --up: #0a8f5a; --down: #d92d20; --accent: #2457f5; --warn: #b54708; --soft: #eef2ff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b0f14; --card: #141a22; --ink: #e8edf3; --muted: #8b97a8; --line: #232c38;
+      --up: #3ccb8c; --down: #ff6b5e; --accent: #7c9cff; --warn: #f5a524; --soft: #1b2333;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.45 -apple-system, BlinkMacSystemFont, "PingFang HK", "Noto Sans TC", "Segoe UI", sans-serif;
+    padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
+  }
+  main { max-width: 640px; margin: 0 auto; padding: 16px; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 8px 0 16px; }
+  h1 { font-size: 24px; margin: 0; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); font-size: 13px; }
+  button, input, select { font: inherit; color: inherit; }
+  .icon-btn { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; cursor: pointer; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px; margin-bottom: 12px; }
+  form.add { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  form.add .full { grid-column: 1 / -1; }
+  label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 4px; }
+  input, select {
+    width: 100%; padding: 11px 12px; border-radius: 10px; border: 1px solid var(--line);
+    background: var(--bg); outline: none; min-height: 44px;
+  }
+  input:focus, select:focus { border-color: var(--accent); }
+  #symbol { text-transform: uppercase; }
+  .primary {
+    background: var(--accent); color: #fff; border: 0; border-radius: 10px; padding: 12px; min-height: 44px;
+    font-weight: 600; cursor: pointer;
+  }
+  .primary:disabled { opacity: .5; cursor: default; }
+  .hint { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  .warn { color: var(--warn); font-size: 13px; }
+  .err { color: var(--down); font-size: 13px; }
+  .alert { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: start; }
+  .sym { font-weight: 700; font-size: 18px; }
+  .name { color: var(--muted); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .price { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; font-size: 18px; }
+  .chg { text-align: right; font-size: 13px; font-variant-numeric: tabular-nums; }
+  .pos { color: var(--up); } .neg { color: var(--down); }
+  .row2 { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 8px; padding-top: 10px; border-top: 1px solid var(--line); flex-wrap: wrap; }
+  .target { font-variant-numeric: tabular-nums; }
+  .pill { font-size: 12px; padding: 3px 8px; border-radius: 999px; background: var(--soft); white-space: nowrap; }
+  .pill.fired { background: color-mix(in srgb, var(--up) 18%, transparent); color: var(--up); }
+  .pill.wait { color: var(--muted); }
+  .actions { display: flex; gap: 6px; }
+  .actions button { background: transparent; border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; font-size: 13px; cursor: pointer; min-height: 34px; }
+  .empty { text-align: center; color: var(--muted); padding: 28px 12px; }
+  .status { display: flex; justify-content: space-between; color: var(--muted); font-size: 12px; margin: 4px 2px 10px; }
+  dialog { border: 1px solid var(--line); border-radius: 16px; background: var(--card); color: var(--ink); width: min(520px, 92vw); padding: 20px; }
+  dialog::backdrop { background: rgb(0 0 0 / .45); }
+  dialog .grid { display: grid; gap: 12px; }
+  dialog h2 { margin: 0 0 4px; font-size: 18px; }
+  .dlg-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 8px; }
+  .dlg-actions button { padding: 10px 16px; border-radius: 10px; border: 1px solid var(--line); background: transparent; cursor: pointer; }
+  .banner { background: var(--soft); border-radius: 12px; padding: 12px 14px; font-size: 14px; margin-bottom: 12px; }
+  .banner button { margin-top: 8px; }
+  a { color: var(--accent); }
+  .toast {
+    position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom)); transform: translateX(-50%);
+    background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 10px; font-size: 14px;
+    opacity: 0; transition: opacity .2s; pointer-events: none; max-width: 90vw;
+  }
+  .toast.show { opacity: 1; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <h1>股價通知</h1>
+      <div class="sub">到價自動推送去 ntfy</div>
+    </div>
+    <button class="icon-btn" id="openSettings" aria-label="設定">⚙︎ 設定</button>
+  </header>
+
+  <div id="setupBanner" class="banner" hidden>
+    第一次用要先喺「設定」入面填 GitHub token，先可以新增或者刪除通知。
+    <div><button class="primary" id="bannerSettings">開設定</button></div>
+  </div>
+
+  <section class="card">
+    <form class="add" id="addForm" autocomplete="off">
+      <div class="full">
+        <label for="symbol">股票代號</label>
+        <input id="symbol" placeholder="例如 AAPL、SHOP.TO" required autocapitalize="characters" spellcheck="false">
+        <div class="hint">美股直接打代號；加股要加 <b>.TO</b>（多倫多）或者 <b>.V</b>（創業板），例如 RY.TO</div>
+      </div>
+      <div>
+        <label for="condition">條件</label>
+        <select id="condition">
+          <option value="above">升到或以上 ≥</option>
+          <option value="below">跌到或以下 ≤</option>
+        </select>
+      </div>
+      <div>
+        <label for="target">目標價</label>
+        <input id="target" type="number" inputmode="decimal" step="any" min="0" placeholder="0.00" required>
+      </div>
+      <div class="full">
+        <label for="note">備註（可以留空）</label>
+        <input id="note" maxlength="80" placeholder="例如：入貨位">
+      </div>
+      <div class="full" id="formMsg"></div>
+      <button class="primary full" id="addBtn" type="submit">加入通知</button>
+    </form>
+  </section>
+
+  <div class="status">
+    <span id="updated">載入中…</span>
+    <span id="market"></span>
+  </div>
+  <div id="list"></div>
+</main>
+
+<dialog id="settings">
+  <form method="dialog" class="grid" id="settingsForm">
+    <h2>設定</h2>
+    <div>
+      <label for="owner">GitHub 用戶名</label>
+      <input id="owner" spellcheck="false" autocapitalize="none" required>
+    </div>
+    <div>
+      <label for="repo">Repo 名</label>
+      <input id="repo" spellcheck="false" autocapitalize="none" required>
+    </div>
+    <div>
+      <label for="token">GitHub token</label>
+      <input id="token" type="password" spellcheck="false" autocapitalize="none" placeholder="github_pat_…">
+      <div class="hint">用 fine-grained token，只揀呢個 repo，權限：Contents → Read and write。token 只會儲喺呢部機嘅瀏覽器入面。</div>
+    </div>
+    <div class="dlg-actions">
+      <button type="button" id="forget">清除 token</button>
+      <button value="cancel" formnovalidate>取消</button>
+      <button value="save" class="primary" id="saveSettings">儲存</button>
+    </div>
+  </form>
+</dialog>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const store = {
+    get(k) { try { return localStorage.getItem(k); } catch { return null; } },
+    set(k, v) { try { localStorage.setItem(k, v); } catch {} },
+    del(k) { try { localStorage.removeItem(k); } catch {} },
+  };
+
+  function guessRepo() {
+    const h = location.hostname;
+    if (!h.endsWith(".github.io")) return {};
+    const owner = h.split(".")[0];
+    const seg = location.pathname.split("/").filter(Boolean)[0];
+    return { owner, repo: seg || `${owner}.github.io` };
+  }
+  const guess = guessRepo();
+  const cfg = {
+    owner: store.get("sa.owner") || guess.owner || "",
+    repo: store.get("sa.repo") || guess.repo || "",
+    token: store.get("sa.token") || "",
+    branch: "main",
+  };
+
+  let alerts = [], state = {}, prices = {}, updated = null;
+
+  // ---------- helpers ----------
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const fmt = (v) => v == null || isNaN(v) ? "—" :
+    Number(v).toLocaleString("en-US", { minimumFractionDigits: v < 1 ? 2 : 2, maximumFractionDigits: v < 1 ? 4 : 2 });
+  const newId = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+  const timeAgo = (iso) => {
+    if (!iso) return "未有數據";
+    const s = (Date.now() - new Date(iso).getTime()) / 1000;
+    if (s < 60) return "啱啱";
+    if (s < 3600) return `${Math.floor(s / 60)} 分鐘前`;
+    if (s < 86400) return `${Math.floor(s / 3600)} 個鐘前`;
+    return new Date(iso).toLocaleString("zh-HK", { month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit" });
+  };
+  let toastTimer;
+  function toast(msg) {
+    const t = $("toast"); t.textContent = msg; t.classList.add("show");
+    clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove("show"), 2600);
+  }
+  function b64decode(s) {
+    const bin = atob(s.replace(/\n/g, ""));
+    return new TextDecoder().decode(Uint8Array.from(bin, (c) => c.charCodeAt(0)));
+  }
+  function b64encode(str) {
+    const bytes = new TextEncoder().encode(str);
+    let bin = ""; bytes.forEach((b) => (bin += String.fromCharCode(b)));
+    return btoa(bin);
+  }
+
+  function marketStatus() {
+    const et = new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }));
+    const d = et.getDay(), m = et.getHours() * 60 + et.getMinutes();
+    if (d === 0 || d === 6) return "週末休市";
+    if (m >= 570 && m < 960) return "🟢 開市中";
+    if (m >= 240 && m < 570) return "🟡 盤前";
+    if (m >= 960 && m < 1200) return "🟡 盤後";
+    return "⚪ 休市（唔會 check）";
+  }
+
+  // ---------- GitHub ----------
+  async function gh(path, opts = {}) {
+    const r = await fetch(`https://api.github.com/repos/${cfg.owner}/${cfg.repo}/${path}`, {
+      ...opts,
+      cache: "no-store",
+      headers: {
+        Accept: "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+        ...(cfg.token ? { Authorization: `Bearer ${cfg.token}` } : {}),
+        ...(opts.headers || {}),
+      },
+    });
+    if (!r.ok) {
+      const e = new Error(`GitHub ${r.status}`);
+      e.status = r.status;
+      try { e.detail = (await r.json()).message; } catch {}
+      throw e;
+    }
+    return r.json();
+  }
+
+  async function readJson(name, fallback) {
+    try {
+      if (cfg.token) {
+        const j = await gh(`contents/${name}?ref=${cfg.branch}`);
+        return { data: JSON.parse(b64decode(j.content)), sha: j.sha };
+      }
+      const r = await fetch(`https://raw.githubusercontent.com/${cfg.owner}/${cfg.repo}/${cfg.branch}/${name}`, { cache: "no-store" });
+      if (r.status === 404) return { data: fallback, sha: null };
+      if (!r.ok) throw Object.assign(new Error(`讀取 ${name} 失敗 (${r.status})`), { status: r.status });
+      return { data: await r.json(), sha: null };
+    } catch (e) {
+      if (e.status === 404) return { data: fallback, sha: null };
+      throw e;
+    }
+  }
+
+  async function updateAlerts(mutate, message) {
+    if (!cfg.token) { openSettings(); throw new Error("請先喺設定填 GitHub token"); }
+    for (let i = 0; i < 3; i++) {
+      const { data, sha } = await readJson("alerts.json", { alerts: [] });
+      const list = Array.isArray(data.alerts) ? data.alerts : [];
+      const next = mutate(list.slice());
+      const body = {
+        message, branch: cfg.branch,
+        content: b64encode(JSON.stringify({ alerts: next }, null, 2) + "\n"),
+        ...(sha ? { sha } : {}),
+      };
+      try {
+        await gh("contents/alerts.json", { method: "PUT", body: JSON.stringify(body), headers: { "Content-Type": "application/json" } });
+        alerts = next;
+        render();
+        return;
+      } catch (e) {
+        if ((e.status === 409 || e.status === 422) && i < 2) continue;
+        throw e;
+      }
+    }
+  }
+
+  async function refresh() {
+    if (!cfg.owner || !cfg.repo) {
+      $("updated").textContent = "未設定 repo";
+      openSettings();
+      return;
+    }
+    try {
+      const [a, s, p] = await Promise.all([
+        readJson("alerts.json", { alerts: [] }),
+        readJson("state.json", {}),
+        readJson("prices.json", { prices: {} }),
+      ]);
+      alerts = Array.isArray(a.data.alerts) ? a.data.alerts : [];
+      state = s.data || {};
+      prices = (p.data && p.data.prices) || {};
+      updated = p.data && p.data.updated;
+      render();
+    } catch (e) {
+      const msg = e.status === 401 ? "token 無效或者過咗期，請喺設定更新" :
+                  e.status === 403 ? "GitHub 拒絕存取（可能係 token 權限唔夠或者用量超咗）" :
+                  `載入失敗：${e.detail || e.message}`;
+      $("updated").textContent = msg;
+    }
+  }
+
+  // ---------- render ----------
+  function render() {
+    $("setupBanner").hidden = !!cfg.token;
+    $("updated").textContent = `價格更新：${timeAgo(updated)}`;
+    $("market").textContent = marketStatus();
+    const list = $("list");
+    if (!alerts.length) {
+      list.innerHTML = `<div class="card empty">未有通知。喺上面加第一隻股票啦。</div>`;
+      return;
+    }
+    const sorted = alerts.slice().sort((x, y) => {
+      const fx = state[x.id] ? 1 : 0, fy = state[y.id] ? 1 : 0;
+      return fx - fy || x.symbol.localeCompare(y.symbol) || x.price - y.price;
+    });
+    list.innerHTML = sorted.map((a) => {
+      const q = prices[a.symbol.toUpperCase()] || {};
+      const fired = state[a.id];
+      const up = a.condition === "above";
+      const p = q.price;
+      const chg = p != null && q.prev_close ? ((p - q.prev_close) / q.prev_close) * 100 : null;
+      const dist = p != null ? ((a.price - p) / p) * 100 : null;
+      let pill;
+      if (fired) pill = `<span class="pill fired">✓ ${timeAgo(fired.triggered_at)}觸發 @ ${fmt(fired.price)}</span>`;
+      else if (q.error && p == null) pill = `<span class="pill err">⚠︎ ${esc(q.error)}</span>`;
+      else if (p == null) pill = `<span class="pill wait">等緊第一次更新…</span>`;
+      else pill = `<span class="pill">相差 ${dist >= 0 ? "+" : ""}${dist.toFixed(2)}%</span>`;
+      return `
+        <div class="card alert">
+          <div style="min-width:0">
+            <div class="sym">${esc(a.symbol)}</div>
+            <div class="name">${esc(q.name || "")}</div>
+          </div>
+          <div>
+            <div class="price">${fmt(p)} <span class="sub">${esc(q.currency || "")}</span></div>
+            <div class="chg ${chg == null ? "" : chg >= 0 ? "pos" : "neg"}">${chg == null ? "" : (chg >= 0 ? "+" : "") + chg.toFixed(2) + "%"}</div>
+          </div>
+          <div class="row2">
+            <div>
+              <div class="target ${up ? "pos" : "neg"}">${up ? "▲ 升到 ≥" : "▼ 跌到 ≤"} ${fmt(a.price)}</div>
+              ${a.note ? `<div class="sub">${esc(a.note)}</div>` : ""}
+              <div style="margin-top:6px">${pill}</div>
+            </div>
+            <div class="actions">
+              ${fired ? `<button data-act="rearm" data-id="${esc(a.id)}">重新開</button>` : ""}
+              <button data-act="del" data-id="${esc(a.id)}">刪除</button>
+            </div>
+          </div>
+        </div>`;
+    }).join("");
+  }
+
+  // ---------- form ----------
+  function checkForm() {
+    const sym = $("symbol").value.trim().toUpperCase();
+    const target = parseFloat($("target").value);
+    const q = prices[sym];
+    const msg = $("formMsg");
+    msg.innerHTML = "";
+    if (!q || q.price == null || isNaN(target)) return;
+    const up = $("condition").value === "above";
+    if ((up && q.price >= target) || (!up && q.price <= target)) {
+      msg.innerHTML = `<div class="warn">而家 ${esc(sym)} 已經係 ${fmt(q.price)}，加咗之後下次 check 會即刻觸發。</div>`;
+    } else {
+      msg.innerHTML = `<div class="hint">而家 ${esc(sym)}：${fmt(q.price)} ${esc(q.currency || "")}</div>`;
+    }
+  }
+  ["symbol", "target", "condition"].forEach((id) => $(id).addEventListener("input", checkForm));
+
+  $("addForm").addEventListener("submit", async (ev) => {
+    ev.preventDefault();
+    const symbol = $("symbol").value.trim().toUpperCase().replace(/\s+/g, "");
+    const price = parseFloat($("target").value);
+    if (!/^[A-Z0-9.\-^=]{1,15}$/.test(symbol)) { $("formMsg").innerHTML = `<div class="err">股票代號格式唔啱</div>`; return; }
+    if (!(price > 0)) { $("formMsg").innerHTML = `<div class="err">請輸入目標價</div>`; return; }
+    const alert = {
+      id: newId(), symbol, condition: $("condition").value, price,
+      note: $("note").value.trim(), created_at: new Date().toISOString(),
+    };
+    $("addBtn").disabled = true;
+    try {
+      await updateAlerts((list) => [...list, alert], `Add alert ${symbol} ${alert.condition} ${price}`);
+      $("target").value = ""; $("note").value = ""; $("formMsg").innerHTML = "";
+      toast(`已加入 ${symbol}，大約一分鐘內會攞到價`);
+      setTimeout(refresh, 60000);
+    } catch (e) {
+      $("formMsg").innerHTML = `<div class="err">儲存失敗：${esc(e.detail || e.message)}</div>`;
+    } finally {
+      $("addBtn").disabled = false;
+    }
+  });
+
+  $("list").addEventListener("click", async (ev) => {
+    const btn = ev.target.closest("button[data-act]");
+    if (!btn) return;
+    const id = btn.dataset.id;
+    const a = alerts.find((x) => x.id === id);
+    if (!a) return;
+    btn.disabled = true;
+    try {
+      if (btn.dataset.act === "del") {
+        await updateAlerts((list) => list.filter((x) => x.id !== id), `Delete alert ${a.symbol}`);
+        toast(`已刪除 ${a.symbol}`);
+      } else if (btn.dataset.act === "rearm") {
+        const fresh = newId();
+        await updateAlerts((list) => list.map((x) => x.id === id ? { ...x, id: fresh } : x), `Re-arm alert ${a.symbol}`);
+        toast(`${a.symbol} 已重新開啟`);
+      }
+    } catch (e) {
+      toast(`失敗：${e.detail || e.message}`);
+      btn.disabled = false;
+    }
+  });
+
+  // ---------- settings ----------
+  function openSettings() {
+    $("owner").value = cfg.owner; $("repo").value = cfg.repo; $("token").value = cfg.token;
+    if (!$("settings").open) $("settings").showModal();
+  }
+  $("openSettings").onclick = openSettings;
+  $("bannerSettings").onclick = openSettings;
+  $("forget").onclick = () => { store.del("sa.token"); cfg.token = ""; $("token").value = ""; toast("已清除 token"); render(); };
+  $("settings").addEventListener("close", () => {
+    if ($("settings").returnValue !== "save") return;
+    cfg.owner = $("owner").value.trim(); cfg.repo = $("repo").value.trim(); cfg.token = $("token").value.trim();
+    store.set("sa.owner", cfg.owner); store.set("sa.repo", cfg.repo);
+    if (cfg.token) store.set("sa.token", cfg.token); else store.del("sa.token");
+    refresh();
+  });
+
+  refresh();
+  setInterval(refresh, 60000);
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) refresh(); });
+})();
+</script>
+</body>
+</html>

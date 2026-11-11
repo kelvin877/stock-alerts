@@ -1,0 +1,52 @@
+name: 檢查股價
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  push:
+    branches: [main]
+    paths: ["alerts.json"]
+  workflow_dispatch:
+    inputs:
+      test:
+        description: "發一個測試通知"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: check-prices
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check prices
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          FORCE: ${{ github.event_name != 'schedule' && '1' || '0' }}
+          TEST_NOTIFY: ${{ inputs.test && '1' || '0' }}
+        run: python scripts/check.py
+
+      - name: Save results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add prices.json state.json
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Update prices [skip ci]"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 5
+          done
+          exit 1
