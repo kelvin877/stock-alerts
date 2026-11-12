@@ -161,6 +161,14 @@
       "price": 300,
       "note": "",
       "created_at": "2026-11-12T00:51:42.532Z"
+    },
+    {
+      "id": "mwcu20qvo5t4v9",
+      "symbol": "IBM",
+      "condition": "below",
+      "price": 200,
+      "note": "",
+      "created_at": "2026-11-12T00:52:01.735Z"
     }
   ]
 }
