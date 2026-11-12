@@ -18,9 +18,9 @@
       "exchange": "NasdaqGS",
       "name": "Advanced Micro Devices, Inc.",
       "prev_close": 515.21,
-      "price": 575.6197,
+      "price": 575.95,
       "regular": 552.9,
-      "time": 1794444438
+      "time": 1794444474
     },
     "APLD": {
       "currency": "USD",
@@ -40,9 +40,9 @@
       "exchange": "NasdaqGS",
       "name": "AXT Inc",
       "prev_close": 39.31,
-      "price": 46.1386,
+      "price": 45.8926,
       "regular": 46.97,
-      "time": 1794444324
+      "time": 1794444478
     },
     "CRWV": {
       "currency": "USD",
@@ -51,9 +51,9 @@
       "exchange": "NasdaqGS",
       "name": "CoreWeave, Inc.",
       "prev_close": 48.73,
-      "price": 56.68,
+      "price": 56.53,
       "regular": 60.77,
-      "time": 1794444441
+      "time": 1794444477
     },
     "INTC": {
       "currency": "USD",
@@ -62,9 +62,20 @@
       "exchange": "NasdaqGS",
       "name": "Intel Corporation",
       "prev_close": 58.13,
-      "price": 60.8108,
+      "price": 60.8723,
       "regular": 62.5,
-      "time": 1794444430
+      "time": 1794444478
+    },
+    "IREN": {
+      "currency": "USD",
+      "day_high": 21.75,
+      "day_low": 20.27,
+      "exchange": "NasdaqGS",
+      "name": "IREN LIMITED",
+      "prev_close": 19.73,
+      "price": 19.9899,
+      "regular": 20.84,
+      "time": 1794444464
     },
     "NBIS": {
       "currency": "USD",
@@ -73,9 +84,9 @@
       "exchange": "NasdaqGS",
       "name": "Nebius Group N.V.",
       "prev_close": 134.0,
-      "price": 149.8,
+      "price": 149.2905,
       "regular": 154.69,
-      "time": 1794444434
+      "time": 1794444479
     },
     "NVDA": {
       "currency": "USD",
@@ -84,9 +95,9 @@
       "exchange": "NasdaqGS",
       "name": "NVIDIA Corporation",
       "prev_close": 168.796,
-      "price": 159.37,
+      "price": 159.21,
       "regular": 173.73,
-      "time": 1794444442
+      "time": 1794444480
     },
     "NVTS": {
       "currency": "USD",
@@ -95,9 +106,9 @@
       "exchange": "NasdaqGM",
       "name": "Navitas Semiconductor Corporati",
       "prev_close": 9.38,
-      "price": 9.87,
+      "price": 9.88,
       "regular": 10.07,
-      "time": 1794444189
+      "time": 1794444459
     },
     "PLTR": {
       "currency": "USD",
@@ -111,5 +122,5 @@
       "time": 1794444426
     }
   },
-  "updated": "2026-11-12T00:47:25+00:00"
+  "updated": "2026-11-12T00:48:01+00:00"
 }
