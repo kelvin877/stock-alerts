@@ -249,6 +249,14 @@
       "price": 280,
       "note": "",
       "created_at": "2026-11-12T00:59:00.470Z"
+    },
+    {
+      "id": "mwcuceesa91nn6",
+      "symbol": "GEV",
+      "condition": "below",
+      "price": 780,
+      "note": "",
+      "created_at": "2026-11-12T01:00:06.004Z"
     }
   ]
 }
