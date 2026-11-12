@@ -393,6 +393,14 @@
       "price": 320,
       "note": "",
       "created_at": "2026-11-12T01:28:54.669Z"
+    },
+    {
+      "id": "mwcvfexxiuqy06",
+      "symbol": "JNJ",
+      "condition": "below",
+      "price": 240,
+      "note": "",
+      "created_at": "2026-11-12T01:30:26.277Z"
     }
   ]
 }
