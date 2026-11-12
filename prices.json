@@ -7,9 +7,9 @@
       "exchange": "NasdaqGS",
       "name": "Apple Inc.",
       "prev_close": 348.51,
-      "price": 356.35,
+      "price": 356.3,
       "regular": 355.63,
-      "time": 1794444207
+      "time": 1794444266
     },
     "AMD": {
       "currency": "USD",
@@ -18,9 +18,9 @@
       "exchange": "NasdaqGS",
       "name": "Advanced Micro Devices, Inc.",
       "prev_close": 515.21,
-      "price": 577.0,
+      "price": 576.81,
       "regular": 552.9,
-      "time": 1794444247
+      "time": 1794444263
     },
     "CRWV": {
       "currency": "USD",
@@ -29,9 +29,9 @@
       "exchange": "NasdaqGS",
       "name": "CoreWeave, Inc.",
       "prev_close": 48.73,
-      "price": 56.81,
+      "price": 56.82,
       "regular": 60.77,
-      "time": 1794444243
+      "time": 1794444259
     },
     "INTEL": {
       "error": "搵唔到呢個股票代號"
@@ -43,9 +43,9 @@
       "exchange": "NasdaqGS",
       "name": "Nebius Group N.V.",
       "prev_close": 134.0,
-      "price": 150.2278,
+      "price": 150.3,
       "regular": 154.69,
-      "time": 1794444231
+      "time": 1794444250
     },
     "NVDA": {
       "currency": "USD",
@@ -54,9 +54,20 @@
       "exchange": "NasdaqGS",
       "name": "NVIDIA Corporation",
       "prev_close": 168.796,
-      "price": 159.5,
+      "price": 159.52,
       "regular": 173.73,
-      "time": 1794444243
+      "time": 1794444269
+    },
+    "NVTS": {
+      "currency": "USD",
+      "day_high": 10.4,
+      "day_low": 9.785,
+      "exchange": "NasdaqGM",
+      "name": "Navitas Semiconductor Corporati",
+      "prev_close": 9.38,
+      "price": 9.87,
+      "regular": 10.07,
+      "time": 1794444189
     },
     "PLTR": {
       "currency": "USD",
@@ -70,5 +81,5 @@
       "time": 1794444058
     }
   },
-  "updated": "2026-11-12T00:44:09+00:00"
+  "updated": "2026-11-12T00:44:35+00:00"
 }
