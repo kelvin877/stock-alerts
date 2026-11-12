@@ -57,6 +57,14 @@
       "price": 16,
       "note": "",
       "created_at": "2026-11-12T00:44:35.000Z"
+    },
+    {
+      "id": "mwctt0a85rjgtf",
+      "symbol": "INTC",
+      "condition": "above",
+      "price": 90,
+      "note": "",
+      "created_at": "2026-11-12T00:45:01.232Z"
     }
   ]
 }
