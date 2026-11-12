@@ -79,7 +79,7 @@
     },
     "BRK-B": {
       "currency": "USD",
-      "day_high": 588.48,
+      "day_high": 588.51,
       "day_low": 576.8,
       "exchange": "NYSE",
       "name": "Berkshire Hathaway Inc. New",
@@ -121,6 +121,17 @@
       "regular": 141.41,
       "time": 1794445113
     },
+    "CRWD": {
+      "currency": "USD",
+      "day_high": 238.36,
+      "day_low": 228.41,
+      "exchange": "NasdaqGS",
+      "name": "CrowdStrike Holdings, Inc.",
+      "prev_close": 225.76,
+      "price": 227.55,
+      "regular": 229.06,
+      "time": 1794445004
+    },
     "CRWV": {
       "currency": "USD",
       "day_high": 62.025,
@@ -135,7 +146,7 @@
     "GEV": {
       "currency": "USD",
       "day_high": 845.0,
-      "day_low": 801.32,
+      "day_low": 802.1,
       "exchange": "NYSE",
       "name": "GE Vernova Inc.",
       "prev_close": 797.04,
@@ -364,5 +375,5 @@
       "time": 1794443479
     }
   },
-  "updated": "2026-11-12T01:08:47+00:00"
+  "updated": "2026-11-12T01:11:55+00:00"
 }
