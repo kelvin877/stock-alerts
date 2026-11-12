@@ -291,14 +291,6 @@
       "created_at": "2026-11-12T01:02:01.438Z"
     },
     {
-      "id": "mwcufcfk4haqd6",
-      "symbol": "MSFT",
-      "condition": "below",
-      "price": 460,
-      "note": "",
-      "created_at": "2026-11-12T01:02:23.408Z"
-    },
-    {
       "id": "mwcufsue33mbor",
       "symbol": "ORCL",
       "condition": "below",
