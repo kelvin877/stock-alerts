@@ -77,8 +77,16 @@
       "regular": 209.47,
       "time": 1794445194
     },
-    "BRKB": {
-      "error": "搵唔到呢個股票代號"
+    "BRK-B": {
+      "currency": "USD",
+      "day_high": 588.48,
+      "day_low": 576.8,
+      "exchange": "NYSE",
+      "name": "Berkshire Hathaway Inc. New",
+      "prev_close": 583.34,
+      "price": 591.62,
+      "regular": 588.24,
+      "time": 1794445199
     },
     "CLSK": {
       "currency": "USD",
@@ -116,7 +124,7 @@
     "GEV": {
       "currency": "USD",
       "day_high": 845.0,
-      "day_low": 802.1,
+      "day_low": 801.32,
       "exchange": "NYSE",
       "name": "GE Vernova Inc.",
       "prev_close": 797.04,
@@ -252,9 +260,9 @@
       "exchange": "NYSE",
       "name": "Realty Income Corporation",
       "prev_close": 59.54,
-      "price": 59.2827,
+      "price": 59.49,
       "regular": 59.57,
-      "time": 1794443842
+      "time": 1794444576
     },
     "ORCL": {
       "currency": "USD",
@@ -289,6 +297,9 @@
       "regular": 18.28,
       "time": 1794445168
     },
+    "SNOWFLAKE": {
+      "error": "搵唔到呢個股票代號"
+    },
     "SPCX": {
       "currency": "USD",
       "day_high": 145.16,
@@ -312,5 +323,5 @@
       "time": 1794445188
     }
   },
-  "updated": "2026-11-12T01:04:32+00:00"
+  "updated": "2026-11-12T01:05:08+00:00"
 }
