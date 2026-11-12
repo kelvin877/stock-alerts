@@ -258,6 +258,14 @@
       "price": 780,
       "note": "",
       "created_at": "2026-11-12T01:00:06.004Z"
+    },
+    {
+      "id": "mwcud61mwrv7vd",
+      "symbol": "MRNA",
+      "condition": "below",
+      "price": 120,
+      "note": "",
+      "created_at": "2026-11-12T01:00:41.818Z"
     }
   ]
 }
