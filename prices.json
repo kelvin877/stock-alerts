@@ -79,7 +79,7 @@
     },
     "BRK-B": {
       "currency": "USD",
-      "day_high": 588.48,
+      "day_high": 588.51,
       "day_low": 576.8,
       "exchange": "NYSE",
       "name": "Berkshire Hathaway Inc. New",
@@ -98,6 +98,17 @@
       "price": 6.76,
       "regular": 6.91,
       "time": 1794445138
+    },
+    "COST": {
+      "currency": "USD",
+      "day_high": 1091.92,
+      "day_low": 1071.34,
+      "exchange": "NasdaqGS",
+      "name": "Costco Wholesale Corporation",
+      "prev_close": 1066.14,
+      "price": 1088.99,
+      "regular": 1087.61,
+      "time": 1794444997
     },
     "CRDO": {
       "currency": "USD",
@@ -124,7 +135,7 @@
     "GEV": {
       "currency": "USD",
       "day_high": 845.0,
-      "day_low": 801.32,
+      "day_low": 802.1,
       "exchange": "NYSE",
       "name": "GE Vernova Inc.",
       "prev_close": 797.04,
@@ -342,5 +353,5 @@
       "time": 1794445188
     }
   },
-  "updated": "2026-11-12T01:07:05+00:00"
+  "updated": "2026-11-12T01:07:30+00:00"
 }
