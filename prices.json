@@ -79,7 +79,7 @@
     },
     "BRK-B": {
       "currency": "USD",
-      "day_high": 588.51,
+      "day_high": 588.48,
       "day_low": 576.8,
       "exchange": "NYSE",
       "name": "Berkshire Hathaway Inc. New",
@@ -146,7 +146,7 @@
     "GEV": {
       "currency": "USD",
       "day_high": 845.0,
-      "day_low": 802.1,
+      "day_low": 801.32,
       "exchange": "NYSE",
       "name": "GE Vernova Inc.",
       "prev_close": 797.04,
@@ -408,5 +408,5 @@
       "time": 1794443479
     }
   },
-  "updated": "2026-11-12T01:15:32+00:00"
+  "updated": "2026-11-12T01:16:57+00:00"
 }
