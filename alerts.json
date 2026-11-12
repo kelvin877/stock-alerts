@@ -29,7 +29,8 @@
     "MSFT",
     "ORCL",
     "BRK-B",
-    "SNOW"
+    "SNOW",
+    "SOFI"
   ],
   "alerts": [
     {
