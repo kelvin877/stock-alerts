@@ -79,7 +79,7 @@
     },
     "BRK-B": {
       "currency": "USD",
-      "day_high": 588.51,
+      "day_high": 588.48,
       "day_low": 576.8,
       "exchange": "NYSE",
       "name": "Berkshire Hathaway Inc. New",
@@ -146,7 +146,7 @@
     "GEV": {
       "currency": "USD",
       "day_high": 845.0,
-      "day_low": 802.1,
+      "day_low": 801.32,
       "exchange": "NYSE",
       "name": "GE Vernova Inc.",
       "prev_close": 797.04,
@@ -230,6 +230,17 @@
       "price": 520.15,
       "regular": 521.125,
       "time": 1794445188
+    },
+    "MU": {
+      "currency": "USD",
+      "day_high": 827.58,
+      "day_low": 763.05,
+      "exchange": "NasdaqGS",
+      "name": "Micron Technology, Inc.",
+      "prev_close": 725.11,
+      "price": 788.5711,
+      "regular": 811.3,
+      "time": 1794445194
     },
     "NBIS": {
       "currency": "USD",
@@ -375,5 +386,5 @@
       "time": 1794443479
     }
   },
-  "updated": "2026-11-12T01:12:20+00:00"
+  "updated": "2026-11-12T01:12:51+00:00"
 }
