@@ -10,7 +10,18 @@
       "price": 356.22,
       "regular": 355.63,
       "time": 1794443252
+    },
+    "NVDA": {
+      "currency": "USD",
+      "day_high": 177.54,
+      "day_low": 170.77,
+      "exchange": "NasdaqGS",
+      "name": "NVIDIA Corporation",
+      "prev_close": 168.796,
+      "price": 160.0,
+      "regular": 173.73,
+      "time": 1794443269
     }
   },
-  "updated": "2026-11-12T00:27:40+00:00"
+  "updated": "2026-11-12T00:27:50+00:00"
 }
