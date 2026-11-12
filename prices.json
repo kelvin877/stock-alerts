@@ -352,9 +352,17 @@
       "regular": 390.84,
       "time": 1794445188
     },
-    "VISA": {
-      "error": "搵唔到呢個股票代號"
+    "V": {
+      "currency": "USD",
+      "day_high": 425.71,
+      "day_low": 417.3,
+      "exchange": "NYSE",
+      "name": "Visa Inc.",
+      "prev_close": 423.0,
+      "price": 426.993,
+      "regular": 425.55,
+      "time": 1794443479
     }
   },
-  "updated": "2026-11-12T01:08:11+00:00"
+  "updated": "2026-11-12T01:08:47+00:00"
 }
