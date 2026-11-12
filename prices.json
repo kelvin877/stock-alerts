@@ -297,6 +297,28 @@
       "regular": 18.28,
       "time": 1794445168
     },
+    "SNOW": {
+      "currency": "USD",
+      "day_high": 310.192,
+      "day_low": 300.44,
+      "exchange": "NYSE",
+      "name": "Snowflake Inc.",
+      "prev_close": 295.76,
+      "price": 301.06,
+      "regular": 301.22,
+      "time": 1794444543
+    },
+    "SOFI": {
+      "currency": "USD",
+      "day_high": 16.825,
+      "day_low": 16.25,
+      "exchange": "NasdaqGS",
+      "name": "SoFi Technologies, Inc.",
+      "prev_close": 16.37,
+      "price": 16.1595,
+      "regular": 16.27,
+      "time": 1794445193
+    },
     "SPCX": {
       "currency": "USD",
       "day_high": 145.16,
@@ -320,5 +342,5 @@
       "time": 1794445188
     }
   },
-  "updated": "2026-11-12T01:05:26+00:00"
+  "updated": "2026-11-12T01:06:25+00:00"
 }
