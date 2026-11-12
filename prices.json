@@ -32,7 +32,18 @@
       "price": 159.65,
       "regular": 173.73,
       "time": 1794443942
+    },
+    "PLTR": {
+      "currency": "USD",
+      "day_high": 175.41,
+      "day_low": 170.8,
+      "exchange": "NasdaqGS",
+      "name": "Palantir Technologies Inc.",
+      "prev_close": 168.82,
+      "price": 169.69,
+      "regular": 172.4,
+      "time": 1794443908
     }
   },
-  "updated": "2026-11-12T00:41:11+00:00"
+  "updated": "2026-11-12T00:41:30+00:00"
 }
