@@ -30,7 +30,8 @@
     "ORCL",
     "BRK-B",
     "SNOW",
-    "SOFI"
+    "SOFI",
+    "COST"
   ],
   "alerts": [
     {
