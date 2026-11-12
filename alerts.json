@@ -39,6 +39,14 @@
       "price": 430,
       "note": "",
       "created_at": "2026-11-12T00:43:10.415Z"
+    },
+    {
+      "id": "mwctr8ex5l4my2",
+      "symbol": "NBIS",
+      "condition": "below",
+      "price": 130,
+      "note": "",
+      "created_at": "2026-11-12T00:43:38.457Z"
     }
   ]
 }
