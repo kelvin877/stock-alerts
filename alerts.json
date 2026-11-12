@@ -110,6 +110,14 @@
       "price": 17,
       "note": "",
       "created_at": "2026-11-12T00:48:09.434Z"
+    },
+    {
+      "id": "mwctzffe2azcsj",
+      "symbol": "CRDO",
+      "condition": "below",
+      "price": 100,
+      "note": "",
+      "created_at": "2026-11-12T00:50:00.794Z"
     }
   ]
 }
