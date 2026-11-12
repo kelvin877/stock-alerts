@@ -7,9 +7,9 @@
       "exchange": "NasdaqGS",
       "name": "Apple Inc.",
       "prev_close": 348.51,
-      "price": 356.1875,
+      "price": 356.0186,
       "regular": 355.63,
-      "time": 1794444357
+      "time": 1794444435
     },
     "AMD": {
       "currency": "USD",
@@ -18,9 +18,9 @@
       "exchange": "NasdaqGS",
       "name": "Advanced Micro Devices, Inc.",
       "prev_close": 515.21,
-      "price": 576.4225,
+      "price": 575.6197,
       "regular": 552.9,
-      "time": 1794444425
+      "time": 1794444438
     },
     "APLD": {
       "currency": "USD",
@@ -51,9 +51,9 @@
       "exchange": "NasdaqGS",
       "name": "CoreWeave, Inc.",
       "prev_close": 48.73,
-      "price": 56.7542,
+      "price": 56.68,
       "regular": 60.77,
-      "time": 1794444426
+      "time": 1794444441
     },
     "INTC": {
       "currency": "USD",
@@ -62,9 +62,9 @@
       "exchange": "NasdaqGS",
       "name": "Intel Corporation",
       "prev_close": 58.13,
-      "price": 60.88,
+      "price": 60.8108,
       "regular": 62.5,
-      "time": 1794444417
+      "time": 1794444430
     },
     "NBIS": {
       "currency": "USD",
@@ -73,9 +73,9 @@
       "exchange": "NasdaqGS",
       "name": "Nebius Group N.V.",
       "prev_close": 134.0,
-      "price": 149.81,
+      "price": 149.8,
       "regular": 154.69,
-      "time": 1794444389
+      "time": 1794444434
     },
     "NVDA": {
       "currency": "USD",
@@ -84,9 +84,9 @@
       "exchange": "NasdaqGS",
       "name": "NVIDIA Corporation",
       "prev_close": 168.796,
-      "price": 159.59,
+      "price": 159.37,
       "regular": 173.73,
-      "time": 1794444413
+      "time": 1794444442
     },
     "NVTS": {
       "currency": "USD",
@@ -106,10 +106,10 @@
       "exchange": "NasdaqGS",
       "name": "Palantir Technologies Inc.",
       "prev_close": 168.82,
-      "price": 169.67,
+      "price": 169.83,
       "regular": 172.4,
-      "time": 1794444058
+      "time": 1794444426
     }
   },
-  "updated": "2026-11-12T00:47:08+00:00"
+  "updated": "2026-11-12T00:47:25+00:00"
 }
