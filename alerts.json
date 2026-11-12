@@ -28,7 +28,8 @@
     "O",
     "MSFT",
     "ORCL",
-    "BRK-B"
+    "BRK-B",
+    "SNOWFLAKE"
   ],
   "alerts": [
     {
