@@ -240,6 +240,14 @@
       "price": 260,
       "note": "",
       "created_at": "2026-11-12T00:58:21.895Z"
+    },
+    {
+      "id": "mwcuazuehs3r35",
+      "symbol": "AVGO",
+      "condition": "below",
+      "price": 280,
+      "note": "",
+      "created_at": "2026-11-12T00:59:00.470Z"
     }
   ]
 }
