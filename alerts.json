@@ -294,6 +294,14 @@
       "price": 460,
       "note": "",
       "created_at": "2026-11-12T01:02:23.408Z"
+    },
+    {
+      "id": "mwcufsue33mbor",
+      "symbol": "ORCL",
+      "condition": "below",
+      "price": 120,
+      "note": "",
+      "created_at": "2026-11-12T01:02:44.678Z"
     }
   ]
 }
