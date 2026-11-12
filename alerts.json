@@ -83,14 +83,6 @@
       "price": 40,
       "note": "",
       "created_at": "2026-11-12T00:46:27.809Z"
-    },
-    {
-      "id": "mwctvis42i3g6o",
-      "symbol": "APLD",
-      "condition": "above",
-      "price": 29,
-      "note": "",
-      "created_at": "2026-11-12T00:46:58.516Z"
     }
   ]
 }
