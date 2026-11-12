@@ -7,9 +7,9 @@
       "exchange": "NasdaqGS",
       "name": "Apple Inc.",
       "prev_close": 348.51,
-      "price": 356.3,
+      "price": 356.1875,
       "regular": 355.63,
-      "time": 1794444266
+      "time": 1794444357
     },
     "AMD": {
       "currency": "USD",
@@ -18,9 +18,20 @@
       "exchange": "NasdaqGS",
       "name": "Advanced Micro Devices, Inc.",
       "prev_close": 515.21,
-      "price": 576.0933,
+      "price": 576.02,
       "regular": 552.9,
-      "time": 1794444308
+      "time": 1794444362
+    },
+    "AXTI": {
+      "currency": "USD",
+      "day_high": 49.04,
+      "day_low": 42.84,
+      "exchange": "NasdaqGS",
+      "name": "AXT Inc",
+      "prev_close": 39.31,
+      "price": 46.1386,
+      "regular": 46.97,
+      "time": 1794444324
     },
     "CRWV": {
       "currency": "USD",
@@ -29,9 +40,9 @@
       "exchange": "NasdaqGS",
       "name": "CoreWeave, Inc.",
       "prev_close": 48.73,
-      "price": 56.7714,
+      "price": 56.66,
       "regular": 60.77,
-      "time": 1794444304
+      "time": 1794444366
     },
     "INTC": {
       "currency": "USD",
@@ -40,9 +51,9 @@
       "exchange": "NasdaqGS",
       "name": "Intel Corporation",
       "prev_close": 58.13,
-      "price": 60.9176,
+      "price": 60.88,
       "regular": 62.5,
-      "time": 1794444302
+      "time": 1794444349
     },
     "NBIS": {
       "currency": "USD",
@@ -53,7 +64,7 @@
       "prev_close": 134.0,
       "price": 150.0,
       "regular": 154.69,
-      "time": 1794444307
+      "time": 1794444343
     },
     "NVDA": {
       "currency": "USD",
@@ -62,9 +73,9 @@
       "exchange": "NasdaqGS",
       "name": "NVIDIA Corporation",
       "prev_close": 168.796,
-      "price": 159.5999,
+      "price": 159.59,
       "regular": 173.73,
-      "time": 1794444306
+      "time": 1794444368
     },
     "NVTS": {
       "currency": "USD",
@@ -89,5 +100,5 @@
       "time": 1794444058
     }
   },
-  "updated": "2026-11-12T00:45:11+00:00"
+  "updated": "2026-11-12T00:46:11+00:00"
 }
