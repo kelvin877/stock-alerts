@@ -18,9 +18,9 @@
       "exchange": "NasdaqGS",
       "name": "Advanced Micro Devices, Inc.",
       "prev_close": 515.21,
-      "price": 574.8,
+      "price": 574.89,
       "regular": 552.9,
-      "time": 1794444588
+      "time": 1794444641
     },
     "APLD": {
       "currency": "USD",
@@ -29,9 +29,9 @@
       "exchange": "NasdaqGS",
       "name": "Applied Digital Corporation",
       "prev_close": 16.68,
-      "price": 17.36,
+      "price": 17.48,
       "regular": 17.91,
-      "time": 1794444554
+      "time": 1794444599
     },
     "AXTI": {
       "currency": "USD",
@@ -40,9 +40,20 @@
       "exchange": "NasdaqGS",
       "name": "AXT Inc",
       "prev_close": 39.31,
-      "price": 45.7,
+      "price": 45.7497,
       "regular": 46.97,
-      "time": 1794444593
+      "time": 1794444636
+    },
+    "BE": {
+      "currency": "USD",
+      "day_high": 217.845,
+      "day_low": 199.48,
+      "exchange": "NYSE",
+      "name": "Bloom Energy Corporation",
+      "prev_close": 185.42,
+      "price": 204.41,
+      "regular": 209.47,
+      "time": 1794444643
     },
     "CLSK": {
       "currency": "USD",
@@ -64,7 +75,7 @@
       "prev_close": 129.8,
       "price": 136.9,
       "regular": 141.41,
-      "time": 1794444562
+      "time": 1794444643
     },
     "CRWV": {
       "currency": "USD",
@@ -73,9 +84,9 @@
       "exchange": "NasdaqGS",
       "name": "CoreWeave, Inc.",
       "prev_close": 48.73,
-      "price": 56.3044,
+      "price": 56.3,
       "regular": 60.77,
-      "time": 1794444596
+      "time": 1794444641
     },
     "INTC": {
       "currency": "USD",
@@ -84,9 +95,9 @@
       "exchange": "NasdaqGS",
       "name": "Intel Corporation",
       "prev_close": 58.13,
-      "price": 60.73,
+      "price": 60.72,
       "regular": 62.5,
-      "time": 1794444598
+      "time": 1794444645
     },
     "IREN": {
       "currency": "USD",
@@ -95,9 +106,9 @@
       "exchange": "NasdaqGS",
       "name": "IREN LIMITED",
       "prev_close": 19.73,
-      "price": 19.9495,
+      "price": 19.93,
       "regular": 20.84,
-      "time": 1794444589
+      "time": 1794444633
     },
     "NBIS": {
       "currency": "USD",
@@ -106,9 +117,9 @@
       "exchange": "NasdaqGS",
       "name": "Nebius Group N.V.",
       "prev_close": 134.0,
-      "price": 148.91,
+      "price": 148.5101,
       "regular": 154.69,
-      "time": 1794444598
+      "time": 1794444644
     },
     "NVDA": {
       "currency": "USD",
@@ -117,9 +128,9 @@
       "exchange": "NasdaqGS",
       "name": "NVIDIA Corporation",
       "prev_close": 168.796,
-      "price": 158.63,
+      "price": 158.4155,
       "regular": 173.73,
-      "time": 1794444599
+      "time": 1794444650
     },
     "NVTS": {
       "currency": "USD",
@@ -139,10 +150,10 @@
       "exchange": "NasdaqGS",
       "name": "Palantir Technologies Inc.",
       "prev_close": 168.82,
-      "price": 170.49,
+      "price": 170.694,
       "regular": 172.4,
-      "time": 1794444583
+      "time": 1794444601
     }
   },
-  "updated": "2026-11-12T00:50:00+00:00"
+  "updated": "2026-11-12T00:50:51+00:00"
 }
