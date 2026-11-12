@@ -101,6 +101,14 @@
       "price": 46,
       "note": "",
       "created_at": "2026-11-12T00:47:42.761Z"
+    },
+    {
+      "id": "mwctx1i29jbvom",
+      "symbol": "CLSK",
+      "condition": "above",
+      "price": 17,
+      "note": "",
+      "created_at": "2026-11-12T00:48:09.434Z"
     }
   ]
 }
