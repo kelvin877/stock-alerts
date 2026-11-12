@@ -79,7 +79,7 @@
     },
     "BRK-B": {
       "currency": "USD",
-      "day_high": 588.48,
+      "day_high": 588.51,
       "day_low": 576.8,
       "exchange": "NYSE",
       "name": "Berkshire Hathaway Inc. New",
@@ -146,7 +146,7 @@
     "GEV": {
       "currency": "USD",
       "day_high": 845.0,
-      "day_low": 801.32,
+      "day_low": 802.1,
       "exchange": "NYSE",
       "name": "GE Vernova Inc.",
       "prev_close": 797.04,
@@ -406,7 +406,18 @@
       "price": 426.993,
       "regular": 425.55,
       "time": 1794443479
+    },
+    "VRT": {
+      "currency": "USD",
+      "day_high": 211.74,
+      "day_low": 202.01,
+      "exchange": "NYSE",
+      "name": "Vertiv Holdings, LLC",
+      "prev_close": 194.22,
+      "price": 202.0,
+      "regular": 206.51,
+      "time": 1794445095
     }
   },
-  "updated": "2026-11-12T01:16:57+00:00"
+  "updated": "2026-11-12T01:17:44+00:00"
 }
