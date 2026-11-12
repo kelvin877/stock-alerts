@@ -401,6 +401,14 @@
       "price": 240,
       "note": "",
       "created_at": "2026-11-12T01:30:26.277Z"
+    },
+    {
+      "id": "mwd9t2jceoz23w",
+      "symbol": "MSFT",
+      "condition": "below",
+      "price": 420,
+      "note": "",
+      "created_at": "2026-11-12T08:12:58.008Z"
     }
   ]
 }
