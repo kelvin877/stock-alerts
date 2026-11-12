@@ -57,6 +57,14 @@
       "price": 90,
       "note": "",
       "created_at": "2026-11-12T00:44:03.354Z"
+    },
+    {
+      "id": "mwctsg1k9oo9a2",
+      "symbol": "NVTS",
+      "condition": "above",
+      "price": 16,
+      "note": "",
+      "created_at": "2026-11-12T00:44:35.000Z"
     }
   ]
 }
