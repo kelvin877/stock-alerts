@@ -170,6 +170,14 @@
       "price": 200,
       "note": "",
       "created_at": "2026-11-12T00:52:01.735Z"
+    },
+    {
+      "id": "mwcu2wew3nj0zc",
+      "symbol": "NOW",
+      "condition": "above",
+      "price": 160,
+      "note": "",
+      "created_at": "2026-11-12T00:52:42.776Z"
     }
   ]
 }
