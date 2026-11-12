@@ -209,6 +209,17 @@
       "regular": 20.84,
       "time": 1794445198
     },
+    "JNJ": {
+      "currency": "USD",
+      "day_high": 281.16,
+      "day_low": 276.605,
+      "exchange": "NYSE",
+      "name": "Johnson & Johnson",
+      "prev_close": 280.78,
+      "price": 280.8299,
+      "regular": 280.41,
+      "time": 1794444541
+    },
     "JPM": {
       "currency": "USD",
       "day_high": 344.589,
@@ -430,5 +441,5 @@
       "time": 1794445095
     }
   },
-  "updated": "2026-11-12T01:28:54+00:00"
+  "updated": "2026-11-12T01:30:26+00:00"
 }
