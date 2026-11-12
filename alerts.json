@@ -10,7 +10,8 @@
     "INTC",
     "AXTI",
     "APLD",
-    "IREN"
+    "IREN",
+    "CLSK"
   ],
   "alerts": [
     {
