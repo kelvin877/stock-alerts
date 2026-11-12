@@ -79,7 +79,7 @@
     },
     "BRK-B": {
       "currency": "USD",
-      "day_high": 588.48,
+      "day_high": 588.51,
       "day_low": 576.8,
       "exchange": "NYSE",
       "name": "Berkshire Hathaway Inc. New",
@@ -146,7 +146,7 @@
     "GEV": {
       "currency": "USD",
       "day_high": 845.0,
-      "day_low": 801.32,
+      "day_low": 802.1,
       "exchange": "NYSE",
       "name": "GE Vernova Inc.",
       "prev_close": 797.04,
@@ -208,6 +208,17 @@
       "price": 19.9502,
       "regular": 20.84,
       "time": 1794445198
+    },
+    "META": {
+      "currency": "USD",
+      "day_high": 648.45,
+      "day_low": 628.02,
+      "exchange": "NasdaqGS",
+      "name": "Meta Platforms, Inc.",
+      "prev_close": 641.39,
+      "price": 624.9,
+      "regular": 628.77,
+      "time": 1794445181
     },
     "MRNA": {
       "currency": "USD",
@@ -397,5 +408,5 @@
       "time": 1794443479
     }
   },
-  "updated": "2026-11-12T01:14:11+00:00"
+  "updated": "2026-11-12T01:15:19+00:00"
 }
