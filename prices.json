@@ -116,7 +116,7 @@
     "GEV": {
       "currency": "USD",
       "day_high": 845.0,
-      "day_low": 801.32,
+      "day_low": 802.1,
       "exchange": "NYSE",
       "name": "GE Vernova Inc.",
       "prev_close": 797.04,
@@ -234,6 +234,17 @@
       "regular": 10.07,
       "time": 1794445176
     },
+    "O": {
+      "currency": "USD",
+      "day_high": 59.63,
+      "day_low": 58.95,
+      "exchange": "NYSE",
+      "name": "Realty Income Corporation",
+      "prev_close": 59.54,
+      "price": 59.2827,
+      "regular": 59.57,
+      "time": 1794443842
+    },
     "PLTR": {
       "currency": "USD",
       "day_high": 175.41,
@@ -279,5 +290,5 @@
       "time": 1794445188
     }
   },
-  "updated": "2026-11-12T01:01:37+00:00"
+  "updated": "2026-11-12T01:02:15+00:00"
 }
