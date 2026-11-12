@@ -190,6 +190,17 @@
       "regular": 248.69,
       "time": 1794445169
     },
+    "MSFT": {
+      "currency": "USD",
+      "day_high": 534.76,
+      "day_low": 518.45,
+      "exchange": "NasdaqGS",
+      "name": "Microsoft Corporation",
+      "prev_close": 533.16,
+      "price": 520.15,
+      "regular": 521.125,
+      "time": 1794445188
+    },
     "NBIS": {
       "currency": "USD",
       "day_high": 160.21,
@@ -245,6 +256,17 @@
       "regular": 59.57,
       "time": 1794443842
     },
+    "ORCL": {
+      "currency": "USD",
+      "day_high": 130.77,
+      "day_low": 124.15,
+      "exchange": "NYSE",
+      "name": "Oracle Corporation",
+      "prev_close": 117.98,
+      "price": 124.767,
+      "regular": 128.38,
+      "time": 1794445196
+    },
     "PLTR": {
       "currency": "USD",
       "day_high": 175.41,
@@ -290,5 +312,5 @@
       "time": 1794445188
     }
   },
-  "updated": "2026-11-12T01:02:15+00:00"
+  "updated": "2026-11-12T01:02:53+00:00"
 }
