@@ -276,6 +276,14 @@
       "price": 521,
       "note": "",
       "created_at": "2026-11-12T01:01:34.261Z"
+    },
+    {
+      "id": "mwcuevhasntf32",
+      "symbol": "O",
+      "condition": "below",
+      "price": 55,
+      "note": "",
+      "created_at": "2026-11-12T01:02:01.438Z"
     }
   ]
 }
