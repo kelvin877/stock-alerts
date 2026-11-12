@@ -18,9 +18,20 @@
       "exchange": "NasdaqGS",
       "name": "Advanced Micro Devices, Inc.",
       "prev_close": 515.21,
-      "price": 576.1,
+      "price": 576.4225,
       "regular": 552.9,
-      "time": 1794444384
+      "time": 1794444425
+    },
+    "APLD": {
+      "currency": "USD",
+      "day_high": 18.6,
+      "day_low": 17.37,
+      "exchange": "NasdaqGS",
+      "name": "Applied Digital Corporation",
+      "prev_close": 16.68,
+      "price": 17.42,
+      "regular": 17.91,
+      "time": 1794444332
     },
     "AXTI": {
       "currency": "USD",
@@ -40,9 +51,9 @@
       "exchange": "NasdaqGS",
       "name": "CoreWeave, Inc.",
       "prev_close": 48.73,
-      "price": 56.6232,
+      "price": 56.7542,
       "regular": 60.77,
-      "time": 1794444380
+      "time": 1794444426
     },
     "INTC": {
       "currency": "USD",
@@ -53,7 +64,7 @@
       "prev_close": 58.13,
       "price": 60.88,
       "regular": 62.5,
-      "time": 1794444349
+      "time": 1794444417
     },
     "NBIS": {
       "currency": "USD",
@@ -62,9 +73,9 @@
       "exchange": "NasdaqGS",
       "name": "Nebius Group N.V.",
       "prev_close": 134.0,
-      "price": 150.0,
+      "price": 149.81,
       "regular": 154.69,
-      "time": 1794444381
+      "time": 1794444389
     },
     "NVDA": {
       "currency": "USD",
@@ -73,9 +84,9 @@
       "exchange": "NasdaqGS",
       "name": "NVIDIA Corporation",
       "prev_close": 168.796,
-      "price": 159.56,
+      "price": 159.59,
       "regular": 173.73,
-      "time": 1794444385
+      "time": 1794444413
     },
     "NVTS": {
       "currency": "USD",
@@ -100,5 +111,5 @@
       "time": 1794444058
     }
   },
-  "updated": "2026-11-12T00:46:27+00:00"
+  "updated": "2026-11-12T00:47:08+00:00"
 }
