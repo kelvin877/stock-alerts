@@ -7,9 +7,9 @@
       "exchange": "NasdaqGS",
       "name": "Apple Inc.",
       "prev_close": 348.51,
-      "price": 356.17,
+      "price": 356.2023,
       "regular": 355.63,
-      "time": 1794444722
+      "time": 1794444737
     },
     "AMD": {
       "currency": "USD",
@@ -18,9 +18,9 @@
       "exchange": "NasdaqGS",
       "name": "Advanced Micro Devices, Inc.",
       "prev_close": 515.21,
-      "price": 575.0,
+      "price": 574.98,
       "regular": 552.9,
-      "time": 1794444717
+      "time": 1794444742
     },
     "APLD": {
       "currency": "USD",
@@ -29,9 +29,9 @@
       "exchange": "NasdaqGS",
       "name": "Applied Digital Corporation",
       "prev_close": 16.68,
-      "price": 17.48,
+      "price": 17.36,
       "regular": 17.91,
-      "time": 1794444599
+      "time": 1794444731
     },
     "AXTI": {
       "currency": "USD",
@@ -40,9 +40,9 @@
       "exchange": "NasdaqGS",
       "name": "AXT Inc",
       "prev_close": 39.31,
-      "price": 45.7,
+      "price": 45.81,
       "regular": 46.97,
-      "time": 1794444685
+      "time": 1794444731
     },
     "BE": {
       "currency": "USD",
@@ -51,9 +51,9 @@
       "exchange": "NYSE",
       "name": "Bloom Energy Corporation",
       "prev_close": 185.42,
-      "price": 204.85,
+      "price": 204.5,
       "regular": 209.47,
-      "time": 1794444730
+      "time": 1794444731
     },
     "CLSK": {
       "currency": "USD",
@@ -84,9 +84,9 @@
       "exchange": "NasdaqGS",
       "name": "CoreWeave, Inc.",
       "prev_close": 48.73,
-      "price": 56.3985,
+      "price": 56.5,
       "regular": 60.77,
-      "time": 1794444730
+      "time": 1794444733
     },
     "HIVE.TO": {
       "currency": "CAD",
@@ -117,9 +117,9 @@
       "exchange": "NasdaqGS",
       "name": "Intel Corporation",
       "prev_close": 58.13,
-      "price": 60.7494,
+      "price": 60.7577,
       "regular": 62.5,
-      "time": 1794444706
+      "time": 1794444727
     },
     "IREN": {
       "currency": "USD",
@@ -143,6 +143,17 @@
       "regular": 154.69,
       "time": 1794444729
     },
+    "NOW": {
+      "currency": "USD",
+      "day_high": 103.65,
+      "day_low": 100.4,
+      "exchange": "NYSE",
+      "name": "ServiceNow, Inc.",
+      "prev_close": 99.61,
+      "price": 101.0,
+      "regular": 102.76,
+      "time": 1794444092
+    },
     "NVDA": {
       "currency": "USD",
       "day_high": 177.54,
@@ -150,9 +161,9 @@
       "exchange": "NasdaqGS",
       "name": "NVIDIA Corporation",
       "prev_close": 168.796,
-      "price": 158.989,
+      "price": 159.0,
       "regular": 173.73,
-      "time": 1794444731
+      "time": 1794444745
     },
     "NVTS": {
       "currency": "USD",
@@ -172,10 +183,10 @@
       "exchange": "NasdaqGS",
       "name": "Palantir Technologies Inc.",
       "prev_close": 168.82,
-      "price": 170.25,
+      "price": 170.26,
       "regular": 172.4,
-      "time": 1794444682
+      "time": 1794444733
     }
   },
-  "updated": "2026-11-12T00:52:14+00:00"
+  "updated": "2026-11-12T00:52:26+00:00"
 }
