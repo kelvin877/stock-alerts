@@ -7,9 +7,9 @@
       "exchange": "NasdaqGS",
       "name": "Apple Inc.",
       "prev_close": 348.51,
-      "price": 356.05,
+      "price": 356.06,
       "regular": 355.63,
-      "time": 1794444906
+      "time": 1794444954
     },
     "AMD": {
       "currency": "USD",
@@ -18,9 +18,9 @@
       "exchange": "NasdaqGS",
       "name": "Advanced Micro Devices, Inc.",
       "prev_close": 515.21,
-      "price": 575.2434,
+      "price": 575.7598,
       "regular": 552.9,
-      "time": 1794444922
+      "time": 1794444955
     },
     "APLD": {
       "currency": "USD",
@@ -29,9 +29,9 @@
       "exchange": "NasdaqGS",
       "name": "Applied Digital Corporation",
       "prev_close": 16.68,
-      "price": 17.4,
+      "price": 17.4845,
       "regular": 17.91,
-      "time": 1794444849
+      "time": 1794444958
     },
     "AXTI": {
       "currency": "USD",
@@ -40,9 +40,9 @@
       "exchange": "NasdaqGS",
       "name": "AXT Inc",
       "prev_close": 39.31,
-      "price": 45.75,
+      "price": 45.66,
       "regular": 46.97,
-      "time": 1794444805
+      "time": 1794444945
     },
     "BE": {
       "currency": "USD",
@@ -51,9 +51,9 @@
       "exchange": "NYSE",
       "name": "Bloom Energy Corporation",
       "prev_close": 185.42,
-      "price": 204.65,
+      "price": 204.9652,
       "regular": 209.47,
-      "time": 1794444912
+      "time": 1794444953
     },
     "CLSK": {
       "currency": "USD",
@@ -84,9 +84,9 @@
       "exchange": "NasdaqGS",
       "name": "CoreWeave, Inc.",
       "prev_close": 48.73,
-      "price": 56.64,
+      "price": 56.56,
       "regular": 60.77,
-      "time": 1794444920
+      "time": 1794444944
     },
     "HIVE.TO": {
       "currency": "CAD",
@@ -117,9 +117,9 @@
       "exchange": "NasdaqGS",
       "name": "Intel Corporation",
       "prev_close": 58.13,
-      "price": 60.8615,
+      "price": 60.8881,
       "regular": 62.5,
-      "time": 1794444912
+      "time": 1794444954
     },
     "IREN": {
       "currency": "USD",
@@ -130,7 +130,7 @@
       "prev_close": 19.73,
       "price": 19.95,
       "regular": 20.84,
-      "time": 1794444916
+      "time": 1794444929
     },
     "NBIS": {
       "currency": "USD",
@@ -139,9 +139,9 @@
       "exchange": "NasdaqGS",
       "name": "Nebius Group N.V.",
       "prev_close": 134.0,
-      "price": 149.5,
+      "price": 149.16,
       "regular": 154.69,
-      "time": 1794444918
+      "time": 1794444958
     },
     "NOW": {
       "currency": "USD",
@@ -161,9 +161,9 @@
       "exchange": "NasdaqGS",
       "name": "NVIDIA Corporation",
       "prev_close": 168.796,
-      "price": 158.9,
+      "price": 158.83,
       "regular": 173.73,
-      "time": 1794444926
+      "time": 1794444964
     },
     "NVTS": {
       "currency": "USD",
@@ -205,10 +205,21 @@
       "exchange": "NasdaqGS",
       "name": "Space Exploration Technologies ",
       "prev_close": 143.09,
-      "price": 138.2071,
+      "price": 138.2074,
       "regular": 139.75,
-      "time": 1794444926
+      "time": 1794444959
+    },
+    "TSLA": {
+      "currency": "USD",
+      "day_high": 395.43,
+      "day_low": 386.354,
+      "exchange": "NasdaqGS",
+      "name": "Tesla, Inc.",
+      "prev_close": 379.78,
+      "price": 387.2,
+      "regular": 390.84,
+      "time": 1794444963
     }
   },
-  "updated": "2026-11-12T00:55:28+00:00"
+  "updated": "2026-11-12T00:56:07+00:00"
 }
