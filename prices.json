@@ -176,6 +176,17 @@
       "regular": 20.84,
       "time": 1794445198
     },
+    "MRNA": {
+      "currency": "USD",
+      "day_high": 254.86,
+      "day_low": 243.0,
+      "exchange": "NasdaqGS",
+      "name": "Moderna, Inc.",
+      "prev_close": 250.83,
+      "price": 245.5999,
+      "regular": 248.69,
+      "time": 1794445169
+    },
     "NBIS": {
       "currency": "USD",
       "day_high": 160.21,
@@ -265,5 +276,5 @@
       "time": 1794445188
     }
   },
-  "updated": "2026-11-12T01:00:15+00:00"
+  "updated": "2026-11-12T01:00:33+00:00"
 }
