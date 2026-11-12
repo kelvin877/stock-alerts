@@ -79,7 +79,7 @@
     },
     "BRK-B": {
       "currency": "USD",
-      "day_high": 588.51,
+      "day_high": 588.48,
       "day_low": 576.8,
       "exchange": "NYSE",
       "name": "Berkshire Hathaway Inc. New",
@@ -146,7 +146,7 @@
     "GEV": {
       "currency": "USD",
       "day_high": 845.0,
-      "day_low": 802.1,
+      "day_low": 801.32,
       "exchange": "NYSE",
       "name": "GE Vernova Inc.",
       "prev_close": 797.04,
@@ -208,6 +208,17 @@
       "price": 19.9502,
       "regular": 20.84,
       "time": 1794445198
+    },
+    "JPM": {
+      "currency": "USD",
+      "day_high": 344.589,
+      "day_low": 340.82,
+      "exchange": "NYSE",
+      "name": "JP Morgan Chase & Co.",
+      "prev_close": 342.07,
+      "price": 343.39,
+      "regular": 343.39,
+      "time": 1794441467
     },
     "META": {
       "currency": "USD",
@@ -419,5 +430,5 @@
       "time": 1794445095
     }
   },
-  "updated": "2026-11-12T01:17:44+00:00"
+  "updated": "2026-11-12T01:28:54+00:00"
 }
