@@ -18,9 +18,9 @@
       "exchange": "NasdaqGS",
       "name": "Advanced Micro Devices, Inc.",
       "prev_close": 515.21,
-      "price": 576.5,
+      "price": 576.7579,
       "regular": 552.9,
-      "time": 1794445198
+      "time": 1794445199
     },
     "AMZN": {
       "currency": "USD",
@@ -51,9 +51,9 @@
       "exchange": "NasdaqGS",
       "name": "Broadcom Inc.",
       "prev_close": 331.98,
-      "price": 353.43,
+      "price": 353.36,
       "regular": 345.22,
-      "time": 1794445189
+      "time": 1794445195
     },
     "AXTI": {
       "currency": "USD",
@@ -194,7 +194,7 @@
       "exchange": "NYSE",
       "name": "ServiceNow, Inc.",
       "prev_close": 99.61,
-      "price": 100.7985,
+      "price": 100.799,
       "regular": 102.76,
       "time": 1794445197
     },
@@ -265,5 +265,5 @@
       "time": 1794445188
     }
   },
-  "updated": "2026-11-12T01:00:03+00:00"
+  "updated": "2026-11-12T01:00:15+00:00"
 }
