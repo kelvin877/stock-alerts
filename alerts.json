@@ -92,6 +92,14 @@
       "price": 29,
       "note": "",
       "created_at": "2026-11-12T00:47:20.436Z"
+    },
+    {
+      "id": "mwctwgx5o4rmnc",
+      "symbol": "IREN",
+      "condition": "above",
+      "price": 46,
+      "note": "",
+      "created_at": "2026-11-12T00:47:42.761Z"
     }
   ]
 }
