@@ -9,7 +9,7 @@
       "prev_close": 348.51,
       "price": 356.2,
       "regular": 355.63,
-      "time": 1794445117
+      "time": 1794445136
     },
     "AMD": {
       "currency": "USD",
@@ -18,9 +18,9 @@
       "exchange": "NasdaqGS",
       "name": "Advanced Micro Devices, Inc.",
       "prev_close": 515.21,
-      "price": 577.4,
+      "price": 577.086,
       "regular": 552.9,
-      "time": 1794445117
+      "time": 1794445141
     },
     "AMZN": {
       "currency": "USD",
@@ -29,9 +29,9 @@
       "exchange": "NasdaqGS",
       "name": "Amazon.com, Inc.",
       "prev_close": 270.87,
-      "price": 267.2752,
+      "price": 267.2572,
       "regular": 266.17,
-      "time": 1794445105
+      "time": 1794445140
     },
     "APLD": {
       "currency": "USD",
@@ -40,9 +40,9 @@
       "exchange": "NasdaqGS",
       "name": "Applied Digital Corporation",
       "prev_close": 16.68,
-      "price": 17.4,
+      "price": 17.32,
       "regular": 17.91,
-      "time": 1794445106
+      "time": 1794445144
     },
     "AVGO": {
       "currency": "USD",
@@ -51,9 +51,9 @@
       "exchange": "NasdaqGS",
       "name": "Broadcom Inc.",
       "prev_close": 331.98,
-      "price": 353.65,
+      "price": 353.55,
       "regular": 345.22,
-      "time": 1794445104
+      "time": 1794445142
     },
     "AXTI": {
       "currency": "USD",
@@ -73,9 +73,9 @@
       "exchange": "NYSE",
       "name": "Bloom Energy Corporation",
       "prev_close": 185.42,
-      "price": 204.3408,
+      "price": 204.3981,
       "regular": 209.47,
-      "time": 1794445117
+      "time": 1794445138
     },
     "CLSK": {
       "currency": "USD",
@@ -84,9 +84,9 @@
       "exchange": "NasdaqCM",
       "name": "CleanSpark, Inc.",
       "prev_close": 6.57,
-      "price": 6.8,
+      "price": 6.76,
       "regular": 6.91,
-      "time": 1794444989
+      "time": 1794445138
     },
     "CRDO": {
       "currency": "USD",
@@ -106,9 +106,9 @@
       "exchange": "NasdaqGS",
       "name": "CoreWeave, Inc.",
       "prev_close": 48.73,
-      "price": 56.7845,
+      "price": 56.86,
       "regular": 60.77,
-      "time": 1794445123
+      "time": 1794445147
     },
     "GOOG": {
       "currency": "USD",
@@ -150,9 +150,9 @@
       "exchange": "NasdaqGS",
       "name": "Intel Corporation",
       "prev_close": 58.13,
-      "price": 60.9754,
+      "price": 60.9238,
       "regular": 62.5,
-      "time": 1794445097
+      "time": 1794445141
     },
     "IREN": {
       "currency": "USD",
@@ -161,9 +161,9 @@
       "exchange": "NasdaqGS",
       "name": "IREN LIMITED",
       "prev_close": 19.73,
-      "price": 19.95,
+      "price": 19.9077,
       "regular": 20.84,
-      "time": 1794445120
+      "time": 1794445128
     },
     "NBIS": {
       "currency": "USD",
@@ -172,9 +172,9 @@
       "exchange": "NasdaqGS",
       "name": "Nebius Group N.V.",
       "prev_close": 134.0,
-      "price": 148.55,
+      "price": 148.3,
       "regular": 154.69,
-      "time": 1794445123
+      "time": 1794445138
     },
     "NOW": {
       "currency": "USD",
@@ -194,9 +194,9 @@
       "exchange": "NasdaqGS",
       "name": "NVIDIA Corporation",
       "prev_close": 168.796,
-      "price": 158.8308,
+      "price": 158.594,
       "regular": 173.73,
-      "time": 1794445124
+      "time": 1794445148
     },
     "NVTS": {
       "currency": "USD",
@@ -205,9 +205,9 @@
       "exchange": "NasdaqGM",
       "name": "Navitas Semiconductor Corporati",
       "prev_close": 9.38,
-      "price": 9.82,
+      "price": 9.8845,
       "regular": 10.07,
-      "time": 1794444920
+      "time": 1794445128
     },
     "PLTR": {
       "currency": "USD",
@@ -238,9 +238,9 @@
       "exchange": "NasdaqGS",
       "name": "Space Exploration Technologies ",
       "prev_close": 143.09,
-      "price": 138.11,
+      "price": 138.1467,
       "regular": 139.75,
-      "time": 1794445123
+      "time": 1794445148
     },
     "TSLA": {
       "currency": "USD",
@@ -249,10 +249,10 @@
       "exchange": "NasdaqGS",
       "name": "Tesla, Inc.",
       "prev_close": 379.78,
-      "price": 387.13,
+      "price": 387.2,
       "regular": 390.84,
-      "time": 1794445114
+      "time": 1794445140
     }
   },
-  "updated": "2026-11-12T00:58:48+00:00"
+  "updated": "2026-11-12T00:59:09+00:00"
 }
