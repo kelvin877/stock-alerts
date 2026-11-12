@@ -9,7 +9,8 @@
     "NVTS",
     "INTC",
     "AXTI",
-    "APLD"
+    "APLD",
+    "IREN"
   ],
   "alerts": [
     {
