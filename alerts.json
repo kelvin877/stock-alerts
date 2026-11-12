@@ -31,7 +31,8 @@
     "BRK-B",
     "SNOW",
     "SOFI",
-    "COST"
+    "COST",
+    "VISA"
   ],
   "alerts": [
     {
