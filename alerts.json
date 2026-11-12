@@ -27,7 +27,8 @@
     "MRNA",
     "BRK.B",
     "O",
-    "MSFT"
+    "MSFT",
+    "ORCL"
   ],
   "alerts": [
     {
