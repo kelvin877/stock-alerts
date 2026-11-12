@@ -135,6 +135,14 @@
       "price": 280,
       "note": "",
       "created_at": "2026-11-12T00:50:34.723Z"
+    },
+    {
+      "id": "mwcu0cln4zn324",
+      "symbol": "BE",
+      "condition": "below",
+      "price": 180,
+      "note": "",
+      "created_at": "2026-11-12T00:50:43.787Z"
     }
   ]
 }
