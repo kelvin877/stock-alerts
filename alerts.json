@@ -331,6 +331,14 @@
       "price": 300,
       "note": "",
       "created_at": "2026-11-12T01:08:30.220Z"
+    },
+    {
+      "id": "mwcurx1q66fkfq",
+      "symbol": "CRWD",
+      "condition": "below",
+      "price": 145,
+      "note": "",
+      "created_at": "2026-11-12T01:12:09.998Z"
     }
   ]
 }
