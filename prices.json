@@ -1,4 +1,16 @@
 {
-  "prices": {},
-  "updated": "2026-11-12T00:16:27+00:00"
+  "prices": {
+    "AAPL": {
+      "currency": "USD",
+      "day_high": 355.9,
+      "day_low": 349.325,
+      "exchange": "NasdaqGS",
+      "name": "Apple Inc.",
+      "prev_close": 348.51,
+      "price": 356.22,
+      "regular": 355.63,
+      "time": 1794443252
+    }
+  },
+  "updated": "2026-11-12T00:27:40+00:00"
 }
