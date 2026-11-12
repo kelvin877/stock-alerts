@@ -7,9 +7,9 @@
       "exchange": "NasdaqGS",
       "name": "Apple Inc.",
       "prev_close": 348.51,
-      "price": 356.33,
+      "price": 356.2,
       "regular": 355.63,
-      "time": 1794445039
+      "time": 1794445074
     },
     "AMD": {
       "currency": "USD",
@@ -18,9 +18,9 @@
       "exchange": "NasdaqGS",
       "name": "Advanced Micro Devices, Inc.",
       "prev_close": 515.21,
-      "price": 576.5831,
+      "price": 576.9842,
       "regular": 552.9,
-      "time": 1794445047
+      "time": 1794445090
     },
     "AMZN": {
       "currency": "USD",
@@ -29,9 +29,9 @@
       "exchange": "NasdaqGS",
       "name": "Amazon.com, Inc.",
       "prev_close": 270.87,
-      "price": 267.4352,
+      "price": 267.14,
       "regular": 266.17,
-      "time": 1794445062
+      "time": 1794445071
     },
     "APLD": {
       "currency": "USD",
@@ -40,9 +40,9 @@
       "exchange": "NasdaqGS",
       "name": "Applied Digital Corporation",
       "prev_close": 16.68,
-      "price": 17.4845,
+      "price": 17.4432,
       "regular": 17.91,
-      "time": 1794444958
+      "time": 1794445072
     },
     "AXTI": {
       "currency": "USD",
@@ -51,9 +51,9 @@
       "exchange": "NasdaqGS",
       "name": "AXT Inc",
       "prev_close": 39.31,
-      "price": 45.66,
+      "price": 45.75,
       "regular": 46.97,
-      "time": 1794445017
+      "time": 1794445069
     },
     "BE": {
       "currency": "USD",
@@ -62,9 +62,9 @@
       "exchange": "NYSE",
       "name": "Bloom Energy Corporation",
       "prev_close": 185.42,
-      "price": 204.8,
+      "price": 204.3951,
       "regular": 209.47,
-      "time": 1794445022
+      "time": 1794445074
     },
     "CLSK": {
       "currency": "USD",
@@ -84,9 +84,9 @@
       "exchange": "NasdaqGS",
       "name": "Credo Technology Group Holding ",
       "prev_close": 129.8,
-      "price": 136.5,
+      "price": 137.5,
       "regular": 141.41,
-      "time": 1794445060
+      "time": 1794445080
     },
     "CRWV": {
       "currency": "USD",
@@ -95,9 +95,9 @@
       "exchange": "NasdaqGS",
       "name": "CoreWeave, Inc.",
       "prev_close": 48.73,
-      "price": 56.58,
+      "price": 56.69,
       "regular": 60.77,
-      "time": 1794445061
+      "time": 1794445091
     },
     "HIVE.TO": {
       "currency": "CAD",
@@ -128,9 +128,9 @@
       "exchange": "NasdaqGS",
       "name": "Intel Corporation",
       "prev_close": 58.13,
-      "price": 60.9784,
+      "price": 60.9696,
       "regular": 62.5,
-      "time": 1794445054
+      "time": 1794445078
     },
     "IREN": {
       "currency": "USD",
@@ -141,7 +141,7 @@
       "prev_close": 19.73,
       "price": 19.93,
       "regular": 20.84,
-      "time": 1794445064
+      "time": 1794445084
     },
     "NBIS": {
       "currency": "USD",
@@ -150,9 +150,9 @@
       "exchange": "NasdaqGS",
       "name": "Nebius Group N.V.",
       "prev_close": 134.0,
-      "price": 148.55,
+      "price": 148.7,
       "regular": 154.69,
-      "time": 1794445053
+      "time": 1794445085
     },
     "NOW": {
       "currency": "USD",
@@ -172,9 +172,9 @@
       "exchange": "NasdaqGS",
       "name": "NVIDIA Corporation",
       "prev_close": 168.796,
-      "price": 158.8055,
+      "price": 158.85,
       "regular": 173.73,
-      "time": 1794445066
+      "time": 1794445092
     },
     "NVTS": {
       "currency": "USD",
@@ -196,7 +196,7 @@
       "prev_close": 168.82,
       "price": 170.0,
       "regular": 172.4,
-      "time": 1794444999
+      "time": 1794445081
     },
     "RIOT": {
       "currency": "USD",
@@ -216,9 +216,9 @@
       "exchange": "NasdaqGS",
       "name": "Space Exploration Technologies ",
       "prev_close": 143.09,
-      "price": 138.1209,
+      "price": 138.1246,
       "regular": 139.75,
-      "time": 1794445065
+      "time": 1794445080
     },
     "TSLA": {
       "currency": "USD",
@@ -227,10 +227,10 @@
       "exchange": "NasdaqGS",
       "name": "Tesla, Inc.",
       "prev_close": 379.78,
-      "price": 387.12,
+      "price": 387.13,
       "regular": 390.84,
-      "time": 1794444986
+      "time": 1794445066
     }
   },
-  "updated": "2026-11-12T00:57:47+00:00"
+  "updated": "2026-11-12T00:58:14+00:00"
 }
