@@ -7,9 +7,9 @@
       "exchange": "NasdaqGS",
       "name": "Apple Inc.",
       "prev_close": 348.51,
-      "price": 356.1562,
+      "price": 356.17,
       "regular": 355.63,
-      "time": 1794444669
+      "time": 1794444722
     },
     "AMD": {
       "currency": "USD",
@@ -18,9 +18,9 @@
       "exchange": "NasdaqGS",
       "name": "Advanced Micro Devices, Inc.",
       "prev_close": 515.21,
-      "price": 574.7,
+      "price": 575.0,
       "regular": 552.9,
-      "time": 1794444692
+      "time": 1794444717
     },
     "APLD": {
       "currency": "USD",
@@ -51,9 +51,9 @@
       "exchange": "NYSE",
       "name": "Bloom Energy Corporation",
       "prev_close": 185.42,
-      "price": 204.66,
+      "price": 204.85,
       "regular": 209.47,
-      "time": 1794444684
+      "time": 1794444730
     },
     "CLSK": {
       "currency": "USD",
@@ -84,9 +84,9 @@
       "exchange": "NasdaqGS",
       "name": "CoreWeave, Inc.",
       "prev_close": 48.73,
-      "price": 56.4814,
+      "price": 56.3985,
       "regular": 60.77,
-      "time": 1794444689
+      "time": 1794444730
     },
     "HIVE.TO": {
       "currency": "CAD",
@@ -99,6 +99,17 @@
       "regular": 2.51,
       "time": 1794430800
     },
+    "IBM": {
+      "currency": "USD",
+      "day_high": 249.31,
+      "day_low": 242.88,
+      "exchange": "NYSE",
+      "name": "International Business Machines",
+      "prev_close": 244.53,
+      "price": 247.03,
+      "regular": 248.22,
+      "time": 1794442412
+    },
     "INTC": {
       "currency": "USD",
       "day_high": 64.055,
@@ -106,9 +117,9 @@
       "exchange": "NasdaqGS",
       "name": "Intel Corporation",
       "prev_close": 58.13,
-      "price": 60.8,
+      "price": 60.7494,
       "regular": 62.5,
-      "time": 1794444683
+      "time": 1794444706
     },
     "IREN": {
       "currency": "USD",
@@ -128,9 +139,9 @@
       "exchange": "NasdaqGS",
       "name": "Nebius Group N.V.",
       "prev_close": 134.0,
-      "price": 149.0024,
+      "price": 149.2,
       "regular": 154.69,
-      "time": 1794444688
+      "time": 1794444729
     },
     "NVDA": {
       "currency": "USD",
@@ -139,9 +150,9 @@
       "exchange": "NasdaqGS",
       "name": "NVIDIA Corporation",
       "prev_close": 168.796,
-      "price": 158.8,
+      "price": 158.989,
       "regular": 173.73,
-      "time": 1794444692
+      "time": 1794444731
     },
     "NVTS": {
       "currency": "USD",
@@ -166,5 +177,5 @@
       "time": 1794444682
     }
   },
-  "updated": "2026-11-12T00:51:35+00:00"
+  "updated": "2026-11-12T00:52:14+00:00"
 }
