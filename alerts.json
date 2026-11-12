@@ -294,6 +294,14 @@
       "price": 120,
       "note": "",
       "created_at": "2026-11-12T01:02:44.678Z"
+    },
+    {
+      "id": "mwcuid16232v34",
+      "symbol": "BRK-B",
+      "condition": "below",
+      "price": 520,
+      "note": "",
+      "created_at": "2026-11-12T01:04:44.154Z"
     }
   ]
 }
