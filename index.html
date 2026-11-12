@@ -91,6 +91,26 @@
     opacity: 0; transition: opacity .2s; pointer-events: none; max-width: 90vw;
   }
   .toast.show { opacity: 1; }
+
+  .tabs { display: flex; gap: 4px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 4px; margin-bottom: 12px; position: sticky; top: env(safe-area-inset-top); z-index: 5; }
+  .tabs a { flex: 1; text-align: center; padding: 8px 4px; border-radius: 9px; text-decoration: none; color: var(--muted); font-size: 14px; font-weight: 600; }
+  .tabs a.on { background: var(--accent); color: #fff; }
+  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  .seg button { border: 0; background: transparent; padding: 7px 14px; font-size: 14px; cursor: pointer; }
+  .seg button.on.up { background: var(--up); color: #fff; }
+  .seg button.on.down { background: var(--down); color: #fff; }
+  .rank-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+  .rank-head h2 { font-size: 18px; margin: 0; }
+  .rank-list { padding: 4px 0; }
+  .rank-row { display: grid; grid-template-columns: 26px 36px 1fr auto 36px; gap: 10px; align-items: center; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+  .rank-row:last-child { border-bottom: 0; }
+  .rank-row .n { color: var(--muted); font-size: 13px; text-align: right; font-variant-numeric: tabular-nums; }
+  .rank-row .logo, .rank-row .logo.letter { width: 36px; height: 36px; border-radius: 10px; font-size: 15px; }
+  .rank-row .sym { font-size: 15px; }
+  .rank-row .r { text-align: right; font-variant-numeric: tabular-nums; }
+  .rank-row .big { font-weight: 650; font-size: 15px; }
+  .add-btn { width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--line); background: transparent; cursor: pointer; font-size: 18px; line-height: 1; color: var(--accent); }
+  .add-btn.done { color: var(--up); border-color: transparent; cursor: default; }
 </style>
 </head>
 <body>
@@ -103,11 +123,18 @@
     <button class="icon-btn" id="openSettings" aria-label="設定">⚙︎ 設定</button>
   </header>
 
+  <nav class="tabs">
+    <a href="#watch" data-view="watch">我的股票</a>
+    <a href="#movers" data-view="movers">本月排行</a>
+    <a href="#popular" data-view="popular">熱門 100</a>
+  </nav>
+
   <div id="setupBanner" class="banner" hidden>
     第一次用要先喺「設定」入面填 GitHub token，先可以加股票同設通知。
     <div><button class="primary" id="bannerSettings">開設定</button></div>
   </div>
 
+  <div id="view-watch">
   <section class="card">
     <form id="addStock" autocomplete="off">
       <label for="symbol">加股票入觀察清單</label>
@@ -130,6 +157,31 @@
     </select>
   </div>
   <div id="list"></div>
+  </div>
+
+  <div id="view-movers" hidden>
+    <div class="rank-head">
+      <div>
+        <h2 id="moversTitle">本月升幅 Top 20</h2>
+        <div class="sub" id="moversSub"></div>
+      </div>
+      <div class="seg">
+        <button type="button" data-mode="gainers" class="on up">▲ 升幅</button>
+        <button type="button" data-mode="losers">▼ 跌幅</button>
+      </div>
+    </div>
+    <div class="card rank-list" id="moversList"></div>
+  </div>
+
+  <div id="view-popular" hidden>
+    <div class="rank-head">
+      <div>
+        <h2>熱門 100</h2>
+        <div class="sub" id="popularSub">按過去 20 個交易日平均成交額排名</div>
+      </div>
+    </div>
+    <div class="card rank-list" id="popularList"></div>
+  </div>
 </main>
 
 <dialog id="settings">
@@ -182,7 +234,8 @@
     branch: "main",
   };
 
-  let data = { watchlist: [], alerts: [] }, state = {}, prices = {}, updated = null;
+  let data = { watchlist: [], alerts: [] }, state = {}, prices = {}, updated = null, rankings = null;
+  let moversMode = "gainers";
   let openFormFor = null;
   $("sort").value = store.get("sa.sort") || "added";
 
@@ -309,16 +362,19 @@
   async function refresh() {
     if (!cfg.owner || !cfg.repo) { $("updated").textContent = "未設定 repo"; openSettings(); return; }
     try {
-      const [a, s, p] = await Promise.all([
+      const [a, s, p, rk] = await Promise.all([
         readJson("alerts.json", { alerts: [] }),
         readJson("state.json", {}),
         readJson("prices.json", { prices: {} }),
+        readJson("rankings.json", null).catch(() => ({ data: null })),
       ]);
+      rankings = rk.data;
       data = normalize(a.data);
       state = s.data || {};
       prices = (p.data && p.data.prices) || {};
       updated = p.data && p.data.updated;
       render();
+      renderRankings();
     } catch (e) {
       $("updated").textContent = e.status === 401 ? "token 無效或者過咗期，請喺設定更新" :
         e.status === 403 ? "GitHub 拒絕存取（token 權限唔夠或者用量超咗）" : `載入失敗：${e.detail || e.message}`;
@@ -447,6 +503,89 @@
       if (f) f.price.focus();
     }
   }
+
+  // ---------- rankings ----------
+  const compact = (v) => v == null ? "—" : v >= 1e9 ? `$${(v / 1e9).toFixed(1)}B` : v >= 1e6 ? `$${(v / 1e6).toFixed(0)}M` : `$${Math.round(v).toLocaleString()}`;
+  function addBtn(sym) {
+    return data.watchlist.includes(sym)
+      ? `<button class="add-btn done" disabled aria-label="已喺觀察清單">✓</button>`
+      : `<button class="add-btn" data-watch="${esc(sym)}" aria-label="加入觀察清單">＋</button>`;
+  }
+  function rankRow(r, i, right) {
+    return `
+      <div class="rank-row">
+        <div class="n">${i + 1}</div>
+        ${logoHtml(r.symbol)}
+        <div style="min-width:0">
+          <div class="sym">${esc(r.symbol)}</div>
+          <div class="name">${esc(r.name || "")}</div>
+        </div>
+        <div class="r">${right}</div>
+        ${addBtn(r.symbol)}
+      </div>`;
+  }
+  function pctSpan(v, big) {
+    if (v == null) return "—";
+    return `<span class="${v >= 0 ? "pos" : "neg"}${big ? " big" : ""}">${signed(v)}%</span>`;
+  }
+  function renderRankings() {
+    const empty = `<div class="empty">排行榜未有數據。GitHub 每個鐘（開市時間）會更新一次，第一次大約要等幾分鐘。</div>`;
+    const ml = $("moversList"), pl = $("popularList");
+    if (!rankings) { ml.innerHTML = empty; pl.innerHTML = empty; return; }
+    const [y, m] = (rankings.month || "").split("-");
+    const up = moversMode === "gainers";
+    $("moversTitle").textContent = `${m ? Number(m) + " 月" : "本月"}${up ? "升幅" : "跌幅"} Top 20`;
+    $("moversSub").textContent = `由上月收市計起 · ${rankings.universe_size || ""} 隻美股入面揀 · 更新：${timeAgo(rankings.updated)}`;
+    document.querySelectorAll(".seg button").forEach((b) => {
+      const on = b.dataset.mode === moversMode;
+      b.classList.toggle("on", on);
+      b.classList.toggle("up", on && b.dataset.mode === "gainers");
+      b.classList.toggle("down", on && b.dataset.mode === "losers");
+    });
+    const rows = rankings[moversMode] || [];
+    ml.innerHTML = rows.length ? rows.map((r, i) => rankRow(r, i, `
+        ${pctSpan(r.month_pct, true)}
+        <div class="sub">${fmt(r.price)}</div>`)).join("") : empty;
+    const pop = rankings.popular || [];
+    $("popularSub").textContent = `按過去 20 個交易日平均每日成交額排名 · 更新：${timeAgo(rankings.updated)}`;
+    pl.innerHTML = pop.length ? pop.map((r, i) => rankRow(r, i, `
+        <div class="big">${fmt(r.price)}</div>
+        <div class="sub">${pctSpan(r.day_pct)} · ${compact(r.dollar_volume)}</div>`)).join("") : empty;
+  }
+  document.querySelector(".seg").addEventListener("click", (ev) => {
+    const b = ev.target.closest("button[data-mode]");
+    if (!b) return;
+    moversMode = b.dataset.mode;
+    renderRankings();
+  });
+  async function watchFromList(btn) {
+    const sym = btn.dataset.watch;
+    btn.disabled = true;
+    try {
+      await updateData((d) => ({ ...d, watchlist: [...d.watchlist.filter((s) => s !== sym), sym] }), `Watch ${sym}`);
+      renderRankings();
+      toast(`已加入 ${sym} 到觀察清單`);
+      setTimeout(refresh, 60000);
+    } catch (e) {
+      btn.disabled = false;
+      toast(`失敗：${e.detail || e.message}`);
+    }
+  }
+  ["moversList", "popularList"].forEach((id) => $(id).addEventListener("click", (ev) => {
+    const btn = ev.target.closest("button[data-watch]");
+    if (btn) watchFromList(btn);
+  }));
+
+  // ---------- views ----------
+  function showView() {
+    const v = (location.hash || "#watch").slice(1);
+    const view = ["watch", "movers", "popular"].includes(v) ? v : "watch";
+    ["watch", "movers", "popular"].forEach((n) => { $(`view-${n}`).hidden = n !== view; });
+    document.querySelectorAll(".tabs a").forEach((a) => a.classList.toggle("on", a.dataset.view === view));
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener("hashchange", showView);
+  showView();
 
   // ---------- events ----------
   $("addStock").addEventListener("submit", async (ev) => {
