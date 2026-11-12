@@ -22,54 +22,69 @@
     font: 16px/1.45 -apple-system, BlinkMacSystemFont, "PingFang HK", "Noto Sans TC", "Segoe UI", sans-serif;
     padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
   }
-  main { max-width: 640px; margin: 0 auto; padding: 16px; }
+  main { max-width: 680px; margin: 0 auto; padding: 16px; }
   header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 8px 0 16px; }
   h1 { font-size: 24px; margin: 0; letter-spacing: -0.01em; }
   .sub { color: var(--muted); font-size: 13px; }
   button, input, select { font: inherit; color: inherit; }
   .icon-btn { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; cursor: pointer; }
-  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px; margin-bottom: 12px; }
-  form.add { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  form.add .full { grid-column: 1 / -1; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin-bottom: 12px; }
   label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 4px; }
   input, select {
-    width: 100%; padding: 11px 12px; border-radius: 10px; border: 1px solid var(--line);
+    width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line);
     background: var(--bg); outline: none; min-height: 44px;
   }
   input:focus, select:focus { border-color: var(--accent); }
-  #symbol { text-transform: uppercase; }
   .primary {
-    background: var(--accent); color: #fff; border: 0; border-radius: 10px; padding: 12px; min-height: 44px;
-    font-weight: 600; cursor: pointer;
+    background: var(--accent); color: #fff; border: 0; border-radius: 10px; padding: 10px 16px; min-height: 44px;
+    font-weight: 600; cursor: pointer; white-space: nowrap;
   }
   .primary:disabled { opacity: .5; cursor: default; }
-  .hint { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  .ghost { background: transparent; border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; font-size: 13px; cursor: pointer; min-height: 34px; }
+  .hint { font-size: 12px; color: var(--muted); margin-top: 6px; }
   .warn { color: var(--warn); font-size: 13px; }
   .err { color: var(--down); font-size: 13px; }
-  .alert { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: start; }
-  .sym { font-weight: 700; font-size: 18px; }
-  .name { color: var(--muted); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .price { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; font-size: 18px; }
-  .chg { text-align: right; font-size: 13px; font-variant-numeric: tabular-nums; }
   .pos { color: var(--up); } .neg { color: var(--down); }
-  .row2 { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 8px; padding-top: 10px; border-top: 1px solid var(--line); flex-wrap: wrap; }
-  .target { font-variant-numeric: tabular-nums; }
-  .pill { font-size: 12px; padding: 3px 8px; border-radius: 999px; background: var(--soft); white-space: nowrap; }
+
+  .addbar { display: flex; gap: 8px; }
+  .addbar input { text-transform: uppercase; }
+  .toolbar { display: flex; justify-content: space-between; align-items: center; gap: 8px; color: var(--muted); font-size: 12px; margin: 4px 2px 10px; }
+  .toolbar select { width: auto; min-height: 32px; padding: 4px 8px; font-size: 13px; }
+
+  .stock-head { display: grid; grid-template-columns: 44px 1fr auto; gap: 12px; align-items: center; }
+  .logo { width: 44px; height: 44px; border-radius: 12px; object-fit: contain; background: #fff; border: 1px solid var(--line); padding: 4px; }
+  .logo.letter { display: grid; place-items: center; font-weight: 700; font-size: 18px; color: #fff; padding: 0; border: 0; }
+  .sym { font-weight: 700; font-size: 17px; }
+  .name { color: var(--muted); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .price { text-align: right; font-weight: 650; font-variant-numeric: tabular-nums; font-size: 19px; }
+  .cur { font-size: 12px; color: var(--muted); font-weight: 400; }
+  .chg { text-align: right; font-size: 13px; font-variant-numeric: tabular-nums; }
+  .tag { font-size: 11px; padding: 1px 6px; border-radius: 6px; background: var(--soft); color: var(--muted); margin-left: 4px; vertical-align: 2px; }
+  .meta { display: flex; justify-content: space-between; gap: 8px; color: var(--muted); font-size: 12px; margin-top: 10px; font-variant-numeric: tabular-nums; flex-wrap: wrap; }
+
+  .alerts { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); display: grid; gap: 8px; }
+  .alert-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+  .alert-row .target { font-variant-numeric: tabular-nums; font-size: 14px; font-weight: 600; }
+  .alert-row .note { color: var(--muted); font-size: 12px; }
+  .pill { font-size: 12px; padding: 2px 8px; border-radius: 999px; background: var(--soft); white-space: nowrap; }
   .pill.fired { background: color-mix(in srgb, var(--up) 18%, transparent); color: var(--up); }
-  .pill.wait { color: var(--muted); }
-  .actions { display: flex; gap: 6px; }
-  .actions button { background: transparent; border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; font-size: 13px; cursor: pointer; min-height: 34px; }
+  .row-actions { display: flex; gap: 6px; align-items: center; }
+  .card-actions { display: flex; gap: 6px; justify-content: flex-end; margin-top: 10px; }
+
+  .alert-form { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; padding: 12px; border-radius: 12px; background: var(--bg); }
+  .alert-form .full { grid-column: 1 / -1; }
+  .alert-form .btns { display: flex; gap: 8px; justify-content: flex-end; }
+
   .empty { text-align: center; color: var(--muted); padding: 28px 12px; }
-  .status { display: flex; justify-content: space-between; color: var(--muted); font-size: 12px; margin: 4px 2px 10px; }
   dialog { border: 1px solid var(--line); border-radius: 16px; background: var(--card); color: var(--ink); width: min(520px, 92vw); padding: 20px; }
   dialog::backdrop { background: rgb(0 0 0 / .45); }
   dialog .grid { display: grid; gap: 12px; }
   dialog h2 { margin: 0 0 4px; font-size: 18px; }
   .dlg-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 8px; }
   .dlg-actions button { padding: 10px 16px; border-radius: 10px; border: 1px solid var(--line); background: transparent; cursor: pointer; }
+  .dlg-actions .primary { border: 0; background: var(--accent); }
   .banner { background: var(--soft); border-radius: 12px; padding: 12px 14px; font-size: 14px; margin-bottom: 12px; }
   .banner button { margin-top: 8px; }
-  a { color: var(--accent); }
   .toast {
     position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom)); transform: translateX(-50%);
     background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 10px; font-size: 14px;
@@ -82,53 +97,43 @@
 <main>
   <header>
     <div>
-      <h1>股價通知</h1>
-      <div class="sub">到價自動推送去 ntfy</div>
+      <h1>我的股票</h1>
+      <div class="sub">觀察清單 · 到價推送去 ntfy</div>
     </div>
     <button class="icon-btn" id="openSettings" aria-label="設定">⚙︎ 設定</button>
   </header>
 
   <div id="setupBanner" class="banner" hidden>
-    第一次用要先喺「設定」入面填 GitHub token，先可以新增或者刪除通知。
+    第一次用要先喺「設定」入面填 GitHub token，先可以加股票同設通知。
     <div><button class="primary" id="bannerSettings">開設定</button></div>
   </div>
 
   <section class="card">
-    <form class="add" id="addForm" autocomplete="off">
-      <div class="full">
-        <label for="symbol">股票代號</label>
+    <form id="addStock" autocomplete="off">
+      <label for="symbol">加股票入觀察清單</label>
+      <div class="addbar">
         <input id="symbol" placeholder="例如 AAPL、SHOP.TO" required autocapitalize="characters" spellcheck="false">
-        <div class="hint">美股直接打代號；加股要加 <b>.TO</b>（多倫多）或者 <b>.V</b>（創業板），例如 RY.TO</div>
+        <button class="primary" id="addBtn" type="submit">加入</button>
       </div>
-      <div>
-        <label for="condition">條件</label>
-        <select id="condition">
-          <option value="above">升到或以上 ≥</option>
-          <option value="below">跌到或以下 ≤</option>
-        </select>
-      </div>
-      <div>
-        <label for="target">目標價</label>
-        <input id="target" type="number" inputmode="decimal" step="any" min="0" placeholder="0.00" required>
-      </div>
-      <div class="full">
-        <label for="note">備註（可以留空）</label>
-        <input id="note" maxlength="80" placeholder="例如：入貨位">
-      </div>
-      <div class="full" id="formMsg"></div>
-      <button class="primary full" id="addBtn" type="submit">加入通知</button>
+      <div class="hint">美股直接打代號；加股要加 <b>.TO</b>（多倫多）或者 <b>.V</b>（創業板），例如 RY.TO</div>
+      <div id="addMsg"></div>
     </form>
   </section>
 
-  <div class="status">
-    <span id="updated">載入中…</span>
-    <span id="market"></span>
+  <div class="toolbar">
+    <span><span id="updated">載入中…</span> · <span id="market"></span></span>
+    <select id="sort" aria-label="排序">
+      <option value="added">加入次序</option>
+      <option value="change">升跌幅</option>
+      <option value="symbol">代號</option>
+      <option value="alerts">有通知先</option>
+    </select>
   </div>
   <div id="list"></div>
 </main>
 
 <dialog id="settings">
-  <form method="dialog" class="grid" id="settingsForm">
+  <form method="dialog" class="grid">
     <h2>設定</h2>
     <div>
       <label for="owner">GitHub 用戶名</label>
@@ -146,7 +151,7 @@
     <div class="dlg-actions">
       <button type="button" id="forget">清除 token</button>
       <button value="cancel" formnovalidate>取消</button>
-      <button value="save" class="primary" id="saveSettings">儲存</button>
+      <button value="save" class="primary">儲存</button>
     </div>
   </form>
 </dialog>
@@ -177,12 +182,15 @@
     branch: "main",
   };
 
-  let alerts = [], state = {}, prices = {}, updated = null;
+  let data = { watchlist: [], alerts: [] }, state = {}, prices = {}, updated = null;
+  let openFormFor = null;
+  $("sort").value = store.get("sa.sort") || "added";
 
   // ---------- helpers ----------
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const fmt = (v) => v == null || isNaN(v) ? "—" :
-    Number(v).toLocaleString("en-US", { minimumFractionDigits: v < 1 ? 2 : 2, maximumFractionDigits: v < 1 ? 4 : 2 });
+    Number(v).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: Math.abs(v) < 1 ? 4 : 2 });
+  const signed = (v, d = 2) => (v >= 0 ? "+" : "") + v.toFixed(d);
   const newId = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
   const timeAgo = (iso) => {
     if (!iso) return "未有數據";
@@ -206,7 +214,6 @@
     let bin = ""; bytes.forEach((b) => (bin += String.fromCharCode(b)));
     return btoa(bin);
   }
-
   function marketStatus() {
     const et = new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }));
     const d = et.getDay(), m = et.getHours() * 60 + et.getMinutes();
@@ -214,14 +221,34 @@
     if (m >= 570 && m < 960) return "🟢 開市中";
     if (m >= 240 && m < 570) return "🟡 盤前";
     if (m >= 960 && m < 1200) return "🟡 盤後";
-    return "⚪ 休市（唔會 check）";
+    return "⚪ 休市";
   }
+
+  // ---------- logos ----------
+  function hue(s) { let h = 0; for (const c of s) h = (h * 31 + c.charCodeAt(0)) % 360; return h; }
+  function logoHtml(sym) {
+    const base = sym.split(".")[0];
+    return `<img class="logo" alt="" loading="lazy"
+      src="https://financialmodelingprep.com/image-stock/${encodeURIComponent(sym)}.png"
+      data-alt="https://assets.parqet.com/logos/symbol/${encodeURIComponent(base)}?format=png"
+      data-sym="${esc(sym)}">`;
+  }
+  document.addEventListener("error", (ev) => {
+    const img = ev.target;
+    if (!(img instanceof HTMLImageElement) || !img.classList.contains("logo")) return;
+    if (img.dataset.alt) { const alt = img.dataset.alt; delete img.dataset.alt; img.src = alt; return; }
+    const d = document.createElement("div");
+    const sym = img.dataset.sym || "?";
+    d.className = "logo letter";
+    d.style.background = `hsl(${hue(sym)} 55% 45%)`;
+    d.textContent = sym[0];
+    img.replaceWith(d);
+  }, true);
 
   // ---------- GitHub ----------
   async function gh(path, opts = {}) {
     const r = await fetch(`https://api.github.com/repos/${cfg.owner}/${cfg.repo}/${path}`, {
-      ...opts,
-      cache: "no-store",
+      ...opts, cache: "no-store",
       headers: {
         Accept: "application/vnd.github+json",
         "X-GitHub-Api-Version": "2022-11-28",
@@ -237,7 +264,6 @@
     }
     return r.json();
   }
-
   async function readJson(name, fallback) {
     try {
       if (cfg.token) {
@@ -253,22 +279,26 @@
       throw e;
     }
   }
-
-  async function updateAlerts(mutate, message) {
+  function normalize(d) {
+    const alerts = Array.isArray(d && d.alerts) ? d.alerts : [];
+    const watchlist = Array.isArray(d && d.watchlist) ? d.watchlist.map((s) => String(s).toUpperCase()) : [];
+    for (const a of alerts) { const s = a.symbol.toUpperCase(); if (!watchlist.includes(s)) watchlist.push(s); }
+    return { watchlist, alerts };
+  }
+  async function updateData(mutate, message) {
     if (!cfg.token) { openSettings(); throw new Error("請先喺設定填 GitHub token"); }
     for (let i = 0; i < 3; i++) {
-      const { data, sha } = await readJson("alerts.json", { alerts: [] });
-      const list = Array.isArray(data.alerts) ? data.alerts : [];
-      const next = mutate(list.slice());
+      const { data: raw, sha } = await readJson("alerts.json", { alerts: [] });
+      const next = mutate(normalize(raw));
       const body = {
         message, branch: cfg.branch,
-        content: b64encode(JSON.stringify({ alerts: next }, null, 2) + "\n"),
+        content: b64encode(JSON.stringify(next, null, 2) + "\n"),
         ...(sha ? { sha } : {}),
       };
       try {
         await gh("contents/alerts.json", { method: "PUT", body: JSON.stringify(body), headers: { "Content-Type": "application/json" } });
-        alerts = next;
-        render();
+        data = next;
+        render(true);
         return;
       } catch (e) {
         if ((e.status === 409 || e.status === 422) && i < 2) continue;
@@ -276,138 +306,228 @@
       }
     }
   }
-
   async function refresh() {
-    if (!cfg.owner || !cfg.repo) {
-      $("updated").textContent = "未設定 repo";
-      openSettings();
-      return;
-    }
+    if (!cfg.owner || !cfg.repo) { $("updated").textContent = "未設定 repo"; openSettings(); return; }
     try {
       const [a, s, p] = await Promise.all([
         readJson("alerts.json", { alerts: [] }),
         readJson("state.json", {}),
         readJson("prices.json", { prices: {} }),
       ]);
-      alerts = Array.isArray(a.data.alerts) ? a.data.alerts : [];
+      data = normalize(a.data);
       state = s.data || {};
       prices = (p.data && p.data.prices) || {};
       updated = p.data && p.data.updated;
       render();
     } catch (e) {
-      const msg = e.status === 401 ? "token 無效或者過咗期，請喺設定更新" :
-                  e.status === 403 ? "GitHub 拒絕存取（可能係 token 權限唔夠或者用量超咗）" :
-                  `載入失敗：${e.detail || e.message}`;
-      $("updated").textContent = msg;
+      $("updated").textContent = e.status === 401 ? "token 無效或者過咗期，請喺設定更新" :
+        e.status === 403 ? "GitHub 拒絕存取（token 權限唔夠或者用量超咗）" : `載入失敗：${e.detail || e.message}`;
     }
   }
 
   // ---------- render ----------
-  function render() {
+  function quote(sym) { return prices[sym] || {}; }
+  function changePct(q) { return q.price != null && q.prev_close ? ((q.price - q.prev_close) / q.prev_close) * 100 : null; }
+
+  function alertRow(a, q) {
+    const up = a.condition === "above";
+    const fired = state[a.id];
+    let pill;
+    if (fired) pill = `<span class="pill fired">✓ ${timeAgo(fired.triggered_at)}觸發 @ ${fmt(fired.price)}</span>`;
+    else if (q.price != null) {
+      const dist = ((a.price - q.price) / q.price) * 100;
+      pill = `<span class="pill">相差 ${signed(dist)}%</span>`;
+    } else pill = `<span class="pill">等緊更新</span>`;
+    return `
+      <div class="alert-row">
+        <div>
+          <div class="target ${up ? "pos" : "neg"}">${up ? "▲ 升到 ≥" : "▼ 跌到 ≤"} ${fmt(a.price)}</div>
+          ${a.note ? `<div class="note">${esc(a.note)}</div>` : ""}
+        </div>
+        <div class="row-actions">
+          ${pill}
+          ${fired ? `<button class="ghost" data-act="rearm" data-id="${esc(a.id)}">重新開</button>` : ""}
+          <button class="ghost" data-act="delAlert" data-id="${esc(a.id)}" aria-label="刪除通知">✕</button>
+        </div>
+      </div>`;
+  }
+
+  function alertForm(sym) {
+    return `
+      <form class="alert-form" data-sym="${esc(sym)}" autocomplete="off">
+        <div>
+          <label>條件</label>
+          <select name="condition">
+            <option value="above">升到或以上 ≥</option>
+            <option value="below">跌到或以下 ≤</option>
+          </select>
+        </div>
+        <div>
+          <label>目標價</label>
+          <input name="price" type="number" inputmode="decimal" step="any" min="0" placeholder="0.00" required>
+        </div>
+        <div class="full">
+          <input name="note" maxlength="80" placeholder="備註（可以留空）">
+        </div>
+        <div class="full msg"></div>
+        <div class="full btns">
+          <button type="button" class="ghost" data-act="cancelForm">取消</button>
+          <button type="submit" class="primary">儲存通知</button>
+        </div>
+      </form>`;
+  }
+
+  function stockCard(sym) {
+    const q = quote(sym);
+    const pct = changePct(q);
+    const abs = q.price != null && q.prev_close ? q.price - q.prev_close : null;
+    const ext = q.price != null && q.regular != null && Math.abs(q.price - q.regular) > 1e-9;
+    const alerts = data.alerts.filter((a) => a.symbol.toUpperCase() === sym);
+    let priceBlock;
+    if (q.price != null) {
+      priceBlock = `
+        <div class="price">${fmt(q.price)} <span class="cur">${esc(q.currency || "")}</span></div>
+        <div class="chg ${pct == null ? "" : pct >= 0 ? "pos" : "neg"}">
+          ${pct == null ? "" : `${signed(abs)} (${signed(pct)}%)`}${ext ? `<span class="tag">盤前/後</span>` : ""}
+        </div>`;
+    } else if (q.error) {
+      priceBlock = `<div class="err" style="text-align:right">⚠︎ ${esc(q.error)}</div>`;
+    } else {
+      priceBlock = `<div class="sub" style="text-align:right">等緊攞價…</div>`;
+    }
+    const meta = [];
+    if (ext && q.regular != null) meta.push(`收市 ${fmt(q.regular)}`);
+    if (q.day_low != null && q.day_high != null) meta.push(`今日 ${fmt(q.day_low)} – ${fmt(q.day_high)}`);
+    if (q.exchange) meta.push(esc(q.exchange));
+    return `
+      <div class="card" data-card="${esc(sym)}">
+        <div class="stock-head">
+          ${logoHtml(sym)}
+          <div style="min-width:0">
+            <div class="sym">${esc(sym)}</div>
+            <div class="name">${esc(q.name || "")}</div>
+          </div>
+          <div>${priceBlock}</div>
+        </div>
+        ${meta.length ? `<div class="meta">${meta.map((m) => `<span>${m}</span>`).join("")}</div>` : ""}
+        ${alerts.length ? `<div class="alerts">${alerts.map((a) => alertRow(a, q)).join("")}</div>` : ""}
+        ${openFormFor === sym ? alertForm(sym) : `
+          <div class="card-actions">
+            <button class="ghost" data-act="removeStock" data-sym="${esc(sym)}">移除</button>
+            <button class="ghost" data-act="openForm" data-sym="${esc(sym)}">🔔 設通知</button>
+          </div>`}
+      </div>`;
+  }
+
+  function sortedSymbols() {
+    const list = data.watchlist.slice();
+    const mode = $("sort").value;
+    if (mode === "symbol") list.sort();
+    else if (mode === "change") list.sort((a, b) => (changePct(quote(b)) ?? -1e9) - (changePct(quote(a)) ?? -1e9));
+    else if (mode === "alerts") {
+      const n = (s) => data.alerts.filter((a) => a.symbol.toUpperCase() === s && !state[a.id]).length;
+      list.sort((a, b) => n(b) - n(a));
+    }
+    return list;
+  }
+
+  function render(force = false) {
     $("setupBanner").hidden = !!cfg.token;
     $("updated").textContent = `價格更新：${timeAgo(updated)}`;
     $("market").textContent = marketStatus();
+    if (openFormFor && !force) return; // don't wipe a half-filled form
     const list = $("list");
-    if (!alerts.length) {
-      list.innerHTML = `<div class="card empty">未有通知。喺上面加第一隻股票啦。</div>`;
+    if (!data.watchlist.length) {
+      list.innerHTML = `<div class="card empty">觀察清單未有股票。喺上面加第一隻啦。</div>`;
       return;
     }
-    const sorted = alerts.slice().sort((x, y) => {
-      const fx = state[x.id] ? 1 : 0, fy = state[y.id] ? 1 : 0;
-      return fx - fy || x.symbol.localeCompare(y.symbol) || x.price - y.price;
-    });
-    list.innerHTML = sorted.map((a) => {
-      const q = prices[a.symbol.toUpperCase()] || {};
-      const fired = state[a.id];
-      const up = a.condition === "above";
-      const p = q.price;
-      const chg = p != null && q.prev_close ? ((p - q.prev_close) / q.prev_close) * 100 : null;
-      const dist = p != null ? ((a.price - p) / p) * 100 : null;
-      let pill;
-      if (fired) pill = `<span class="pill fired">✓ ${timeAgo(fired.triggered_at)}觸發 @ ${fmt(fired.price)}</span>`;
-      else if (q.error && p == null) pill = `<span class="pill err">⚠︎ ${esc(q.error)}</span>`;
-      else if (p == null) pill = `<span class="pill wait">等緊第一次更新…</span>`;
-      else pill = `<span class="pill">相差 ${dist >= 0 ? "+" : ""}${dist.toFixed(2)}%</span>`;
-      return `
-        <div class="card alert">
-          <div style="min-width:0">
-            <div class="sym">${esc(a.symbol)}</div>
-            <div class="name">${esc(q.name || "")}</div>
-          </div>
-          <div>
-            <div class="price">${fmt(p)} <span class="sub">${esc(q.currency || "")}</span></div>
-            <div class="chg ${chg == null ? "" : chg >= 0 ? "pos" : "neg"}">${chg == null ? "" : (chg >= 0 ? "+" : "") + chg.toFixed(2) + "%"}</div>
-          </div>
-          <div class="row2">
-            <div>
-              <div class="target ${up ? "pos" : "neg"}">${up ? "▲ 升到 ≥" : "▼ 跌到 ≤"} ${fmt(a.price)}</div>
-              ${a.note ? `<div class="sub">${esc(a.note)}</div>` : ""}
-              <div style="margin-top:6px">${pill}</div>
-            </div>
-            <div class="actions">
-              ${fired ? `<button data-act="rearm" data-id="${esc(a.id)}">重新開</button>` : ""}
-              <button data-act="del" data-id="${esc(a.id)}">刪除</button>
-            </div>
-          </div>
-        </div>`;
-    }).join("");
-  }
-
-  // ---------- form ----------
-  function checkForm() {
-    const sym = $("symbol").value.trim().toUpperCase();
-    const target = parseFloat($("target").value);
-    const q = prices[sym];
-    const msg = $("formMsg");
-    msg.innerHTML = "";
-    if (!q || q.price == null || isNaN(target)) return;
-    const up = $("condition").value === "above";
-    if ((up && q.price >= target) || (!up && q.price <= target)) {
-      msg.innerHTML = `<div class="warn">而家 ${esc(sym)} 已經係 ${fmt(q.price)}，加咗之後下次 check 會即刻觸發。</div>`;
-    } else {
-      msg.innerHTML = `<div class="hint">而家 ${esc(sym)}：${fmt(q.price)} ${esc(q.currency || "")}</div>`;
+    list.innerHTML = sortedSymbols().map(stockCard).join("");
+    if (openFormFor) {
+      const f = list.querySelector(`form.alert-form`);
+      if (f) f.price.focus();
     }
   }
-  ["symbol", "target", "condition"].forEach((id) => $(id).addEventListener("input", checkForm));
 
-  $("addForm").addEventListener("submit", async (ev) => {
+  // ---------- events ----------
+  $("addStock").addEventListener("submit", async (ev) => {
     ev.preventDefault();
-    const symbol = $("symbol").value.trim().toUpperCase().replace(/\s+/g, "");
-    const price = parseFloat($("target").value);
-    if (!/^[A-Z0-9.\-^=]{1,15}$/.test(symbol)) { $("formMsg").innerHTML = `<div class="err">股票代號格式唔啱</div>`; return; }
-    if (!(price > 0)) { $("formMsg").innerHTML = `<div class="err">請輸入目標價</div>`; return; }
-    const alert = {
-      id: newId(), symbol, condition: $("condition").value, price,
-      note: $("note").value.trim(), created_at: new Date().toISOString(),
-    };
+    const sym = $("symbol").value.trim().toUpperCase().replace(/\s+/g, "");
+    const msg = $("addMsg");
+    msg.innerHTML = "";
+    if (!/^[A-Z0-9.\-^=]{1,15}$/.test(sym)) { msg.innerHTML = `<div class="err hint">股票代號格式唔啱</div>`; return; }
+    if (data.watchlist.includes(sym)) { msg.innerHTML = `<div class="warn hint">${esc(sym)} 已經喺清單入面</div>`; return; }
     $("addBtn").disabled = true;
     try {
-      await updateAlerts((list) => [...list, alert], `Add alert ${symbol} ${alert.condition} ${price}`);
-      $("target").value = ""; $("note").value = ""; $("formMsg").innerHTML = "";
-      toast(`已加入 ${symbol}，大約一分鐘內會攞到價`);
-      setTimeout(refresh, 60000);
+      await updateData((d) => ({ ...d, watchlist: [...d.watchlist.filter((s) => s !== sym), sym] }), `Watch ${sym}`);
+      $("symbol").value = "";
+      toast(`已加入 ${sym}，大約一分鐘內會攞到價`);
+      setTimeout(refresh, 45000);
+      setTimeout(refresh, 90000);
     } catch (e) {
-      $("formMsg").innerHTML = `<div class="err">儲存失敗：${esc(e.detail || e.message)}</div>`;
+      msg.innerHTML = `<div class="err hint">儲存失敗：${esc(e.detail || e.message)}</div>`;
     } finally {
       $("addBtn").disabled = false;
+    }
+  });
+
+  $("sort").addEventListener("change", () => { store.set("sa.sort", $("sort").value); render(true); });
+
+  $("list").addEventListener("input", (ev) => {
+    const f = ev.target.closest("form.alert-form");
+    if (!f) return;
+    const q = quote(f.dataset.sym), target = parseFloat(f.price.value), box = f.querySelector(".msg");
+    box.innerHTML = "";
+    if (q.price == null || isNaN(target)) return;
+    const up = f.condition.value === "above";
+    if ((up && q.price >= target) || (!up && q.price <= target))
+      box.innerHTML = `<div class="warn">而家已經係 ${fmt(q.price)}，儲存之後下次 check 會即刻觸發。</div>`;
+  });
+
+  $("list").addEventListener("submit", async (ev) => {
+    const f = ev.target.closest("form.alert-form");
+    if (!f) return;
+    ev.preventDefault();
+    const sym = f.dataset.sym, price = parseFloat(f.price.value);
+    if (!(price > 0)) return;
+    const alert = { id: newId(), symbol: sym, condition: f.condition.value, price, note: f.note.value.trim(), created_at: new Date().toISOString() };
+    const btn = f.querySelector("button[type=submit]");
+    btn.disabled = true;
+    try {
+      openFormFor = null;
+      await updateData((d) => ({ ...d, alerts: [...d.alerts, alert] }), `Alert ${sym} ${alert.condition} ${price}`);
+      toast(`已設定 ${sym} 通知`);
+    } catch (e) {
+      openFormFor = sym;
+      btn.disabled = false;
+      f.querySelector(".msg").innerHTML = `<div class="err">儲存失敗：${esc(e.detail || e.message)}</div>`;
     }
   });
 
   $("list").addEventListener("click", async (ev) => {
     const btn = ev.target.closest("button[data-act]");
     if (!btn) return;
-    const id = btn.dataset.id;
-    const a = alerts.find((x) => x.id === id);
-    if (!a) return;
+    const act = btn.dataset.act;
+    if (act === "openForm") { openFormFor = btn.dataset.sym; render(true); return; }
+    if (act === "cancelForm") { openFormFor = null; render(true); return; }
     btn.disabled = true;
     try {
-      if (btn.dataset.act === "del") {
-        await updateAlerts((list) => list.filter((x) => x.id !== id), `Delete alert ${a.symbol}`);
-        toast(`已刪除 ${a.symbol}`);
-      } else if (btn.dataset.act === "rearm") {
-        const fresh = newId();
-        await updateAlerts((list) => list.map((x) => x.id === id ? { ...x, id: fresh } : x), `Re-arm alert ${a.symbol}`);
-        toast(`${a.symbol} 已重新開啟`);
+      if (act === "removeStock") {
+        const sym = btn.dataset.sym;
+        const n = data.alerts.filter((a) => a.symbol.toUpperCase() === sym).length;
+        if (!window.confirm(n ? `移除 ${sym}？佢嘅 ${n} 個通知都會一齊刪除。` : `由觀察清單移除 ${sym}？`)) { btn.disabled = false; return; }
+        await updateData((d) => ({
+          watchlist: d.watchlist.filter((s) => s !== sym),
+          alerts: d.alerts.filter((a) => a.symbol.toUpperCase() !== sym),
+        }), `Unwatch ${sym}`);
+        toast(`已移除 ${sym}`);
+      } else if (act === "delAlert") {
+        const id = btn.dataset.id;
+        await updateData((d) => ({ ...d, alerts: d.alerts.filter((a) => a.id !== id) }), "Delete alert");
+        toast("已刪除通知");
+      } else if (act === "rearm") {
+        const id = btn.dataset.id, fresh = newId();
+        await updateData((d) => ({ ...d, alerts: d.alerts.map((a) => a.id === id ? { ...a, id: fresh } : a) }), "Re-arm alert");
+        toast("通知已重新開啟");
       }
     } catch (e) {
       toast(`失敗：${e.detail || e.message}`);
@@ -422,7 +542,7 @@
   }
   $("openSettings").onclick = openSettings;
   $("bannerSettings").onclick = openSettings;
-  $("forget").onclick = () => { store.del("sa.token"); cfg.token = ""; $("token").value = ""; toast("已清除 token"); render(); };
+  $("forget").onclick = () => { store.del("sa.token"); cfg.token = ""; $("token").value = ""; toast("已清除 token"); render(true); };
   $("settings").addEventListener("close", () => {
     if ($("settings").returnValue !== "save") return;
     cfg.owner = $("owner").value.trim(); cfg.repo = $("repo").value.trim(); cfg.token = $("token").value.trim();

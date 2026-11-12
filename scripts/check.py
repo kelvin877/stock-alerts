@@ -99,6 +99,10 @@ def parse_chart(res):
         "name": meta.get("shortName") or meta.get("longName") or meta.get("symbol"),
         "prev_close": meta.get("chartPreviousClose") or meta.get("previousClose"),
         "time": ts,
+        "regular": meta.get("regularMarketPrice"),
+        "day_high": meta.get("regularMarketDayHigh"),
+        "day_low": meta.get("regularMarketDayLow"),
+        "exchange": meta.get("fullExchangeName") or meta.get("exchangeName"),
     }
 
 
@@ -138,12 +142,13 @@ def main(fetch=fetch_quote, send=notify):
         print("Outside trading hours, skipping.")
         return 0
 
-    alerts = [a for a in load("alerts.json", {"alerts": []}).get("alerts", [])
-              if a.get("id") and a.get("symbol")]
+    data = load("alerts.json", {"alerts": []})
+    alerts = [a for a in data.get("alerts", []) if a.get("id") and a.get("symbol")]
+    watchlist = [str(s).upper() for s in data.get("watchlist", []) if s]
     state = load("state.json", {})
     old_prices = load("prices.json", {}).get("prices", {})
 
-    symbols = sorted({a["symbol"].upper() for a in alerts})
+    symbols = sorted({a["symbol"].upper() for a in alerts} | set(watchlist))
     prices = {}
     for sym in symbols:
         try:
