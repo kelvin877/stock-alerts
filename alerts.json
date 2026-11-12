@@ -30,6 +30,14 @@
       "price": 145,
       "note": "",
       "created_at": "2026-11-12T00:41:35.260Z"
+    },
+    {
+      "id": "mwctqmrzmgs61p",
+      "symbol": "AMD",
+      "condition": "below",
+      "price": 430,
+      "note": "",
+      "created_at": "2026-11-12T00:43:10.415Z"
     }
   ]
 }
