@@ -9,7 +9,7 @@
       "prev_close": 348.51,
       "price": 356.2,
       "regular": 355.63,
-      "time": 1794445074
+      "time": 1794445117
     },
     "AMD": {
       "currency": "USD",
@@ -18,9 +18,9 @@
       "exchange": "NasdaqGS",
       "name": "Advanced Micro Devices, Inc.",
       "prev_close": 515.21,
-      "price": 576.9842,
+      "price": 577.4,
       "regular": 552.9,
-      "time": 1794445090
+      "time": 1794445117
     },
     "AMZN": {
       "currency": "USD",
@@ -29,9 +29,9 @@
       "exchange": "NasdaqGS",
       "name": "Amazon.com, Inc.",
       "prev_close": 270.87,
-      "price": 267.14,
+      "price": 267.2752,
       "regular": 266.17,
-      "time": 1794445071
+      "time": 1794445105
     },
     "APLD": {
       "currency": "USD",
@@ -40,9 +40,20 @@
       "exchange": "NasdaqGS",
       "name": "Applied Digital Corporation",
       "prev_close": 16.68,
-      "price": 17.4432,
+      "price": 17.4,
       "regular": 17.91,
-      "time": 1794445072
+      "time": 1794445106
+    },
+    "AVGO": {
+      "currency": "USD",
+      "day_high": 356.85,
+      "day_low": 344.315,
+      "exchange": "NasdaqGS",
+      "name": "Broadcom Inc.",
+      "prev_close": 331.98,
+      "price": 353.65,
+      "regular": 345.22,
+      "time": 1794445104
     },
     "AXTI": {
       "currency": "USD",
@@ -51,9 +62,9 @@
       "exchange": "NasdaqGS",
       "name": "AXT Inc",
       "prev_close": 39.31,
-      "price": 45.75,
+      "price": 45.77,
       "regular": 46.97,
-      "time": 1794445069
+      "time": 1794445114
     },
     "BE": {
       "currency": "USD",
@@ -62,9 +73,9 @@
       "exchange": "NYSE",
       "name": "Bloom Energy Corporation",
       "prev_close": 185.42,
-      "price": 204.3951,
+      "price": 204.3408,
       "regular": 209.47,
-      "time": 1794445074
+      "time": 1794445117
     },
     "CLSK": {
       "currency": "USD",
@@ -84,9 +95,9 @@
       "exchange": "NasdaqGS",
       "name": "Credo Technology Group Holding ",
       "prev_close": 129.8,
-      "price": 137.5,
+      "price": 136.8,
       "regular": 141.41,
-      "time": 1794445080
+      "time": 1794445113
     },
     "CRWV": {
       "currency": "USD",
@@ -95,9 +106,20 @@
       "exchange": "NasdaqGS",
       "name": "CoreWeave, Inc.",
       "prev_close": 48.73,
-      "price": 56.69,
+      "price": 56.7845,
       "regular": 60.77,
-      "time": 1794445091
+      "time": 1794445123
+    },
+    "GOOG": {
+      "currency": "USD",
+      "day_high": 292.92,
+      "day_low": 286.9,
+      "exchange": "NasdaqGS",
+      "name": "Alphabet Inc.",
+      "prev_close": 284.92,
+      "price": 291.1,
+      "regular": 290.63,
+      "time": 1794445120
     },
     "HIVE.TO": {
       "currency": "CAD",
@@ -128,9 +150,9 @@
       "exchange": "NasdaqGS",
       "name": "Intel Corporation",
       "prev_close": 58.13,
-      "price": 60.9696,
+      "price": 60.9754,
       "regular": 62.5,
-      "time": 1794445078
+      "time": 1794445097
     },
     "IREN": {
       "currency": "USD",
@@ -139,9 +161,9 @@
       "exchange": "NasdaqGS",
       "name": "IREN LIMITED",
       "prev_close": 19.73,
-      "price": 19.93,
+      "price": 19.95,
       "regular": 20.84,
-      "time": 1794445084
+      "time": 1794445120
     },
     "NBIS": {
       "currency": "USD",
@@ -150,9 +172,9 @@
       "exchange": "NasdaqGS",
       "name": "Nebius Group N.V.",
       "prev_close": 134.0,
-      "price": 148.7,
+      "price": 148.55,
       "regular": 154.69,
-      "time": 1794445085
+      "time": 1794445123
     },
     "NOW": {
       "currency": "USD",
@@ -172,9 +194,9 @@
       "exchange": "NasdaqGS",
       "name": "NVIDIA Corporation",
       "prev_close": 168.796,
-      "price": 158.85,
+      "price": 158.8308,
       "regular": 173.73,
-      "time": 1794445092
+      "time": 1794445124
     },
     "NVTS": {
       "currency": "USD",
@@ -216,9 +238,9 @@
       "exchange": "NasdaqGS",
       "name": "Space Exploration Technologies ",
       "prev_close": 143.09,
-      "price": 138.1246,
+      "price": 138.11,
       "regular": 139.75,
-      "time": 1794445080
+      "time": 1794445123
     },
     "TSLA": {
       "currency": "USD",
@@ -229,8 +251,8 @@
       "prev_close": 379.78,
       "price": 387.13,
       "regular": 390.84,
-      "time": 1794445066
+      "time": 1794445114
     }
   },
-  "updated": "2026-11-12T00:58:14+00:00"
+  "updated": "2026-11-12T00:58:48+00:00"
 }
