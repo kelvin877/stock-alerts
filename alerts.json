@@ -294,14 +294,6 @@
       "price": 120,
       "note": "",
       "created_at": "2026-11-12T01:02:44.678Z"
-    },
-    {
-      "id": "mwcuh92zzdg0v5",
-      "symbol": "BRKB",
-      "condition": "below",
-      "price": 520,
-      "note": "",
-      "created_at": "2026-11-12T01:03:52.379Z"
     }
   ]
 }
