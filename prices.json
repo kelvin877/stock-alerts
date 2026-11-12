@@ -20,7 +20,7 @@
       "prev_close": 515.21,
       "price": 577.0,
       "regular": 552.9,
-      "time": 1794444228
+      "time": 1794444247
     },
     "CRWV": {
       "currency": "USD",
@@ -29,9 +29,9 @@
       "exchange": "NasdaqGS",
       "name": "CoreWeave, Inc.",
       "prev_close": 48.73,
-      "price": 56.8,
+      "price": 56.81,
       "regular": 60.77,
-      "time": 1794444215
+      "time": 1794444243
     },
     "INTEL": {
       "error": "搵唔到呢個股票代號"
@@ -54,9 +54,9 @@
       "exchange": "NasdaqGS",
       "name": "NVIDIA Corporation",
       "prev_close": 168.796,
-      "price": 159.46,
+      "price": 159.5,
       "regular": 173.73,
-      "time": 1794444239
+      "time": 1794444243
     },
     "PLTR": {
       "currency": "USD",
@@ -70,5 +70,5 @@
       "time": 1794444058
     }
   },
-  "updated": "2026-11-12T00:44:00+00:00"
+  "updated": "2026-11-12T00:44:09+00:00"
 }
