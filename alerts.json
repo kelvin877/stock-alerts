@@ -313,6 +313,14 @@
       "price": 10,
       "note": "",
       "created_at": "2026-11-12T01:06:51.645Z"
+    },
+    {
+      "id": "mwcum0ulf3ieyl",
+      "symbol": "COST",
+      "condition": "below",
+      "price": 950,
+      "note": "",
+      "created_at": "2026-11-12T01:07:34.989Z"
     }
   ]
 }
