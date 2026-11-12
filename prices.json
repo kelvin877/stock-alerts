@@ -18,9 +18,9 @@
       "exchange": "NasdaqGS",
       "name": "Advanced Micro Devices, Inc.",
       "prev_close": 515.21,
-      "price": 577.1396,
+      "price": 577.0,
       "regular": 552.9,
-      "time": 1794444218
+      "time": 1794444228
     },
     "CRWV": {
       "currency": "USD",
@@ -33,6 +33,9 @@
       "regular": 60.77,
       "time": 1794444215
     },
+    "INTEL": {
+      "error": "搵唔到呢個股票代號"
+    },
     "NBIS": {
       "currency": "USD",
       "day_high": 160.21,
@@ -40,9 +43,9 @@
       "exchange": "NasdaqGS",
       "name": "Nebius Group N.V.",
       "prev_close": 134.0,
-      "price": 150.286,
+      "price": 150.2278,
       "regular": 154.69,
-      "time": 1794444223
+      "time": 1794444231
     },
     "NVDA": {
       "currency": "USD",
@@ -51,9 +54,9 @@
       "exchange": "NasdaqGS",
       "name": "NVIDIA Corporation",
       "prev_close": 168.796,
-      "price": 159.5,
+      "price": 159.46,
       "regular": 173.73,
-      "time": 1794444225
+      "time": 1794444239
     },
     "PLTR": {
       "currency": "USD",
@@ -67,5 +70,5 @@
       "time": 1794444058
     }
   },
-  "updated": "2026-11-12T00:43:45+00:00"
+  "updated": "2026-11-12T00:44:00+00:00"
 }
