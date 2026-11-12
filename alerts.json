@@ -6,7 +6,8 @@
     "PLTR",
     "AMD",
     "NBIS",
-    "INTEL"
+    "INTEL",
+    "NVTS"
   ],
   "alerts": [
     {
