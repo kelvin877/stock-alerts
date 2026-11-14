@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0f1720">
-<title>股價通知</title>
+<title>Stock Alerts · 股價通知</title>
 <style>
   :root {
     --bg: #f6f7f9; --card: #ffffff; --ink: #0f1720; --muted: #667085; --line: #e4e7ec;
@@ -91,6 +91,13 @@
     opacity: 0; transition: opacity .2s; pointer-events: none; max-width: 90vw;
   }
   .toast.show { opacity: 1; }
+  .head-actions { display: flex; gap: 8px; align-items: center; }
+  .seg.lang button { padding: 7px 10px; font-size: 13px; white-space: nowrap; }
+  .icon-btn, .ghost, .seg button { white-space: nowrap; }
+  header { align-items: flex-start; }
+  header > div:first-child { min-width: 0; }
+  .addbar input::placeholder { text-transform: none; }
+  .seg.lang button.on { background: var(--ink); color: var(--bg); }
 
   .tabs { display: flex; gap: 4px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 4px; margin-bottom: 12px; position: sticky; top: env(safe-area-inset-top); z-index: 5; }
   .tabs a { flex: 1; text-align: center; padding: 8px 4px; border-radius: 9px; text-decoration: none; color: var(--muted); font-size: 14px; font-weight: 600; }
@@ -120,49 +127,55 @@
 <main>
   <header>
     <div>
-      <h1>我的股票</h1>
-      <div class="sub">觀察清單 · 到價推送去 ntfy</div>
+      <h1 data-i18n="h1">我的股票</h1>
+      <div class="sub" data-i18n="tagline">觀察清單 · 到價推送去 ntfy</div>
     </div>
-    <button class="icon-btn" id="openSettings" aria-label="設定">⚙︎ 設定</button>
+    <div class="head-actions">
+      <div class="seg lang" id="langSwitch" role="group" aria-label="Language">
+        <button type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+      <button class="icon-btn" id="openSettings" data-i18n="settings_btn" data-i18n-aria="settings" style="font-size:18px;padding:6px 12px">⚙︎</button>
+    </div>
   </header>
 
   <nav class="tabs">
-    <a href="#watch" data-view="watch">我的股票</a>
-    <a href="#movers" data-view="movers">升跌排行</a>
-    <a href="#popular" data-view="popular">熱門 100</a>
+    <a href="#watch" data-view="watch" data-i18n="tab_watch">我的股票</a>
+    <a href="#movers" data-view="movers" data-i18n="tab_movers">升跌排行</a>
+    <a href="#popular" data-view="popular" data-i18n="tab_popular">熱門 100</a>
   </nav>
 
   <div id="setupBanner" class="banner" hidden>
-    第一次用要先喺「設定」入面填 GitHub token，先可以加股票同設通知。
-    <div><button class="primary" id="bannerSettings">開設定</button></div>
+    <span data-i18n="banner">第一次用要先喺「設定」入面填 GitHub token，先可以加股票同設通知。</span>
+    <div><button class="primary" id="bannerSettings" data-i18n="open_settings">開設定</button></div>
   </div>
 
   <div id="view-watch">
   <section class="card">
     <form id="addStock" autocomplete="off">
-      <label for="symbol">加股票入觀察清單</label>
+      <label for="symbol" data-i18n="add_label">加股票入觀察清單</label>
       <div class="addbar">
-        <input id="symbol" placeholder="例如 AAPL、SHOP.TO" required autocapitalize="characters" spellcheck="false">
-        <button class="primary" id="addBtn" type="submit">加入</button>
+        <input id="symbol" data-i18n-ph="add_ph" placeholder="例如 AAPL、SHOP.TO" required autocapitalize="characters" spellcheck="false">
+        <button class="primary" id="addBtn" type="submit" data-i18n="add_btn">加入</button>
       </div>
-      <div class="hint">美股直接打代號；加股要加 <b>.TO</b>（多倫多）或者 <b>.V</b>（創業板），例如 RY.TO</div>
+      <div class="hint" data-i18n-html="add_hint">美股直接打代號；加股要加 <b>.TO</b>（多倫多）或者 <b>.V</b>（創業板），例如 RY.TO</div>
       <div id="addMsg"></div>
     </form>
   </section>
 
   <div class="toolbar">
-    <span><span id="updated">載入中…</span> · <span id="market"></span></span>
+    <span><span id="updated" data-i18n="loading">載入中…</span> · <span id="market"></span></span>
   </div>
   <div class="watch-controls">
     <div class="seg" id="watchMode">
-      <button type="button" data-wmode="list">清單</button>
-      <button type="button" data-wmode="gainers">▲ 升幅排名</button>
-      <button type="button" data-wmode="losers">▼ 跌幅排名</button>
+      <button type="button" data-wmode="list" data-i18n="wm_list">清單</button>
+      <button type="button" data-wmode="gainers" data-i18n="wm_gainers">▲ 升幅排名</button>
+      <button type="button" data-wmode="losers" data-i18n="wm_losers">▼ 跌幅排名</button>
     </div>
     <div class="seg" id="watchPeriod">
-      <button type="button" data-period="day">今日</button>
-      <button type="button" data-period="week">本週</button>
-      <button type="button" data-period="month">本月</button>
+      <button type="button" data-period="day" data-i18n="p_day">今日</button>
+      <button type="button" data-period="week" data-i18n="p_week">本週</button>
+      <button type="button" data-period="month" data-i18n="p_month">本月</button>
     </div>
   </div>
   <div id="list"></div>
@@ -176,12 +189,12 @@
       </div>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
         <div class="seg" id="moversPeriod">
-          <button type="button" data-mp="week">本週</button>
-          <button type="button" data-mp="month" class="on plain">本月</button>
+          <button type="button" data-mp="week" data-i18n="p_week">本週</button>
+          <button type="button" data-mp="month" class="on plain" data-i18n="p_month">本月</button>
         </div>
         <div class="seg" id="moversMode">
-          <button type="button" data-mode="gainers" class="on up">▲ 升幅</button>
-          <button type="button" data-mode="losers">▼ 跌幅</button>
+          <button type="button" data-mode="gainers" class="on up" data-i18n="gainers">▲ 升幅</button>
+          <button type="button" data-mode="losers" data-i18n="losers">▼ 跌幅</button>
         </div>
       </div>
     </div>
@@ -191,8 +204,8 @@
   <div id="view-popular" hidden>
     <div class="rank-head">
       <div>
-        <h2>熱門 100</h2>
-        <div class="sub" id="popularSub">按過去 20 個交易日平均成交額排名</div>
+        <h2 data-i18n="popular_title">熱門 100</h2>
+        <div class="sub" id="popularSub"></div>
       </div>
     </div>
     <div class="card rank-list" id="popularList"></div>
@@ -201,24 +214,24 @@
 
 <dialog id="settings">
   <form method="dialog" class="grid">
-    <h2>設定</h2>
+    <h2 data-i18n="settings">設定</h2>
     <div>
-      <label for="owner">GitHub 用戶名</label>
+      <label for="owner" data-i18n="owner_label">GitHub 用戶名</label>
       <input id="owner" spellcheck="false" autocapitalize="none" required>
     </div>
     <div>
-      <label for="repo">Repo 名</label>
+      <label for="repo" data-i18n="repo_label">Repo 名</label>
       <input id="repo" spellcheck="false" autocapitalize="none" required>
     </div>
     <div>
       <label for="token">GitHub token</label>
       <input id="token" type="password" spellcheck="false" autocapitalize="none" placeholder="github_pat_…">
-      <div class="hint">用 fine-grained token，只揀呢個 repo，權限：Contents → Read and write。token 只會儲喺呢部機嘅瀏覽器入面。</div>
+      <div class="hint" data-i18n="token_hint">用 fine-grained token，只揀呢個 repo，權限：Contents → Read and write。token 只會儲喺呢部機嘅瀏覽器入面。</div>
     </div>
     <div class="dlg-actions">
-      <button type="button" id="forget">清除 token</button>
-      <button value="cancel" formnovalidate>取消</button>
-      <button value="save" class="primary">儲存</button>
+      <button type="button" id="forget" data-i18n="forget">清除 token</button>
+      <button value="cancel" formnovalidate data-i18n="cancel">取消</button>
+      <button value="save" class="primary" data-i18n="save">儲存</button>
     </div>
   </form>
 </dialog>
@@ -233,6 +246,119 @@
     set(k, v) { try { localStorage.setItem(k, v); } catch {} },
     del(k) { try { localStorage.removeItem(k); } catch {} },
   };
+
+
+  // ---------- language ----------
+  const I18N = {
+    zh: {
+      title: "股價通知", h1: "我的股票", tagline: "觀察清單 · 到價推送去 ntfy",
+      settings: "設定", settings_btn: "⚙︎",
+      tab_watch: "我的股票", tab_movers: "升跌排行", tab_popular: "熱門 100",
+      banner: "第一次用要先喺「設定」入面填 GitHub token，先可以加股票同設通知。", open_settings: "開設定",
+      add_label: "加股票入觀察清單", add_ph: "例如 AAPL、SHOP.TO", add_btn: "加入",
+      add_hint: "美股直接打代號；加股要加 <b>.TO</b>（多倫多）或者 <b>.V</b>（創業板），例如 RY.TO",
+      loading: "載入中…",
+      wm_list: "清單", wm_gainers: "▲ 升幅排名", wm_losers: "▼ 跌幅排名",
+      p_day: "今日", p_week: "本週", p_month: "本月",
+      gainers: "▲ 升幅", losers: "▼ 跌幅",
+      popular_title: "熱門 100",
+      popular_sub: (t) => `按過去 20 個交易日平均每日成交額排名 · 更新：${t}`,
+      owner_label: "GitHub 用戶名", repo_label: "Repo 名",
+      token_hint: "用 fine-grained token，只揀呢個 repo，權限：Contents → Read and write。token 只會儲喺呢部機嘅瀏覽器入面。",
+      forget: "清除 token", cancel: "取消", save: "儲存",
+      no_data: "未有數據", just_now: "啱啱",
+      min_ago: (n) => `${n} 分鐘前`, hr_ago: (n) => `${n} 個鐘前`, locale: "zh-HK",
+      weekend: "週末休市", m_open: "🟢 開市中", m_pre: "🟡 盤前", m_post: "🟡 盤後", m_closed: "⚪ 休市",
+      read_fail: (n, s) => `讀取 ${n} 失敗 (${s})`, need_token: "請先喺設定填 GitHub token",
+      no_repo: "未設定 repo", token_invalid: "token 無效或者過咗期，請喺設定更新",
+      forbidden: "GitHub 拒絕存取（token 權限唔夠或者用量超咗）", load_fail: (e) => `載入失敗：${e}`,
+      fired: (t, p) => `✓ ${t}觸發 @ ${p}`, dist: (d) => `相差 ${d}%`, waiting: "等緊更新",
+      above_t: "▲ 升到 ≥", below_t: "▼ 跌到 ≤", rearm: "重新開", del_alert: "刪除通知",
+      cond: "條件", opt_above: "升到或以上 ≥", opt_below: "跌到或以下 ≤", target: "目標價",
+      note_ph: "備註（可以留空）", save_alert: "儲存通知",
+      ext: "盤前/後", fetching: "等緊攞價…",
+      close_at: (p) => `收市 ${p}`, day_range: (a, b) => `今日 ${a} – ${b}`,
+      week_meta: (x) => `本週 ${x}`, month_meta: (x) => `本月 ${x}`,
+      remove: "移除", set_alert: "🔔 設通知",
+      missing: (p, list, hourly) => `未有${p}數據：${list}${hourly ? "（排行每個鐘更新一次）" : ""}`, list_sep: "、",
+      rank_label: (p, up, n) => `${p}${up ? "升幅" : "跌幅"}排名 · 共 ${n} 隻`,
+      price_updated: (t) => `價格更新：${t}`,
+      empty_watch: "觀察清單未有股票。喺上面加第一隻啦。",
+      in_watch: "已喺觀察清單", add_watch: "加入觀察清單",
+      rank_empty: "排行榜未有數據。GitHub 每個鐘（開市時間）會更新一次，第一次大約要等幾分鐘。",
+      month_name: (m) => `${m} 月`,
+      movers_title: (period, up) => `${period}${up ? "升幅" : "跌幅"} Top 20`,
+      movers_sub: (wk, n, t) => `由${wk ? "上週五" : "上月最後一日"}收市計起 · ${n} 隻美股入面揀 · 更新：${t}`,
+      added_watch: (s) => `已加入 ${s} 到觀察清單`, failed: (e) => `失敗：${e}`,
+      bad_symbol: "股票代號格式唔啱", already: (s) => `${s} 已經喺清單入面`,
+      added: (s) => `已加入 ${s}，大約一分鐘內會攞到價`, save_fail: (e) => `儲存失敗：${e}`,
+      will_trigger: (p) => `而家已經係 ${p}，儲存之後下次 check 會即刻觸發。`,
+      alert_set: (s) => `已設定 ${s} 通知`,
+      confirm_remove_n: (s, n) => `移除 ${s}？佢嘅 ${n} 個通知都會一齊刪除。`,
+      confirm_remove: (s) => `由觀察清單移除 ${s}？`,
+      removed: (s) => `已移除 ${s}`, alert_deleted: "已刪除通知", rearmed: "通知已重新開啟", token_cleared: "已清除 token",
+    },
+    en: {
+      title: "Stock Alerts", h1: "My Stocks", tagline: "Watchlist · price alerts via ntfy",
+      settings: "Settings", settings_btn: "⚙︎",
+      tab_watch: "My Stocks", tab_movers: "Movers", tab_popular: "Top 100",
+      banner: "First time here? Add your GitHub token in Settings so you can add stocks and alerts.", open_settings: "Open Settings",
+      add_label: "Add a stock to your watchlist", add_ph: "e.g. AAPL, SHOP.TO", add_btn: "Add",
+      add_hint: "US stocks: just type the ticker. Canadian stocks: add <b>.TO</b> (TSX) or <b>.V</b> (TSX Venture), e.g. RY.TO",
+      loading: "Loading…",
+      wm_list: "List", wm_gainers: "▲ Top gainers", wm_losers: "▼ Top losers",
+      p_day: "Today", p_week: "This week", p_month: "This month",
+      gainers: "▲ Gainers", losers: "▼ Losers",
+      popular_title: "Top 100 most traded",
+      popular_sub: (t) => `Ranked by average daily dollar volume over the last 20 trading days · Updated ${t}`,
+      owner_label: "GitHub username", repo_label: "Repo name",
+      token_hint: "Use a fine-grained token for this repo only, with Contents → Read and write. The token is stored only in this browser.",
+      forget: "Clear token", cancel: "Cancel", save: "Save",
+      no_data: "No data yet", just_now: "just now",
+      min_ago: (n) => `${n} min ago`, hr_ago: (n) => `${n} h ago`, locale: "en-US",
+      weekend: "Weekend · market closed", m_open: "🟢 Market open", m_pre: "🟡 Pre-market", m_post: "🟡 After hours", m_closed: "⚪ Market closed",
+      read_fail: (n, s) => `Couldn't read ${n} (${s})`, need_token: "Add your GitHub token in Settings first",
+      no_repo: "Repo not set", token_invalid: "Token is invalid or expired — update it in Settings",
+      forbidden: "GitHub denied access (token permissions or rate limit)", load_fail: (e) => `Couldn't load: ${e}`,
+      fired: (t, p) => `✓ Triggered ${t} @ ${p}`, dist: (d) => `${d}% away`, waiting: "Waiting for update",
+      above_t: "▲ Rises to ≥", below_t: "▼ Falls to ≤", rearm: "Re-arm", del_alert: "Delete alert",
+      cond: "Condition", opt_above: "At or above ≥", opt_below: "At or below ≤", target: "Target price",
+      note_ph: "Note (optional)", save_alert: "Save alert",
+      ext: "Ext. hours", fetching: "Fetching price…",
+      close_at: (p) => `Close ${p}`, day_range: (a, b) => `Day ${a} – ${b}`,
+      week_meta: (x) => `Week ${x}`, month_meta: (x) => `Month ${x}`,
+      remove: "Remove", set_alert: "🔔 Set alert",
+      missing: (p, list, hourly) => `No ${p.toLowerCase()} data yet: ${list}${hourly ? " (rankings update about hourly)" : ""}`, list_sep: ", ",
+      rank_label: (p, up, n) => `${p} · ${up ? "top gainers" : "top losers"} · ${n} stocks`,
+      price_updated: (t) => `Prices updated ${t}`,
+      empty_watch: "Your watchlist is empty. Add your first stock above.",
+      in_watch: "On your watchlist", add_watch: "Add to watchlist",
+      rank_empty: "No ranking data yet. GitHub refreshes it during market hours; the first run takes a few minutes.",
+      month_name: (m) => new Date(2000, m - 1, 1).toLocaleString("en-US", { month: "long" }),
+      movers_title: (period, up) => `Top 20 ${up ? "gainers" : "losers"} · ${period}`,
+      movers_sub: (wk, n, t) => `Since ${wk ? "last Friday's" : "last month's final"} close · ${n} US stocks · Updated ${t}`,
+      added_watch: (s) => `Added ${s} to your watchlist`, failed: (e) => `Failed: ${e}`,
+      bad_symbol: "That ticker doesn't look right", already: (s) => `${s} is already on your list`,
+      added: (s) => `Added ${s} — price in about a minute`, save_fail: (e) => `Couldn't save: ${e}`,
+      will_trigger: (p) => `It's already at ${p}, so this will trigger on the next check.`,
+      alert_set: (s) => `Alert set for ${s}`,
+      confirm_remove_n: (s, n) => `Remove ${s}? Its ${n} alert(s) will be deleted too.`,
+      confirm_remove: (s) => `Remove ${s} from your watchlist?`,
+      removed: (s) => `Removed ${s}`, alert_deleted: "Alert deleted", rearmed: "Alert re-armed", token_cleared: "Token cleared",
+    },
+  };
+  let lang = store.get("sa.lang") || ((navigator.language || "").toLowerCase().startsWith("zh") ? "zh" : "en");
+  if (!I18N[lang]) lang = "zh";
+  const T = (k, ...a) => { const v = I18N[lang][k] ?? I18N.zh[k]; return typeof v === "function" ? v(...a) : v; };
+  function applyStatic() {
+    document.documentElement.lang = lang === "zh" ? "zh-Hant-HK" : "en";
+    document.title = T("title");
+    document.querySelectorAll("[data-i18n]").forEach((el) => { el.textContent = T(el.dataset.i18n); });
+    document.querySelectorAll("[data-i18n-html]").forEach((el) => { el.innerHTML = T(el.dataset.i18nHtml); });
+    document.querySelectorAll("[data-i18n-ph]").forEach((el) => { el.placeholder = T(el.dataset.i18nPh); });
+    document.querySelectorAll("[data-i18n-aria]").forEach((el) => { el.setAttribute("aria-label", T(el.dataset.i18nAria)); });
+    document.querySelectorAll("#langSwitch button").forEach((b) => b.classList.toggle("on", b.dataset.lang === lang));
+  }
 
   function guessRepo() {
     const h = location.hostname;
@@ -252,7 +378,7 @@
   let data = { watchlist: [], alerts: [] }, state = {}, prices = {}, updated = null, rankings = null;
   let moversMode = "gainers";
   let moversPeriod = store.get("sa.mperiod") === "week" ? "week" : "month";
-  const PERIOD = { day: "今日", week: "本週", month: "本月" };
+  const periodName = (p) => T({ day: "p_day", week: "p_week", month: "p_month" }[p]);
   let openFormFor = null;
   let watchMode = store.get("sa.wmode") || "list";
   let watchPeriod = store.get("sa.wperiod") || "day";
@@ -266,12 +392,12 @@
   const signed = (v, d = 2) => (v >= 0 ? "+" : "") + v.toFixed(d);
   const newId = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
   const timeAgo = (iso) => {
-    if (!iso) return "未有數據";
+    if (!iso) return T("no_data");
     const s = (Date.now() - new Date(iso).getTime()) / 1000;
-    if (s < 60) return "啱啱";
-    if (s < 3600) return `${Math.floor(s / 60)} 分鐘前`;
-    if (s < 86400) return `${Math.floor(s / 3600)} 個鐘前`;
-    return new Date(iso).toLocaleString("zh-HK", { month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit" });
+    if (s < 60) return T("just_now");
+    if (s < 3600) return T("min_ago", Math.floor(s / 60));
+    if (s < 86400) return T("hr_ago", Math.floor(s / 3600));
+    return new Date(iso).toLocaleString(T("locale"), { month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit" });
   };
   let toastTimer;
   function toast(msg) {
@@ -290,11 +416,11 @@
   function marketStatus() {
     const et = new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }));
     const d = et.getDay(), m = et.getHours() * 60 + et.getMinutes();
-    if (d === 0 || d === 6) return "週末休市";
-    if (m >= 570 && m < 960) return "🟢 開市中";
-    if (m >= 240 && m < 570) return "🟡 盤前";
-    if (m >= 960 && m < 1200) return "🟡 盤後";
-    return "⚪ 休市";
+    if (d === 0 || d === 6) return T("weekend");
+    if (m >= 570 && m < 960) return T("m_open");
+    if (m >= 240 && m < 570) return T("m_pre");
+    if (m >= 960 && m < 1200) return T("m_post");
+    return T("m_closed");
   }
 
   // ---------- logos ----------
@@ -345,7 +471,7 @@
       }
       const r = await fetch(`https://raw.githubusercontent.com/${cfg.owner}/${cfg.repo}/${cfg.branch}/${name}`, { cache: "no-store" });
       if (r.status === 404) return { data: fallback, sha: null };
-      if (!r.ok) throw Object.assign(new Error(`讀取 ${name} 失敗 (${r.status})`), { status: r.status });
+      if (!r.ok) throw Object.assign(new Error(T("read_fail", name, r.status)), { status: r.status });
       return { data: await r.json(), sha: null };
     } catch (e) {
       if (e.status === 404) return { data: fallback, sha: null };
@@ -359,7 +485,7 @@
     return { watchlist, alerts };
   }
   async function updateData(mutate, message) {
-    if (!cfg.token) { openSettings(); throw new Error("請先喺設定填 GitHub token"); }
+    if (!cfg.token) { openSettings(); throw new Error(T("need_token")); }
     for (let i = 0; i < 3; i++) {
       const { data: raw, sha } = await readJson("alerts.json", { alerts: [] });
       const next = mutate(normalize(raw));
@@ -380,7 +506,7 @@
     }
   }
   async function refresh() {
-    if (!cfg.owner || !cfg.repo) { $("updated").textContent = "未設定 repo"; openSettings(); return; }
+    if (!cfg.owner || !cfg.repo) { $("updated").textContent = T("no_repo"); openSettings(); return; }
     try {
       const [a, s, p, rk] = await Promise.all([
         readJson("alerts.json", { alerts: [] }),
@@ -396,8 +522,8 @@
       render();
       renderRankings();
     } catch (e) {
-      $("updated").textContent = e.status === 401 ? "token 無效或者過咗期，請喺設定更新" :
-        e.status === 403 ? "GitHub 拒絕存取（token 權限唔夠或者用量超咗）" : `載入失敗：${e.detail || e.message}`;
+      $("updated").textContent = e.status === 401 ? T("token_invalid") :
+        e.status === 403 ? T("forbidden") : T("load_fail", e.detail || e.message);
     }
   }
 
@@ -409,21 +535,21 @@
     const up = a.condition === "above";
     const fired = state[a.id];
     let pill;
-    if (fired) pill = `<span class="pill fired">✓ ${timeAgo(fired.triggered_at)}觸發 @ ${fmt(fired.price)}</span>`;
+    if (fired) pill = `<span class="pill fired">${T("fired", timeAgo(fired.triggered_at), fmt(fired.price))}</span>`;
     else if (q.price != null) {
       const dist = ((a.price - q.price) / q.price) * 100;
-      pill = `<span class="pill">相差 ${signed(dist)}%</span>`;
-    } else pill = `<span class="pill">等緊更新</span>`;
+      pill = `<span class="pill">${T("dist", signed(dist))}</span>`;
+    } else pill = `<span class="pill">${T("waiting")}</span>`;
     return `
       <div class="alert-row">
         <div>
-          <div class="target ${up ? "pos" : "neg"}">${up ? "▲ 升到 ≥" : "▼ 跌到 ≤"} ${fmt(a.price)}</div>
+          <div class="target ${up ? "pos" : "neg"}">${up ? T("above_t") : T("below_t")} ${fmt(a.price)}</div>
           ${a.note ? `<div class="note">${esc(a.note)}</div>` : ""}
         </div>
         <div class="row-actions">
           ${pill}
-          ${fired ? `<button class="ghost" data-act="rearm" data-id="${esc(a.id)}">重新開</button>` : ""}
-          <button class="ghost" data-act="delAlert" data-id="${esc(a.id)}" aria-label="刪除通知">✕</button>
+          ${fired ? `<button class="ghost" data-act="rearm" data-id="${esc(a.id)}">${T("rearm")}</button>` : ""}
+          <button class="ghost" data-act="delAlert" data-id="${esc(a.id)}" aria-label="${T("del_alert")}">✕</button>
         </div>
       </div>`;
   }
@@ -432,23 +558,23 @@
     return `
       <form class="alert-form" data-sym="${esc(sym)}" autocomplete="off">
         <div>
-          <label>條件</label>
+          <label>${T("cond")}</label>
           <select name="condition">
-            <option value="above">升到或以上 ≥</option>
-            <option value="below">跌到或以下 ≤</option>
+            <option value="above">${T("opt_above")}</option>
+            <option value="below">${T("opt_below")}</option>
           </select>
         </div>
         <div>
-          <label>目標價</label>
+          <label>${T("target")}</label>
           <input name="price" type="number" inputmode="decimal" step="any" min="0" placeholder="0.00" required>
         </div>
         <div class="full">
-          <input name="note" maxlength="80" placeholder="備註（可以留空）">
+          <input name="note" maxlength="80" placeholder="${T("note_ph")}">
         </div>
         <div class="full msg"></div>
         <div class="full btns">
-          <button type="button" class="ghost" data-act="cancelForm">取消</button>
-          <button type="submit" class="primary">儲存通知</button>
+          <button type="button" class="ghost" data-act="cancelForm">${T("cancel")}</button>
+          <button type="submit" class="primary">${T("save_alert")}</button>
         </div>
       </form>`;
   }
@@ -464,20 +590,20 @@
       priceBlock = `
         <div class="price">${fmt(q.price)} <span class="cur">${esc(q.currency || "")}</span></div>
         <div class="chg ${pct == null ? "" : pct >= 0 ? "pos" : "neg"}">
-          ${pct == null ? "" : `${signed(abs)} (${signed(pct)}%)`}${ext ? `<span class="tag">盤前/後</span>` : ""}
+          ${pct == null ? "" : `${signed(abs)} (${signed(pct)}%)`}${ext ? `<span class="tag">${T("ext")}</span>` : ""}
         </div>`;
     } else if (q.error) {
       priceBlock = `<div class="err" style="text-align:right">⚠︎ ${esc(q.error)}</div>`;
     } else {
-      priceBlock = `<div class="sub" style="text-align:right">等緊攞價…</div>`;
+      priceBlock = `<div class="sub" style="text-align:right">${T("fetching")}</div>`;
     }
     const meta = [];
-    if (ext && q.regular != null) meta.push(`收市 ${fmt(q.regular)}`);
-    if (q.day_low != null && q.day_high != null) meta.push(`今日 ${fmt(q.day_low)} – ${fmt(q.day_high)}`);
+    if (ext && q.regular != null) meta.push(T("close_at", fmt(q.regular)));
+    if (q.day_low != null && q.day_high != null) meta.push(T("day_range", fmt(q.day_low), fmt(q.day_high)));
     const wp = weekPct(sym);
-    if (wp != null) meta.push(`本週 <span class="${wp >= 0 ? "pos" : "neg"}">${signed(wp)}%</span>`);
+    if (wp != null) meta.push(T("week_meta", `<span class="${wp >= 0 ? "pos" : "neg"}">${signed(wp)}%</span>`));
     const mp = monthPct(sym);
-    if (mp != null) meta.push(`本月 <span class="${mp >= 0 ? "pos" : "neg"}">${signed(mp)}%</span>`);
+    if (mp != null) meta.push(T("month_meta", `<span class="${mp >= 0 ? "pos" : "neg"}">${signed(mp)}%</span>`));
     if (q.exchange) meta.push(esc(q.exchange));
     return `
       <div class="card" data-card="${esc(sym)}">
@@ -493,8 +619,8 @@
         ${alerts.length ? `<div class="alerts">${alerts.map((a) => alertRow(a, q)).join("")}</div>` : ""}
         ${openFormFor === sym ? alertForm(sym) : `
           <div class="card-actions">
-            <button class="ghost" data-act="removeStock" data-sym="${esc(sym)}">移除</button>
-            <button class="ghost" data-act="openForm" data-sym="${esc(sym)}">🔔 設通知</button>
+            <button class="ghost" data-act="removeStock" data-sym="${esc(sym)}">${T("remove")}</button>
+            <button class="ghost" data-act="openForm" data-sym="${esc(sym)}">${T("set_alert")}</button>
           </div>`}
       </div>`;
   }
@@ -549,21 +675,20 @@
         </div>`;
     }).join("");
     const note = unknown.length
-      ? `<div class="hint" style="padding:10px 14px">未有${PERIOD[watchPeriod]}數據：${unknown.map((x) => esc(x.s)).join("、")}${watchPeriod !== "day" ? "（排行每個鐘更新一次）" : ""}</div>`
+      ? `<div class="hint" style="padding:10px 14px">${T("missing", periodName(watchPeriod), unknown.map((x) => esc(x.s)).join(T("list_sep")), watchPeriod !== "day")}</div>`
       : "";
-    const label = `${PERIOD[watchPeriod]}${up ? "升幅" : "跌幅"}排名`;
-    return `<div class="sub" style="margin:0 2px 8px">${label} · 共 ${known.length} 隻</div>
-      <div class="card rank-list">${rows || `<div class="empty">未有數據</div>`}${note}</div>`;
+    return `<div class="sub" style="margin:0 2px 8px">${T("rank_label", periodName(watchPeriod), up, known.length)}</div>
+      <div class="card rank-list">${rows || `<div class="empty">${T("no_data")}</div>`}${note}</div>`;
   }
 
   function render(force = false) {
     $("setupBanner").hidden = !!cfg.token;
-    $("updated").textContent = `價格更新：${timeAgo(updated)}`;
+    $("updated").textContent = T("price_updated", timeAgo(updated));
     $("market").textContent = marketStatus();
     if (openFormFor && !force) return; // don't wipe a half-filled form
     const list = $("list");
     if (!data.watchlist.length) {
-      list.innerHTML = `<div class="card empty">觀察清單未有股票。喺上面加第一隻啦。</div>`;
+      list.innerHTML = `<div class="card empty">${T("empty_watch")}</div>`;
       return;
     }
     renderWatchControls();
@@ -579,8 +704,8 @@
   const compact = (v) => v == null ? "—" : v >= 1e9 ? `$${(v / 1e9).toFixed(1)}B` : v >= 1e6 ? `$${(v / 1e6).toFixed(0)}M` : `$${Math.round(v).toLocaleString()}`;
   function addBtn(sym) {
     return data.watchlist.includes(sym)
-      ? `<button class="add-btn done" disabled aria-label="已喺觀察清單">✓</button>`
-      : `<button class="add-btn" data-watch="${esc(sym)}" aria-label="加入觀察清單">＋</button>`;
+      ? `<button class="add-btn done" disabled aria-label="${T("in_watch")}">✓</button>`
+      : `<button class="add-btn" data-watch="${esc(sym)}" aria-label="${T("add_watch")}">＋</button>`;
   }
   function rankRow(r, i, right) {
     return `
@@ -600,15 +725,15 @@
     return `<span class="${v >= 0 ? "pos" : "neg"}${big ? " big" : ""}">${signed(v)}%</span>`;
   }
   function renderRankings() {
-    const empty = `<div class="empty">排行榜未有數據。GitHub 每個鐘（開市時間）會更新一次，第一次大約要等幾分鐘。</div>`;
+    const empty = `<div class="empty">${T("rank_empty")}</div>`;
     const ml = $("moversList"), pl = $("popularList");
     if (!rankings) { ml.innerHTML = empty; pl.innerHTML = empty; return; }
     const [y, m] = (rankings.month || "").split("-");
     const up = moversMode === "gainers";
     const wk = moversPeriod === "week" && rankings.week_gainers;
-    const periodLabel = wk ? "本週" : (m ? Number(m) + " 月" : "本月");
-    $("moversTitle").textContent = `${periodLabel}${up ? "升幅" : "跌幅"} Top 20`;
-    $("moversSub").textContent = `由${wk ? "上週五" : "上月最後一日"}收市計起 · ${rankings.universe_size || ""} 隻美股入面揀 · 更新：${timeAgo(rankings.updated)}`;
+    const periodLabel = wk ? T("p_week") : (m ? T("month_name", Number(m)) : T("p_month"));
+    $("moversTitle").textContent = T("movers_title", periodLabel, up);
+    $("moversSub").textContent = T("movers_sub", !!wk, rankings.universe_size || "", timeAgo(rankings.updated));
     document.querySelectorAll("#moversPeriod button").forEach((b) => {
       const on = b.dataset.mp === (wk ? "week" : "month");
       b.classList.toggle("on", on); b.classList.toggle("plain", on);
@@ -624,7 +749,7 @@
         ${pctSpan(wk ? r.week_pct : r.month_pct, true)}
         <div class="sub">${fmt(r.price)}</div>`)).join("") : empty;
     const pop = rankings.popular || [];
-    $("popularSub").textContent = `按過去 20 個交易日平均每日成交額排名 · 更新：${timeAgo(rankings.updated)}`;
+    $("popularSub").textContent = T("popular_sub", timeAgo(rankings.updated));
     pl.innerHTML = pop.length ? pop.map((r, i) => rankRow(r, i, `
         <div class="big">${fmt(r.price)}</div>
         <div class="sub">${pctSpan(r.day_pct)} · ${compact(r.dollar_volume)}</div>`)).join("") : empty;
@@ -647,11 +772,11 @@
     try {
       await updateData((d) => ({ ...d, watchlist: [...d.watchlist.filter((s) => s !== sym), sym] }), `Watch ${sym}`);
       renderRankings();
-      toast(`已加入 ${sym} 到觀察清單`);
+      toast(T("added_watch", sym));
       setTimeout(refresh, 60000);
     } catch (e) {
       btn.disabled = false;
-      toast(`失敗：${e.detail || e.message}`);
+      toast(T("failed", e.detail || e.message));
     }
   }
   ["moversList", "popularList"].forEach((id) => $(id).addEventListener("click", (ev) => {
@@ -676,17 +801,17 @@
     const sym = $("symbol").value.trim().toUpperCase().replace(/\s+/g, "");
     const msg = $("addMsg");
     msg.innerHTML = "";
-    if (!/^[A-Z0-9.\-^=]{1,15}$/.test(sym)) { msg.innerHTML = `<div class="err hint">股票代號格式唔啱</div>`; return; }
-    if (data.watchlist.includes(sym)) { msg.innerHTML = `<div class="warn hint">${esc(sym)} 已經喺清單入面</div>`; return; }
+    if (!/^[A-Z0-9.\-^=]{1,15}$/.test(sym)) { msg.innerHTML = `<div class="err hint">${T("bad_symbol")}</div>`; return; }
+    if (data.watchlist.includes(sym)) { msg.innerHTML = `<div class="warn hint">${T("already", esc(sym))}</div>`; return; }
     $("addBtn").disabled = true;
     try {
       await updateData((d) => ({ ...d, watchlist: [...d.watchlist.filter((s) => s !== sym), sym] }), `Watch ${sym}`);
       $("symbol").value = "";
-      toast(`已加入 ${sym}，大約一分鐘內會攞到價`);
+      toast(T("added", sym));
       setTimeout(refresh, 45000);
       setTimeout(refresh, 90000);
     } catch (e) {
-      msg.innerHTML = `<div class="err hint">儲存失敗：${esc(e.detail || e.message)}</div>`;
+      msg.innerHTML = `<div class="err hint">${T("save_fail", esc(e.detail || e.message))}</div>`;
     } finally {
       $("addBtn").disabled = false;
     }
@@ -714,7 +839,7 @@
     if (q.price == null || isNaN(target)) return;
     const up = f.condition.value === "above";
     if ((up && q.price >= target) || (!up && q.price <= target))
-      box.innerHTML = `<div class="warn">而家已經係 ${fmt(q.price)}，儲存之後下次 check 會即刻觸發。</div>`;
+      box.innerHTML = `<div class="warn">${T("will_trigger", fmt(q.price))}</div>`;
   });
 
   $("list").addEventListener("submit", async (ev) => {
@@ -729,11 +854,11 @@
     try {
       openFormFor = null;
       await updateData((d) => ({ ...d, alerts: [...d.alerts, alert] }), `Alert ${sym} ${alert.condition} ${price}`);
-      toast(`已設定 ${sym} 通知`);
+      toast(T("alert_set", sym));
     } catch (e) {
       openFormFor = sym;
       btn.disabled = false;
-      f.querySelector(".msg").innerHTML = `<div class="err">儲存失敗：${esc(e.detail || e.message)}</div>`;
+      f.querySelector(".msg").innerHTML = `<div class="err">${T("save_fail", esc(e.detail || e.message))}</div>`;
     }
   });
 
@@ -748,23 +873,23 @@
       if (act === "removeStock") {
         const sym = btn.dataset.sym;
         const n = data.alerts.filter((a) => a.symbol.toUpperCase() === sym).length;
-        if (!window.confirm(n ? `移除 ${sym}？佢嘅 ${n} 個通知都會一齊刪除。` : `由觀察清單移除 ${sym}？`)) { btn.disabled = false; return; }
+        if (!window.confirm(n ? T("confirm_remove_n", sym, n) : T("confirm_remove", sym))) { btn.disabled = false; return; }
         await updateData((d) => ({
           watchlist: d.watchlist.filter((s) => s !== sym),
           alerts: d.alerts.filter((a) => a.symbol.toUpperCase() !== sym),
         }), `Unwatch ${sym}`);
-        toast(`已移除 ${sym}`);
+        toast(T("removed", sym));
       } else if (act === "delAlert") {
         const id = btn.dataset.id;
         await updateData((d) => ({ ...d, alerts: d.alerts.filter((a) => a.id !== id) }), "Delete alert");
-        toast("已刪除通知");
+        toast(T("alert_deleted"));
       } else if (act === "rearm") {
         const id = btn.dataset.id, fresh = newId();
         await updateData((d) => ({ ...d, alerts: d.alerts.map((a) => a.id === id ? { ...a, id: fresh } : a) }), "Re-arm alert");
-        toast("通知已重新開啟");
+        toast(T("rearmed"));
       }
     } catch (e) {
-      toast(`失敗：${e.detail || e.message}`);
+      toast(T("failed", e.detail || e.message));
       btn.disabled = false;
     }
   });
@@ -776,7 +901,7 @@
   }
   $("openSettings").onclick = openSettings;
   $("bannerSettings").onclick = openSettings;
-  $("forget").onclick = () => { store.del("sa.token"); cfg.token = ""; $("token").value = ""; toast("已清除 token"); render(true); };
+  $("forget").onclick = () => { store.del("sa.token"); cfg.token = ""; $("token").value = ""; toast(T("token_cleared")); render(true); };
   $("settings").addEventListener("close", () => {
     if ($("settings").returnValue !== "save") return;
     cfg.owner = $("owner").value.trim(); cfg.repo = $("repo").value.trim(); cfg.token = $("token").value.trim();
@@ -784,6 +909,16 @@
     if (cfg.token) store.set("sa.token", cfg.token); else store.del("sa.token");
     refresh();
   });
+
+  $("langSwitch").addEventListener("click", (ev) => {
+    const b = ev.target.closest("button[data-lang]");
+    if (!b || b.dataset.lang === lang) return;
+    lang = b.dataset.lang; store.set("sa.lang", lang);
+    applyStatic();
+    render(true);
+    renderRankings();
+  });
+  applyStatic();
 
   refresh();
   setInterval(refresh, 60000);

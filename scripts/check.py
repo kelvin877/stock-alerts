@@ -123,6 +123,19 @@ def notify(topic, title, message, tags, priority=4):
         r.read()
 
 
+TEXT = {
+    "zh": {"test_title": "測試通知 ✅", "test_msg": "股價通知設定成功！到價嗰陣你會收到呢類通知。",
+           "up": "升到", "down": "跌到", "target": "目標", "note": "備註"},
+    "en": {"test_title": "Test notification ✅", "test_msg": "Stock alerts are set up! You'll get notifications like this when a price is hit.",
+           "up": "rose to", "down": "fell to", "target": "Target", "note": "Note"},
+}
+
+
+def text(key):
+    lang = os.environ.get("NOTIFY_LANG", "zh").strip().lower()
+    return TEXT.get(lang if lang in TEXT else "zh")[key]
+
+
 def fmt(v):
     return f"{v:,.4f}".rstrip("0").rstrip(".") if v < 1 else f"{v:,.2f}"
 
@@ -135,7 +148,7 @@ def main(fetch=fetch_quote, send=notify):
         if not topic:
             print("::error::未設定 NTFY_TOPIC secret")
             return 1
-        send(topic, "測試通知 ✅", "股價通知設定成功！到價嗰陣你會收到呢類通知。", ["white_check_mark"], 3)
+        send(topic, text("test_title"), text("test_msg"), ["white_check_mark"], 3)
         print("Sent test notification")
 
     if not force and not market_open():
@@ -171,12 +184,12 @@ def main(fetch=fetch_quote, send=notify):
             print("::warning::到價但未設定 NTFY_TOPIC，冇發通知")
             continue
         up = a.get("condition") == "above"
-        title = f"{a['symbol'].upper()} {'升到' if up else '跌到'} {fmt(p)}"
-        msg = f"目標：{'≥' if up else '≤'} {fmt(float(a['price']))} {q.get('currency') or ''}".strip()
+        title = f"{a['symbol'].upper()} {text('up') if up else text('down')} {fmt(p)}"
+        msg = f"{text('target')}: {'≥' if up else '≤'} {fmt(float(a['price']))} {q.get('currency') or ''}".strip()
         if q.get("name"):
             msg = f"{q['name']}\n{msg}"
         if a.get("note"):
-            msg += f"\n備註：{a['note']}"
+            msg += f"\n{text('note')}: {a['note']}"
         try:
             send(topic, title, msg, ["chart_with_upwards_trend" if up else "chart_with_downwards_trend"])
         except Exception as e:

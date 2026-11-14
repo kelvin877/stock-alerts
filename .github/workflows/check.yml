@@ -34,6 +34,7 @@ jobs:
       - name: Check prices
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          NOTIFY_LANG: ${{ vars.NOTIFY_LANG }}
           FORCE: ${{ github.event_name != 'schedule' && '1' || '0' }}
           TEST_NOTIFY: ${{ inputs.test && '1' || '0' }}
         run: python scripts/check.py
