@@ -110,6 +110,9 @@
   .rank-row .r { text-align: right; font-variant-numeric: tabular-nums; }
   .rank-row .big { font-weight: 650; font-size: 15px; }
   .add-btn { width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--line); background: transparent; cursor: pointer; font-size: 18px; line-height: 1; color: var(--accent); }
+  .watch-controls { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin: 0 0 12px; flex-wrap: wrap; }
+  .seg button.on.plain { background: var(--accent); color: #fff; }
+  .rank-row.watch { grid-template-columns: 26px 36px 1fr auto; }
   .add-btn.done { color: var(--up); border-color: transparent; cursor: default; }
 </style>
 </head>
@@ -149,12 +152,17 @@
 
   <div class="toolbar">
     <span><span id="updated">載入中…</span> · <span id="market"></span></span>
-    <select id="sort" aria-label="排序">
-      <option value="added">加入次序</option>
-      <option value="change">升跌幅</option>
-      <option value="symbol">代號</option>
-      <option value="alerts">有通知先</option>
-    </select>
+  </div>
+  <div class="watch-controls">
+    <div class="seg" id="watchMode">
+      <button type="button" data-wmode="list">清單</button>
+      <button type="button" data-wmode="gainers">▲ 升幅排名</button>
+      <button type="button" data-wmode="losers">▼ 跌幅排名</button>
+    </div>
+    <div class="seg" id="watchPeriod">
+      <button type="button" data-period="day">今日</button>
+      <button type="button" data-period="month">本月</button>
+    </div>
   </div>
   <div id="list"></div>
   </div>
@@ -165,7 +173,7 @@
         <h2 id="moversTitle">本月升幅 Top 20</h2>
         <div class="sub" id="moversSub"></div>
       </div>
-      <div class="seg">
+      <div class="seg" id="moversMode">
         <button type="button" data-mode="gainers" class="on up">▲ 升幅</button>
         <button type="button" data-mode="losers">▼ 跌幅</button>
       </div>
@@ -237,7 +245,10 @@
   let data = { watchlist: [], alerts: [] }, state = {}, prices = {}, updated = null, rankings = null;
   let moversMode = "gainers";
   let openFormFor = null;
-  $("sort").value = store.get("sa.sort") || "added";
+  let watchMode = store.get("sa.wmode") || "list";
+  let watchPeriod = store.get("sa.wperiod") || "day";
+  if (!["list", "gainers", "losers"].includes(watchMode)) watchMode = "list";
+  if (!["day", "month"].includes(watchPeriod)) watchPeriod = "day";
 
   // ---------- helpers ----------
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -454,6 +465,8 @@
     const meta = [];
     if (ext && q.regular != null) meta.push(`收市 ${fmt(q.regular)}`);
     if (q.day_low != null && q.day_high != null) meta.push(`今日 ${fmt(q.day_low)} – ${fmt(q.day_high)}`);
+    const mp = monthPct(sym);
+    if (mp != null) meta.push(`本月 <span class="${mp >= 0 ? "pos" : "neg"}">${signed(mp)}%</span>`);
     if (q.exchange) meta.push(esc(q.exchange));
     return `
       <div class="card" data-card="${esc(sym)}">
@@ -475,16 +488,57 @@
       </div>`;
   }
 
-  function sortedSymbols() {
-    const list = data.watchlist.slice();
-    const mode = $("sort").value;
-    if (mode === "symbol") list.sort();
-    else if (mode === "change") list.sort((a, b) => (changePct(quote(b)) ?? -1e9) - (changePct(quote(a)) ?? -1e9));
-    else if (mode === "alerts") {
-      const n = (s) => data.alerts.filter((a) => a.symbol.toUpperCase() === s && !state[a.id]).length;
-      list.sort((a, b) => n(b) - n(a));
-    }
-    return list;
+  function monthPct(sym) {
+    const m = rankings && rankings.month_pct;
+    return m && m[sym] != null ? m[sym] : null;
+  }
+  function periodPct(sym) {
+    return watchPeriod === "month" ? monthPct(sym) : changePct(quote(sym));
+  }
+
+  function renderWatchControls() {
+    document.querySelectorAll("#watchMode button").forEach((b) => {
+      const on = b.dataset.wmode === watchMode;
+      b.classList.toggle("on", on);
+      b.classList.toggle("up", on && watchMode === "gainers");
+      b.classList.toggle("down", on && watchMode === "losers");
+      b.classList.toggle("plain", on && watchMode === "list");
+    });
+    $("watchPeriod").hidden = watchMode === "list";
+    document.querySelectorAll("#watchPeriod button").forEach((b) => {
+      const on = b.dataset.period === watchPeriod;
+      b.classList.toggle("on", on);
+      b.classList.toggle("plain", on);
+    });
+  }
+
+  function renderWatchRanking() {
+    const up = watchMode === "gainers";
+    const withPct = data.watchlist.map((s) => ({ s, p: periodPct(s) }));
+    const known = withPct.filter((x) => x.p != null).sort((a, b) => up ? b.p - a.p : a.p - b.p);
+    const unknown = withPct.filter((x) => x.p == null);
+    const rows = known.map((x, i) => {
+      const q = quote(x.s);
+      return `
+        <div class="rank-row watch">
+          <div class="n">${i + 1}</div>
+          ${logoHtml(x.s)}
+          <div style="min-width:0">
+            <div class="sym">${esc(x.s)}</div>
+            <div class="name">${esc(q.name || "")}</div>
+          </div>
+          <div class="r">
+            <span class="big ${x.p >= 0 ? "pos" : "neg"}">${signed(x.p)}%</span>
+            <div class="sub">${fmt(q.price)}</div>
+          </div>
+        </div>`;
+    }).join("");
+    const note = unknown.length
+      ? `<div class="hint" style="padding:10px 14px">未有${watchPeriod === "month" ? "本月" : "今日"}數據：${unknown.map((x) => esc(x.s)).join("、")}${watchPeriod === "month" ? "（排行每個鐘更新一次）" : ""}</div>`
+      : "";
+    const label = `${watchPeriod === "month" ? "本月" : "今日"}${up ? "升幅" : "跌幅"}排名`;
+    return `<div class="sub" style="margin:0 2px 8px">${label} · 共 ${known.length} 隻</div>
+      <div class="card rank-list">${rows || `<div class="empty">未有數據</div>`}${note}</div>`;
   }
 
   function render(force = false) {
@@ -497,7 +551,9 @@
       list.innerHTML = `<div class="card empty">觀察清單未有股票。喺上面加第一隻啦。</div>`;
       return;
     }
-    list.innerHTML = sortedSymbols().map(stockCard).join("");
+    renderWatchControls();
+    if (watchMode !== "list") { list.innerHTML = renderWatchRanking(); return; }
+    list.innerHTML = data.watchlist.map(stockCard).join("");
     if (openFormFor) {
       const f = list.querySelector(`form.alert-form`);
       if (f) f.price.focus();
@@ -536,7 +592,7 @@
     const up = moversMode === "gainers";
     $("moversTitle").textContent = `${m ? Number(m) + " 月" : "本月"}${up ? "升幅" : "跌幅"} Top 20`;
     $("moversSub").textContent = `由上月收市計起 · ${rankings.universe_size || ""} 隻美股入面揀 · 更新：${timeAgo(rankings.updated)}`;
-    document.querySelectorAll(".seg button").forEach((b) => {
+    document.querySelectorAll("#moversMode button").forEach((b) => {
       const on = b.dataset.mode === moversMode;
       b.classList.toggle("on", on);
       b.classList.toggle("up", on && b.dataset.mode === "gainers");
@@ -552,7 +608,7 @@
         <div class="big">${fmt(r.price)}</div>
         <div class="sub">${pctSpan(r.day_pct)} · ${compact(r.dollar_volume)}</div>`)).join("") : empty;
   }
-  document.querySelector(".seg").addEventListener("click", (ev) => {
+  $("moversMode").addEventListener("click", (ev) => {
     const b = ev.target.closest("button[data-mode]");
     if (!b) return;
     moversMode = b.dataset.mode;
@@ -609,7 +665,19 @@
     }
   });
 
-  $("sort").addEventListener("change", () => { store.set("sa.sort", $("sort").value); render(true); });
+  $("watchMode").addEventListener("click", (ev) => {
+    const b = ev.target.closest("button[data-wmode]");
+    if (!b) return;
+    watchMode = b.dataset.wmode; store.set("sa.wmode", watchMode);
+    openFormFor = null;
+    render(true);
+  });
+  $("watchPeriod").addEventListener("click", (ev) => {
+    const b = ev.target.closest("button[data-period]");
+    if (!b) return;
+    watchPeriod = b.dataset.period; store.set("sa.wperiod", watchPeriod);
+    render(true);
+  });
 
   $("list").addEventListener("input", (ev) => {
     const f = ev.target.closest("form.alert-form");

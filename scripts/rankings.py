@@ -108,8 +108,16 @@ def main():
         res = fetch_daily(sym)
         return summarize(sym, name, res, month_start_ts) if res else None
 
+    # Also compute this month's change for the user's own watchlist.
+    watch = [str(x).upper() for x in load("alerts.json", {}).get("watchlist", []) if x]
+    todo = dict(symbols)
+    for sym in watch:
+        todo.setdefault(sym, sym)
+
     with ThreadPoolExecutor(max_workers=6) as pool:
-        rows = [r for r in pool.map(work, sorted(symbols.items())) if r]
+        fetched = [r for r in pool.map(work, sorted(todo.items())) if r]
+    month_map = {r["symbol"]: r["month_pct"] for r in fetched if r["month_pct"] is not None}
+    rows = [r for r in fetched if r["symbol"] in symbols]
 
     print(f"Fetched {len(rows)} / {len(symbols)} symbols")
     if len(rows) < len(symbols) * 0.5:
@@ -127,6 +135,7 @@ def main():
         "gainers": movers[:20],
         "losers": movers[::-1][:20],
         "popular": popular[:100],
+        "month_pct": month_map,
     })
     save("universe.json", {
         "source": "S&P 500 (datasets/s-and-p-500-companies) + popular extras",
