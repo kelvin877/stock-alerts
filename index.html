@@ -128,7 +128,7 @@
 
   <nav class="tabs">
     <a href="#watch" data-view="watch">我的股票</a>
-    <a href="#movers" data-view="movers">本月排行</a>
+    <a href="#movers" data-view="movers">升跌排行</a>
     <a href="#popular" data-view="popular">熱門 100</a>
   </nav>
 
@@ -161,6 +161,7 @@
     </div>
     <div class="seg" id="watchPeriod">
       <button type="button" data-period="day">今日</button>
+      <button type="button" data-period="week">本週</button>
       <button type="button" data-period="month">本月</button>
     </div>
   </div>
@@ -173,9 +174,15 @@
         <h2 id="moversTitle">本月升幅 Top 20</h2>
         <div class="sub" id="moversSub"></div>
       </div>
-      <div class="seg" id="moversMode">
-        <button type="button" data-mode="gainers" class="on up">▲ 升幅</button>
-        <button type="button" data-mode="losers">▼ 跌幅</button>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <div class="seg" id="moversPeriod">
+          <button type="button" data-mp="week">本週</button>
+          <button type="button" data-mp="month" class="on plain">本月</button>
+        </div>
+        <div class="seg" id="moversMode">
+          <button type="button" data-mode="gainers" class="on up">▲ 升幅</button>
+          <button type="button" data-mode="losers">▼ 跌幅</button>
+        </div>
       </div>
     </div>
     <div class="card rank-list" id="moversList"></div>
@@ -244,11 +251,13 @@
 
   let data = { watchlist: [], alerts: [] }, state = {}, prices = {}, updated = null, rankings = null;
   let moversMode = "gainers";
+  let moversPeriod = store.get("sa.mperiod") === "week" ? "week" : "month";
+  const PERIOD = { day: "今日", week: "本週", month: "本月" };
   let openFormFor = null;
   let watchMode = store.get("sa.wmode") || "list";
   let watchPeriod = store.get("sa.wperiod") || "day";
   if (!["list", "gainers", "losers"].includes(watchMode)) watchMode = "list";
-  if (!["day", "month"].includes(watchPeriod)) watchPeriod = "day";
+  if (!["day", "week", "month"].includes(watchPeriod)) watchPeriod = "day";
 
   // ---------- helpers ----------
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -465,6 +474,8 @@
     const meta = [];
     if (ext && q.regular != null) meta.push(`收市 ${fmt(q.regular)}`);
     if (q.day_low != null && q.day_high != null) meta.push(`今日 ${fmt(q.day_low)} – ${fmt(q.day_high)}`);
+    const wp = weekPct(sym);
+    if (wp != null) meta.push(`本週 <span class="${wp >= 0 ? "pos" : "neg"}">${signed(wp)}%</span>`);
     const mp = monthPct(sym);
     if (mp != null) meta.push(`本月 <span class="${mp >= 0 ? "pos" : "neg"}">${signed(mp)}%</span>`);
     if (q.exchange) meta.push(esc(q.exchange));
@@ -492,8 +503,12 @@
     const m = rankings && rankings.month_pct;
     return m && m[sym] != null ? m[sym] : null;
   }
+  function weekPct(sym) {
+    const m = rankings && rankings.week_pct;
+    return m && m[sym] != null ? m[sym] : null;
+  }
   function periodPct(sym) {
-    return watchPeriod === "month" ? monthPct(sym) : changePct(quote(sym));
+    return watchPeriod === "month" ? monthPct(sym) : watchPeriod === "week" ? weekPct(sym) : changePct(quote(sym));
   }
 
   function renderWatchControls() {
@@ -534,9 +549,9 @@
         </div>`;
     }).join("");
     const note = unknown.length
-      ? `<div class="hint" style="padding:10px 14px">未有${watchPeriod === "month" ? "本月" : "今日"}數據：${unknown.map((x) => esc(x.s)).join("、")}${watchPeriod === "month" ? "（排行每個鐘更新一次）" : ""}</div>`
+      ? `<div class="hint" style="padding:10px 14px">未有${PERIOD[watchPeriod]}數據：${unknown.map((x) => esc(x.s)).join("、")}${watchPeriod !== "day" ? "（排行每個鐘更新一次）" : ""}</div>`
       : "";
-    const label = `${watchPeriod === "month" ? "本月" : "今日"}${up ? "升幅" : "跌幅"}排名`;
+    const label = `${PERIOD[watchPeriod]}${up ? "升幅" : "跌幅"}排名`;
     return `<div class="sub" style="margin:0 2px 8px">${label} · 共 ${known.length} 隻</div>
       <div class="card rank-list">${rows || `<div class="empty">未有數據</div>`}${note}</div>`;
   }
@@ -590,17 +605,23 @@
     if (!rankings) { ml.innerHTML = empty; pl.innerHTML = empty; return; }
     const [y, m] = (rankings.month || "").split("-");
     const up = moversMode === "gainers";
-    $("moversTitle").textContent = `${m ? Number(m) + " 月" : "本月"}${up ? "升幅" : "跌幅"} Top 20`;
-    $("moversSub").textContent = `由上月收市計起 · ${rankings.universe_size || ""} 隻美股入面揀 · 更新：${timeAgo(rankings.updated)}`;
+    const wk = moversPeriod === "week" && rankings.week_gainers;
+    const periodLabel = wk ? "本週" : (m ? Number(m) + " 月" : "本月");
+    $("moversTitle").textContent = `${periodLabel}${up ? "升幅" : "跌幅"} Top 20`;
+    $("moversSub").textContent = `由${wk ? "上週五" : "上月最後一日"}收市計起 · ${rankings.universe_size || ""} 隻美股入面揀 · 更新：${timeAgo(rankings.updated)}`;
+    document.querySelectorAll("#moversPeriod button").forEach((b) => {
+      const on = b.dataset.mp === (wk ? "week" : "month");
+      b.classList.toggle("on", on); b.classList.toggle("plain", on);
+    });
     document.querySelectorAll("#moversMode button").forEach((b) => {
       const on = b.dataset.mode === moversMode;
       b.classList.toggle("on", on);
       b.classList.toggle("up", on && b.dataset.mode === "gainers");
       b.classList.toggle("down", on && b.dataset.mode === "losers");
     });
-    const rows = rankings[moversMode] || [];
+    const rows = rankings[(wk ? "week_" : "") + moversMode] || [];
     ml.innerHTML = rows.length ? rows.map((r, i) => rankRow(r, i, `
-        ${pctSpan(r.month_pct, true)}
+        ${pctSpan(wk ? r.week_pct : r.month_pct, true)}
         <div class="sub">${fmt(r.price)}</div>`)).join("") : empty;
     const pop = rankings.popular || [];
     $("popularSub").textContent = `按過去 20 個交易日平均每日成交額排名 · 更新：${timeAgo(rankings.updated)}`;
@@ -608,6 +629,12 @@
         <div class="big">${fmt(r.price)}</div>
         <div class="sub">${pctSpan(r.day_pct)} · ${compact(r.dollar_volume)}</div>`)).join("") : empty;
   }
+  $("moversPeriod").addEventListener("click", (ev) => {
+    const b = ev.target.closest("button[data-mp]");
+    if (!b) return;
+    moversPeriod = b.dataset.mp; store.set("sa.mperiod", moversPeriod);
+    renderRankings();
+  });
   $("moversMode").addEventListener("click", (ev) => {
     const b = ev.target.closest("button[data-mode]");
     if (!b) return;

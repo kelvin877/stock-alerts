@@ -14,7 +14,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from check import ET, UA, load, now_iso, save  # noqa: E402
@@ -65,7 +65,7 @@ def fetch_daily(symbol):
     return None
 
 
-def summarize(symbol, name, res, month_start_ts):
+def summarize(symbol, name, res, month_start_ts, week_start_ts=None):
     meta = res.get("meta") or {}
     stamps = res.get("timestamp") or []
     q = ((res.get("indicators") or {}).get("quote") or [{}])[0]
@@ -74,8 +74,11 @@ def summarize(symbol, name, res, month_start_ts):
     if len(bars) < 2:
         return None
     price = meta.get("regularMarketPrice") or bars[-1][1]
-    before = [b for b in bars if b[0] < month_start_ts]
-    base = before[-1][1] if before else bars[0][1]
+    def base_before(ts):
+        before = [b for b in bars if b[0] < ts]
+        return before[-1][1] if before else bars[0][1]
+    base = base_before(month_start_ts)
+    wbase = base_before(week_start_ts) if week_start_ts else None
     # Previous session close: the bar before today's, if today's bar exists.
     def day(ts):
         return datetime.fromtimestamp(ts, ET).date()
@@ -91,6 +94,7 @@ def summarize(symbol, name, res, month_start_ts):
         "currency": meta.get("currency"),
         "month_base": round(float(base), 4),
         "month_pct": round((price - base) / base * 100, 2) if base else None,
+        "week_pct": round((price - wbase) / wbase * 100, 2) if wbase else None,
         "day_pct": round((price - prev_close) / prev_close * 100, 2) if prev_close else None,
         "dollar_volume": round(dollar_vol),
         "avg_volume": round(sum(v for _, _, v in recent) / len(recent)),
@@ -102,11 +106,13 @@ def main():
     now_et = datetime.now(timezone.utc).astimezone(ET)
     month_start = now_et.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
     month_start_ts = int(month_start.timestamp())
+    week_start = (now_et - timedelta(days=now_et.weekday())).replace(hour=0, minute=0, second=0, microsecond=0)
+    week_start_ts = int(week_start.timestamp())
 
     def work(item):
         sym, name = item
         res = fetch_daily(sym)
-        return summarize(sym, name, res, month_start_ts) if res else None
+        return summarize(sym, name, res, month_start_ts, week_start_ts) if res else None
 
     # Also compute this month's change for the user's own watchlist.
     watch = [str(x).upper() for x in load("alerts.json", {}).get("watchlist", []) if x]
@@ -117,6 +123,7 @@ def main():
     with ThreadPoolExecutor(max_workers=6) as pool:
         fetched = [r for r in pool.map(work, sorted(todo.items())) if r]
     month_map = {r["symbol"]: r["month_pct"] for r in fetched if r["month_pct"] is not None}
+    week_map = {r["symbol"]: r["week_pct"] for r in fetched if r["week_pct"] is not None}
     rows = [r for r in fetched if r["symbol"] in symbols]
 
     print(f"Fetched {len(rows)} / {len(symbols)} symbols")
@@ -126,6 +133,7 @@ def main():
 
     movers = [r for r in rows if r["month_pct"] is not None]
     movers.sort(key=lambda r: r["month_pct"], reverse=True)
+    wmovers = sorted((r for r in rows if r["week_pct"] is not None), key=lambda r: r["week_pct"], reverse=True)
     popular = sorted(rows, key=lambda r: r["dollar_volume"], reverse=True)
 
     save("rankings.json", {
@@ -136,6 +144,10 @@ def main():
         "losers": movers[::-1][:20],
         "popular": popular[:100],
         "month_pct": month_map,
+        "week": week_start.strftime("%Y-%m-%d"),
+        "week_gainers": wmovers[:20],
+        "week_losers": wmovers[::-1][:20],
+        "week_pct": week_map,
     })
     save("universe.json", {
         "source": "S&P 500 (datasets/s-and-p-500-companies) + popular extras",
