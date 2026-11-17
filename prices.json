@@ -3,35 +3,35 @@
     "AAPL": {
       "currency": "USD",
       "day_high": 357.1,
-      "day_low": 351.86,
+      "day_low": 351.31,
       "exchange": "NasdaqGS",
       "name": "Apple Inc.",
       "prev_close": 356.27,
-      "price": 352.09,
-      "regular": 352.09,
-      "time": 1794854828
+      "price": 352.8,
+      "regular": 352.78,
+      "time": 1794911808
     },
     "AMD": {
       "currency": "USD",
-      "day_high": 526.19,
-      "day_low": 502.22,
+      "day_high": 526.2,
+      "day_low": 501.303,
       "exchange": "NasdaqGS",
       "name": "Advanced Micro Devices, Inc.",
       "prev_close": 534.06,
-      "price": 506.43,
-      "regular": 506.43,
-      "time": 1794854827
+      "price": 501.58,
+      "regular": 504.28,
+      "time": 1794911638
     },
     "AMZN": {
       "currency": "USD",
       "day_high": 262.92,
-      "day_low": 256.83,
+      "day_low": 256.68,
       "exchange": "NasdaqGS",
       "name": "Amazon.com, Inc.",
       "prev_close": 266.66,
-      "price": 257.89,
-      "regular": 257.89,
-      "time": 1794854828
+      "price": 257.16,
+      "regular": 257.75,
+      "time": 1794911544
     },
     "APLD": {
       "currency": "USD",
@@ -40,9 +40,9 @@
       "exchange": "NasdaqGS",
       "name": "Applied Digital Corporation",
       "prev_close": 15.97,
-      "price": 14.52,
-      "regular": 14.52,
-      "time": 1794854827
+      "price": 14.38,
+      "regular": 14.58,
+      "time": 1794911122
     },
     "AVGO": {
       "currency": "USD",
@@ -51,9 +51,9 @@
       "exchange": "NasdaqGS",
       "name": "Broadcom Inc.",
       "prev_close": 347.01,
-      "price": 331.38,
-      "regular": 331.38,
-      "time": 1794854828
+      "price": 331.41,
+      "regular": 333.4,
+      "time": 1794911751
     },
     "AXTI": {
       "currency": "USD",
@@ -62,9 +62,9 @@
       "exchange": "NasdaqGS",
       "name": "AXT Inc",
       "prev_close": 41.84,
-      "price": 37.68,
-      "regular": 37.68,
-      "time": 1794854829
+      "price": 37.9,
+      "regular": 38.46,
+      "time": 1794911708
     },
     "BE": {
       "currency": "USD",
@@ -73,9 +73,9 @@
       "exchange": "NYSE",
       "name": "Bloom Energy Corporation",
       "prev_close": 191.99,
-      "price": 177.895,
-      "regular": 177.895,
-      "time": 1794854827
+      "price": 175.15,
+      "regular": 177.28,
+      "time": 1794911674
     },
     "BRK-B": {
       "currency": "USD",
@@ -84,9 +84,9 @@
       "exchange": "NYSE",
       "name": "Berkshire Hathaway Inc. New",
       "prev_close": 592.94,
-      "price": 591.09,
-      "regular": 591.09,
-      "time": 1794854828
+      "price": 591.49,
+      "regular": 592.85,
+      "time": 1794909428
     },
     "CLSK": {
       "currency": "USD",
@@ -95,9 +95,9 @@
       "exchange": "NasdaqCM",
       "name": "CleanSpark, Inc.",
       "prev_close": 6.65,
-      "price": 6.1888,
-      "regular": 6.189,
-      "time": 1794854828
+      "price": 6.22,
+      "regular": 6.3,
+      "time": 1794909600
     },
     "COST": {
       "currency": "USD",
@@ -106,9 +106,9 @@
       "exchange": "NasdaqGS",
       "name": "Costco Wholesale Corporation",
       "prev_close": 1106.21,
-      "price": 1109.1,
-      "regular": 1109.1,
-      "time": 1794854791
+      "price": 1112.4233,
+      "regular": 1113.74,
+      "time": 1794909480
     },
     "CRDO": {
       "currency": "USD",
@@ -117,20 +117,20 @@
       "exchange": "NasdaqGS",
       "name": "Credo Technology Group Holding ",
       "prev_close": 131.51,
-      "price": 121.685,
-      "regular": 121.685,
-      "time": 1794854823
+      "price": 119.88,
+      "regular": 120.71,
+      "time": 1794911767
     },
     "CRWD": {
       "currency": "USD",
-      "day_high": 223.8,
+      "day_high": 224.52,
       "day_low": 218.422,
       "exchange": "NasdaqGS",
       "name": "CrowdStrike Holdings, Inc.",
       "prev_close": 226.61,
-      "price": 221.56,
-      "regular": 221.56,
-      "time": 1794854815
+      "price": 220.01,
+      "regular": 223.21,
+      "time": 1794907388
     },
     "CRWV": {
       "currency": "USD",
@@ -139,31 +139,31 @@
       "exchange": "NasdaqGS",
       "name": "CoreWeave, Inc.",
       "prev_close": 53.13,
-      "price": 49.6461,
-      "regular": 49.646,
-      "time": 1794854829
+      "price": 48.85,
+      "regular": 49.88,
+      "time": 1794911721
     },
     "GEV": {
       "currency": "USD",
       "day_high": 800.32,
-      "day_low": 761.01,
+      "day_low": 760.0,
       "exchange": "NYSE",
       "name": "GE Vernova Inc.",
       "prev_close": 803.13,
-      "price": 765.03,
-      "regular": 765.03,
-      "time": 1794854830
+      "price": 762.0,
+      "regular": 763.57,
+      "time": 1794909184
     },
     "GOOG": {
       "currency": "USD",
       "day_high": 290.75,
-      "day_low": 281.72,
+      "day_low": 280.48,
       "exchange": "NasdaqGS",
       "name": "Alphabet Inc.",
       "prev_close": 292.52,
-      "price": 282.49,
-      "regular": 282.49,
-      "time": 1794854831
+      "price": 279.732,
+      "regular": 281.26,
+      "time": 1794911758
     },
     "HIVE.TO": {
       "currency": "CAD",
@@ -172,20 +172,20 @@
       "exchange": "Toronto",
       "name": "HIVE DIGITAL TECHNOLOGIES LTD",
       "prev_close": 2.24,
-      "price": 2.09,
-      "regular": 2.09,
-      "time": 1794854797
+      "price": 2.1,
+      "regular": 2.1,
+      "time": 1794862800
     },
     "IBM": {
       "currency": "USD",
       "day_high": 247.01,
-      "day_low": 243.06,
+      "day_low": 241.37,
       "exchange": "NYSE",
       "name": "International Business Machines",
       "prev_close": 247.13,
-      "price": 243.43,
-      "regular": 243.43,
-      "time": 1794854818
+      "price": 241.25,
+      "regular": 242.51,
+      "time": 1794906900
     },
     "INTC": {
       "currency": "USD",
@@ -194,9 +194,9 @@
       "exchange": "NasdaqGS",
       "name": "Intel Corporation",
       "prev_close": 59.66,
-      "price": 55.23,
-      "regular": 55.23,
-      "time": 1794854831
+      "price": 53.59,
+      "regular": 55.442,
+      "time": 1794911813
     },
     "IREN": {
       "currency": "USD",
@@ -205,20 +205,20 @@
       "exchange": "NasdaqGS",
       "name": "IREN LIMITED",
       "prev_close": 18.17,
-      "price": 16.27,
-      "regular": 16.27,
-      "time": 1794854831
+      "price": 16.18,
+      "regular": 16.39,
+      "time": 1794911766
     },
     "JNJ": {
       "currency": "USD",
       "day_high": 290.25,
-      "day_low": 284.15,
+      "day_low": 282.33,
       "exchange": "NYSE",
       "name": "Johnson & Johnson",
       "prev_close": 285.75,
-      "price": 284.32,
-      "regular": 284.32,
-      "time": 1794854828
+      "price": 282.88,
+      "regular": 282.55,
+      "time": 1794910835
     },
     "JPM": {
       "currency": "USD",
@@ -227,9 +227,9 @@
       "exchange": "NYSE",
       "name": "JP Morgan Chase & Co.",
       "prev_close": 346.19,
-      "price": 337.6814,
-      "regular": 337.681,
-      "time": 1794854831
+      "price": 336.36,
+      "regular": 338.21,
+      "time": 1794909660
     },
     "META": {
       "currency": "USD",
@@ -238,9 +238,9 @@
       "exchange": "NasdaqGS",
       "name": "Meta Platforms, Inc.",
       "prev_close": 641.69,
-      "price": 625.49,
-      "regular": 625.49,
-      "time": 1794854831
+      "price": 621.6,
+      "regular": 626.41,
+      "time": 1794911659
     },
     "MRNA": {
       "currency": "USD",
@@ -249,31 +249,31 @@
       "exchange": "NasdaqGS",
       "name": "Moderna, Inc.",
       "prev_close": 223.37,
-      "price": 214.93,
-      "regular": 214.93,
-      "time": 1794854827
+      "price": 213.4024,
+      "regular": 215.27,
+      "time": 1794909240
     },
     "MSFT": {
       "currency": "USD",
       "day_high": 527.95,
-      "day_low": 516.922,
+      "day_low": 516.83,
       "exchange": "NasdaqGS",
       "name": "Microsoft Corporation",
       "prev_close": 523.88,
-      "price": 520.26,
-      "regular": 520.26,
-      "time": 1794854832
+      "price": 516.5,
+      "regular": 517.99,
+      "time": 1794911503
     },
     "MU": {
       "currency": "USD",
       "day_high": 739.12,
-      "day_low": 717.4,
+      "day_low": 716.38,
       "exchange": "NasdaqGS",
       "name": "Micron Technology, Inc.",
       "prev_close": 778.31,
-      "price": 724.84,
-      "regular": 724.84,
-      "time": 1794854833
+      "price": 712.5,
+      "regular": 719.02,
+      "time": 1794911784
     },
     "NBIS": {
       "currency": "USD",
@@ -282,9 +282,9 @@
       "exchange": "NasdaqGS",
       "name": "Nebius Group N.V.",
       "prev_close": 115.88,
-      "price": 107.05,
-      "regular": 107.05,
-      "time": 1794854833
+      "price": 106.02,
+      "regular": 107.13,
+      "time": 1794911527
     },
     "NOW": {
       "currency": "USD",
@@ -293,9 +293,9 @@
       "exchange": "NYSE",
       "name": "ServiceNow, Inc.",
       "prev_close": 102.25,
-      "price": 100.505,
-      "regular": 100.505,
-      "time": 1794854831
+      "price": 98.5581,
+      "regular": 99.37,
+      "time": 1794911783
     },
     "NVDA": {
       "currency": "USD",
@@ -304,9 +304,9 @@
       "exchange": "NasdaqGS",
       "name": "NVIDIA Corporation",
       "prev_close": 162.85,
-      "price": 155.705,
-      "regular": 155.705,
-      "time": 1794854833
+      "price": 155.2146,
+      "regular": 156.14,
+      "time": 1794911792
     },
     "NVTS": {
       "currency": "USD",
@@ -315,53 +315,53 @@
       "exchange": "NasdaqGM",
       "name": "Navitas Semiconductor Corporati",
       "prev_close": 8.95,
-      "price": 7.9,
-      "regular": 7.9,
-      "time": 1794854833
+      "price": 7.82,
+      "regular": 7.88,
+      "time": 1794911786
     },
     "O": {
       "currency": "USD",
       "day_high": 59.46,
-      "day_low": 58.59,
+      "day_low": 58.48,
       "exchange": "NYSE",
       "name": "Realty Income Corporation",
       "prev_close": 58.82,
-      "price": 58.6,
-      "regular": 58.6,
-      "time": 1794854825
+      "price": 58.39,
+      "regular": 58.55,
+      "time": 1794907507
     },
     "ORCL": {
       "currency": "USD",
       "day_high": 123.14,
-      "day_low": 118.53,
+      "day_low": 118.27,
       "exchange": "NYSE",
       "name": "Oracle Corporation",
       "prev_close": 125.35,
-      "price": 118.9073,
-      "regular": 118.907,
-      "time": 1794854823
+      "price": 117.7,
+      "regular": 119.09,
+      "time": 1794911576
     },
     "PLTR": {
       "currency": "USD",
       "day_high": 166.09,
-      "day_low": 160.17,
+      "day_low": 158.68,
       "exchange": "NasdaqGS",
       "name": "Palantir Technologies Inc.",
       "prev_close": 167.99,
-      "price": 161.44,
-      "regular": 161.44,
-      "time": 1794854832
+      "price": 158.9137,
+      "regular": 160.39,
+      "time": 1794911774
     },
     "RIOT": {
       "currency": "USD",
-      "day_high": 17.235,
+      "day_high": 17.285,
       "day_low": 16.445,
       "exchange": "NasdaqCM",
       "name": "Riot Platforms, Inc.",
       "prev_close": 17.52,
-      "price": 16.855,
-      "regular": 16.855,
-      "time": 1794854834
+      "price": 16.71,
+      "regular": 17.06,
+      "time": 1794910541
     },
     "SNOW": {
       "currency": "USD",
@@ -370,20 +370,20 @@
       "exchange": "NYSE",
       "name": "Snowflake Inc.",
       "prev_close": 291.0,
-      "price": 282.8601,
-      "regular": 283.015,
-      "time": 1794854760
+      "price": 278.0,
+      "regular": 280.54,
+      "time": 1794906791
     },
     "SOFI": {
       "currency": "USD",
       "day_high": 15.24,
-      "day_low": 14.71,
+      "day_low": 14.66,
       "exchange": "NasdaqGS",
       "name": "SoFi Technologies, Inc.",
       "prev_close": 15.42,
-      "price": 14.735,
-      "regular": 14.735,
-      "time": 1794854833
+      "price": 14.7,
+      "regular": 14.85,
+      "time": 1794911711
     },
     "SPCX": {
       "currency": "USD",
@@ -392,20 +392,20 @@
       "exchange": "NasdaqGS",
       "name": "Space Exploration Technologies ",
       "prev_close": 139.11,
-      "price": 136.445,
-      "regular": 136.445,
-      "time": 1794854835
+      "price": 136.88,
+      "regular": 137.36,
+      "time": 1794911812
     },
     "TSLA": {
       "currency": "USD",
       "day_high": 389.798,
-      "day_low": 376.18,
+      "day_low": 375.63,
       "exchange": "NasdaqGS",
       "name": "Tesla, Inc.",
       "prev_close": 390.22,
-      "price": 377.77,
-      "regular": 377.77,
-      "time": 1794854835
+      "price": 376.92,
+      "regular": 379.74,
+      "time": 1794911752
     },
     "TSM": {
       "currency": "USD",
@@ -414,32 +414,32 @@
       "exchange": "NYSE",
       "name": "Taiwan Semiconductor Manufactur",
       "prev_close": 398.73,
-      "price": 375.455,
-      "regular": 375.455,
-      "time": 1794854835
+      "price": 366.9,
+      "regular": 373.45,
+      "time": 1794911814
     },
     "V": {
       "currency": "USD",
       "day_high": 430.99,
-      "day_low": 426.81,
+      "day_low": 425.2,
       "exchange": "NYSE",
       "name": "Visa Inc.",
       "prev_close": 425.76,
-      "price": 427.005,
-      "regular": 427.005,
-      "time": 1794854829
+      "price": 424.89,
+      "regular": 426.46,
+      "time": 1794909629
     },
     "VRT": {
       "currency": "USD",
       "day_high": 193.77,
-      "day_low": 186.96,
+      "day_low": 186.925,
       "exchange": "NYSE",
       "name": "Vertiv Holdings, LLC",
       "prev_close": 202.07,
-      "price": 187.93,
-      "regular": 187.93,
-      "time": 1794854836
+      "price": 186.3933,
+      "regular": 188.67,
+      "time": 1794911476
     }
   },
-  "updated": "2026-11-16T18:47:17+00:00"
+  "updated": "2026-11-17T10:37:07+00:00"
 }
