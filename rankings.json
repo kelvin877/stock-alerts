@@ -1,10 +1,10 @@
 {
   "gainers": [
     {
-      "avg_volume": 5864016,
+      "avg_volume": 5864375,
       "currency": "USD",
       "day_pct": 1.5,
-      "dollar_volume": 1901735770,
+      "dollar_volume": 1901885000,
       "month_base": 228.5,
       "month_pct": 81.72,
       "name": "Applovin Corporation",
@@ -13,10 +13,10 @@
       "week_pct": 1.5
     },
     {
-      "avg_volume": 27966905,
+      "avg_volume": 27969355,
       "currency": "USD",
       "day_pct": -2.63,
-      "dollar_volume": 426119774,
+      "dollar_volume": 426162412,
       "month_base": 12.81,
       "month_pct": 33.18,
       "name": "Riot Platforms, Inc.",
@@ -28,7 +28,7 @@
       "avg_volume": 684100,
       "currency": "USD",
       "day_pct": -0.51,
-      "dollar_volume": 439910546,
+      "dollar_volume": 439910301,
       "month_base": 551.21,
       "month_pct": 27.11,
       "name": "IDEXX Laboratories, Inc.",
@@ -37,10 +37,10 @@
       "week_pct": -0.51
     },
     {
-      "avg_volume": 8328951,
+      "avg_volume": 8328980,
       "currency": "USD",
       "day_pct": -0.72,
-      "dollar_volume": 478195652,
+      "dollar_volume": 478197460,
       "month_base": 50.02,
       "month_pct": 26.59,
       "name": "Fiserv, Inc.",
@@ -49,10 +49,10 @@
       "week_pct": -0.72
     },
     {
-      "avg_volume": 3646524,
+      "avg_volume": 3646545,
       "currency": "USD",
       "day_pct": 0.65,
-      "dollar_volume": 358227465,
+      "dollar_volume": 358229828,
       "month_base": 88.0,
       "month_pct": 25.19,
       "name": "Clorox Company (The)",
@@ -61,10 +61,10 @@
       "week_pct": 0.65
     },
     {
-      "avg_volume": 2999879,
+      "avg_volume": 2999985,
       "currency": "USD",
       "day_pct": 0.4,
-      "dollar_volume": 359529168,
+      "dollar_volume": 359543904,
       "month_base": 111.49,
       "month_pct": 24.63,
       "name": "Charter Communications, Inc.",
@@ -73,10 +73,10 @@
       "week_pct": 0.4
     },
     {
-      "avg_volume": 4888704,
+      "avg_volume": 4910975,
       "currency": "USD",
       "day_pct": -0.04,
-      "dollar_volume": 478002211,
+      "dollar_volume": 480387658,
       "month_base": 92.01,
       "month_pct": 16.41,
       "name": "Edwards Lifesciences Corporatio",
@@ -85,10 +85,10 @@
       "week_pct": -0.04
     },
     {
-      "avg_volume": 10721899,
+      "avg_volume": 10724920,
       "currency": "USD",
       "day_pct": -3.15,
-      "dollar_volume": 214055274,
+      "dollar_volume": 214121277,
       "month_base": 18.39,
       "month_pct": 15.44,
       "name": "Mosaic Company (The)",
@@ -100,7 +100,7 @@
       "avg_volume": 896830,
       "currency": "USD",
       "day_pct": -0.91,
-      "dollar_volume": 217694343,
+      "dollar_volume": 217694474,
       "month_base": 227.12,
       "month_pct": 15.32,
       "name": "STERIS plc (Ireland)",
@@ -109,10 +109,10 @@
       "week_pct": -0.91
     },
     {
-      "avg_volume": 501273,
+      "avg_volume": 502130,
       "currency": "USD",
       "day_pct": -0.11,
-      "dollar_volume": 215698868,
+      "dollar_volume": 216094571,
       "month_base": 400.94,
       "month_pct": 15.16,
       "name": "Corpay, Inc.",
@@ -121,10 +121,10 @@
       "week_pct": -0.11
     },
     {
-      "avg_volume": 2885665,
+      "avg_volume": 2909180,
       "currency": "USD",
       "day_pct": 0.41,
-      "dollar_volume": 356679982,
+      "dollar_volume": 359806288,
       "month_base": 116.29,
       "month_pct": 14.33,
       "name": "Tapestry, Inc.",
@@ -133,10 +133,10 @@
       "week_pct": 0.41
     },
     {
-      "avg_volume": 1685993,
+      "avg_volume": 1690090,
       "currency": "USD",
       "day_pct": 0.98,
-      "dollar_volume": 441203276,
+      "dollar_volume": 442366294,
       "month_base": 250.48,
       "month_pct": 13.32,
       "name": "Cardinal Health, Inc.",
@@ -145,10 +145,10 @@
       "week_pct": 0.98
     },
     {
-      "avg_volume": 4829013,
+      "avg_volume": 4864310,
       "currency": "USD",
       "day_pct": -0.32,
-      "dollar_volume": 861162125,
+      "dollar_volume": 867734083,
       "month_base": 164.39,
       "month_pct": 13.26,
       "name": "Airbnb, Inc.",
@@ -157,10 +157,10 @@
       "week_pct": -0.32
     },
     {
-      "avg_volume": 6864379,
+      "avg_volume": 6864385,
       "currency": "USD",
       "day_pct": 0.59,
-      "dollar_volume": 249441686,
+      "dollar_volume": 249441928,
       "month_base": 34.66,
       "month_pct": 12.84,
       "name": "Rollins, Inc.",
@@ -169,10 +169,10 @@
       "week_pct": 0.59
     },
     {
-      "avg_volume": 20411522,
+      "avg_volume": 20412245,
       "currency": "USD",
       "day_pct": 1.87,
-      "dollar_volume": 648451599,
+      "dollar_volume": 648477595,
       "month_base": 31.89,
       "month_pct": 12.7,
       "name": "Chipotle Mexican Grill, Inc.",
@@ -181,10 +181,10 @@
       "week_pct": 1.87
     },
     {
-      "avg_volume": 1242208,
+      "avg_volume": 1242210,
       "currency": "USD",
       "day_pct": 0.55,
-      "dollar_volume": 427135798,
+      "dollar_volume": 427136534,
       "month_base": 335.53,
       "month_pct": 12.51,
       "name": "Cboe Global Markets, Inc.",
@@ -193,10 +193,10 @@
       "week_pct": 0.55
     },
     {
-      "avg_volume": 775203,
+      "avg_volume": 775205,
       "currency": "USD",
       "day_pct": 1.92,
-      "dollar_volume": 145161739,
+      "dollar_volume": 145162075,
       "month_base": 176.05,
       "month_pct": 12.35,
       "name": "Universal Health Services, Inc.",
@@ -205,10 +205,10 @@
       "week_pct": 1.92
     },
     {
-      "avg_volume": 3491130,
+      "avg_volume": 3492585,
       "currency": "USD",
       "day_pct": -6.3,
-      "dollar_volume": 738143868,
+      "dollar_volume": 738454499,
       "month_base": 190.17,
       "month_pct": 12.25,
       "name": "Take-Two Interactive Software, ",
@@ -217,10 +217,10 @@
       "week_pct": -6.3
     },
     {
-      "avg_volume": 4045071,
+      "avg_volume": 4045810,
       "currency": "USD",
       "day_pct": 8.72,
-      "dollar_volume": 237385875,
+      "dollar_volume": 237433137,
       "month_base": 57.04,
       "month_pct": 12.11,
       "name": "Tyson Foods, Inc.",
@@ -229,10 +229,10 @@
       "week_pct": 8.72
     },
     {
-      "avg_volume": 13190077,
+      "avg_volume": 13190120,
       "currency": "USD",
       "day_pct": 4.12,
-      "dollar_volume": 455944415,
+      "dollar_volume": 455946054,
       "month_base": 33.94,
       "month_pct": 11.81,
       "name": "Tractor Supply Company",
@@ -243,10 +243,10 @@
   ],
   "losers": [
     {
-      "avg_volume": 6435065,
+      "avg_volume": 6436410,
       "currency": "USD",
       "day_pct": -8.48,
-      "dollar_volume": 4530533311,
+      "dollar_volume": 4531303649,
       "month_base": 840.7,
       "month_pct": -35.05,
       "name": "Lumentum Holdings Inc.",
@@ -255,10 +255,10 @@
       "week_pct": -8.48
     },
     {
-      "avg_volume": 15383248,
+      "avg_volume": 15388575,
       "currency": "USD",
       "day_pct": -5.93,
-      "dollar_volume": 362557428,
+      "dollar_volume": 362659058,
       "month_base": 27.68,
       "month_pct": -32.95,
       "name": "Hims & Hers Health, Inc.",
@@ -267,10 +267,10 @@
       "week_pct": -5.93
     },
     {
-      "avg_volume": 12093086,
+      "avg_volume": 12101035,
       "currency": "USD",
       "day_pct": -8.58,
-      "dollar_volume": 12476981520,
+      "dollar_volume": 12483761936,
       "month_base": 1150.89,
       "month_pct": -29.7,
       "name": "Sandisk Corporation",
@@ -279,10 +279,10 @@
       "week_pct": -8.58
     },
     {
-      "avg_volume": 1594926,
+      "avg_volume": 1594940,
       "currency": "USD",
       "day_pct": -2.85,
-      "dollar_volume": 563120653,
+      "dollar_volume": 563125019,
       "month_base": 427.77,
       "month_pct": -28.36,
       "name": "Axon Enterprise, Inc.",
@@ -291,10 +291,10 @@
       "week_pct": -2.85
     },
     {
-      "avg_volume": 9916900,
+      "avg_volume": 9919755,
       "currency": "USD",
       "day_pct": -4.2,
-      "dollar_volume": 319741150,
+      "dollar_volume": 319821938,
       "month_base": 38.55,
       "month_pct": -26.59,
       "name": "Fidelity National Information S",
@@ -303,10 +303,10 @@
       "week_pct": -4.2
     },
     {
-      "avg_volume": 4527708,
+      "avg_volume": 4527750,
       "currency": "USD",
       "day_pct": -6.14,
-      "dollar_volume": 959440948,
+      "dollar_volume": 959448226,
       "month_base": 235.27,
       "month_pct": -26.53,
       "name": "Datadog, Inc.",
@@ -315,10 +315,10 @@
       "week_pct": -6.14
     },
     {
-      "avg_volume": 30370733,
+      "avg_volume": 30381535,
       "currency": "USD",
       "day_pct": -7.27,
-      "dollar_volume": 5428652690,
+      "dollar_volume": 5430295778,
       "month_base": 196.4,
       "month_pct": -25.99,
       "name": "Marvell Technology, Inc.",
@@ -327,10 +327,10 @@
       "week_pct": -7.27
     },
     {
-      "avg_volume": 7344216,
+      "avg_volume": 7346300,
       "currency": "USD",
       "day_pct": -6.96,
-      "dollar_volume": 2877236497,
+      "dollar_volume": 2877935074,
       "month_base": 424.3,
       "month_pct": -24.45,
       "name": "Dell Technologies Inc.",
@@ -339,10 +339,10 @@
       "week_pct": -6.96
     },
     {
-      "avg_volume": 15973042,
+      "avg_volume": 15981155,
       "currency": "USD",
       "day_pct": -4.93,
-      "dollar_volume": 1088767733,
+      "dollar_volume": 1089243485,
       "month_base": 77.34,
       "month_pct": -24.18,
       "name": "Microchip Technology Incorporat",
@@ -351,10 +351,10 @@
       "week_pct": -4.93
     },
     {
-      "avg_volume": 48306823,
+      "avg_volume": 48328605,
       "currency": "USD",
       "day_pct": -6.87,
-      "dollar_volume": 1473157148,
+      "dollar_volume": 1473740749,
       "month_base": 32.95,
       "month_pct": -24.05,
       "name": "Super Micro Computer, Inc.",
@@ -363,10 +363,10 @@
       "week_pct": -6.87
     },
     {
-      "avg_volume": 30471489,
+      "avg_volume": 30474810,
       "currency": "USD",
       "day_pct": -8.37,
-      "dollar_volume": 159527495,
+      "dollar_volume": 159542446,
       "month_base": 5.62,
       "month_pct": -24.02,
       "name": "NuScale Power Corporation",
@@ -375,10 +375,10 @@
       "week_pct": -8.37
     },
     {
-      "avg_volume": 220309442,
+      "avg_volume": 220480570,
       "currency": "USD",
       "day_pct": -4.12,
-      "dollar_volume": 40027740044,
+      "dollar_volume": 40055123189,
       "month_base": 204.64,
       "month_pct": -23.7,
       "name": "NVIDIA Corporation",
@@ -387,10 +387,10 @@
       "week_pct": -4.12
     },
     {
-      "avg_volume": 8785532,
+      "avg_volume": 8792705,
       "currency": "USD",
       "day_pct": -4.98,
-      "dollar_volume": 2898465276,
+      "dollar_volume": 2900488087,
       "month_base": 366.11,
       "month_pct": -23.27,
       "name": "Western Digital Corporation",
@@ -399,10 +399,10 @@
       "week_pct": -4.98
     },
     {
-      "avg_volume": 6071606,
+      "avg_volume": 6071785,
       "currency": "USD",
       "day_pct": -5.54,
-      "dollar_volume": 3575597301,
+      "dollar_volume": 3575686872,
       "month_base": 644.58,
       "month_pct": -22.59,
       "name": "Seagate Technology Holdings PLC",
@@ -411,10 +411,10 @@
       "week_pct": -5.54
     },
     {
-      "avg_volume": 3432414,
+      "avg_volume": 3435985,
       "currency": "USD",
       "day_pct": -0.03,
-      "dollar_volume": 622335855,
+      "dollar_volume": 622871224,
       "month_base": 191.72,
       "month_pct": -21.79,
       "name": "Atlassian Corporation",
@@ -423,10 +423,10 @@
       "week_pct": -0.03
     },
     {
-      "avg_volume": 17685317,
+      "avg_volume": 17697265,
       "currency": "USD",
       "day_pct": -7.7,
-      "dollar_volume": 2338331890,
+      "dollar_volume": 2339620655,
       "month_base": 130.51,
       "month_pct": -21.06,
       "name": "Strategy Inc",
@@ -435,10 +435,10 @@
       "week_pct": -7.7
     },
     {
-      "avg_volume": 3220685,
+      "avg_volume": 3220755,
       "currency": "USD",
       "day_pct": -8.19,
-      "dollar_volume": 954339965,
+      "dollar_volume": 954358059,
       "month_base": 320.72,
       "month_pct": -19.69,
       "name": "Ciena Corporation",
@@ -447,10 +447,10 @@
       "week_pct": -8.19
     },
     {
-      "avg_volume": 8638475,
+      "avg_volume": 8640615,
       "currency": "USD",
       "day_pct": -6.63,
-      "dollar_volume": 1798289815,
+      "dollar_volume": 1798717602,
       "month_base": 232.5,
       "month_pct": -18.85,
       "name": "Vertiv Holdings, LLC",
@@ -459,10 +459,10 @@
       "week_pct": -6.63
     },
     {
-      "avg_volume": 30698455,
+      "avg_volume": 30710755,
       "currency": "USD",
       "day_pct": -7.62,
-      "dollar_volume": 24740468770,
+      "dollar_volume": 24749694436,
       "month_base": 884.74,
       "month_pct": -18.73,
       "name": "Micron Technology, Inc.",
@@ -471,10 +471,10 @@
       "week_pct": -7.62
     },
     {
-      "avg_volume": 2972221,
+      "avg_volume": 2972285,
       "currency": "USD",
       "day_pct": -3.99,
-      "dollar_volume": 343861434,
+      "dollar_volume": 343868064,
       "month_base": 126.98,
       "month_pct": -18.35,
       "name": "Everpure, Inc.",
@@ -1033,10 +1033,10 @@
   },
   "popular": [
     {
-      "avg_volume": 220309442,
+      "avg_volume": 220480570,
       "currency": "USD",
       "day_pct": -4.12,
-      "dollar_volume": 40027740044,
+      "dollar_volume": 40055123189,
       "month_base": 204.64,
       "month_pct": -23.7,
       "name": "NVIDIA Corporation",
@@ -1045,10 +1045,10 @@
       "week_pct": -4.12
     },
     {
-      "avg_volume": 30698455,
+      "avg_volume": 30710755,
       "currency": "USD",
       "day_pct": -7.62,
-      "dollar_volume": 24740468770,
+      "dollar_volume": 24749694436,
       "month_base": 884.74,
       "month_pct": -18.73,
       "name": "Micron Technology, Inc.",
@@ -1057,10 +1057,10 @@
       "week_pct": -7.62
     },
     {
-      "avg_volume": 35460912,
+      "avg_volume": 35477360,
       "currency": "USD",
       "day_pct": -5.58,
-      "dollar_volume": 17995471068,
+      "dollar_volume": 18004099673,
       "month_base": 504.8,
       "month_pct": -0.1,
       "name": "Advanced Micro Devices, Inc.",
@@ -1069,10 +1069,10 @@
       "week_pct": -5.58
     },
     {
-      "avg_volume": 47727212,
+      "avg_volume": 47775945,
       "currency": "USD",
       "day_pct": -0.98,
-      "dollar_volume": 16515415419,
+      "dollar_volume": 16532614917,
       "month_base": 344.63,
       "month_pct": 2.36,
       "name": "Apple Inc.",
@@ -1081,10 +1081,10 @@
       "week_pct": -0.98
     },
     {
-      "avg_volume": 38987026,
+      "avg_volume": 38997050,
       "currency": "USD",
       "day_pct": -2.69,
-      "dollar_volume": 14954086022,
+      "dollar_volume": 14957957808,
       "month_base": 399.81,
       "month_pct": -5.02,
       "name": "Tesla, Inc.",
@@ -1093,10 +1093,10 @@
       "week_pct": -2.69
     },
     {
-      "avg_volume": 23522330,
+      "avg_volume": 23525160,
       "currency": "USD",
       "day_pct": -2.38,
-      "dollar_volume": 14877996916,
+      "dollar_volume": 14879787485,
       "month_base": 614.99,
       "month_pct": 1.86,
       "name": "Meta Platforms, Inc.",
@@ -1105,10 +1105,10 @@
       "week_pct": -2.38
     },
     {
-      "avg_volume": 26816585,
+      "avg_volume": 26849980,
       "currency": "USD",
       "day_pct": -1.12,
-      "dollar_volume": 14202557454,
+      "dollar_volume": 14219865718,
       "month_base": 521.91,
       "month_pct": -0.75,
       "name": "Microsoft Corporation",
@@ -1117,10 +1117,10 @@
       "week_pct": -1.12
     },
     {
-      "avg_volume": 49609680,
+      "avg_volume": 49621300,
       "currency": "USD",
       "day_pct": -3.34,
-      "dollar_volume": 12693197280,
+      "dollar_volume": 12696224557,
       "month_base": 240.35,
       "month_pct": 7.24,
       "name": "Amazon.com, Inc.",
@@ -1129,10 +1129,10 @@
       "week_pct": -3.34
     },
     {
-      "avg_volume": 12093086,
+      "avg_volume": 12101035,
       "currency": "USD",
       "day_pct": -8.58,
-      "dollar_volume": 12476981520,
+      "dollar_volume": 12483761936,
       "month_base": 1150.89,
       "month_pct": -29.7,
       "name": "Sandisk Corporation",
@@ -1141,10 +1141,10 @@
       "week_pct": -8.58
     },
     {
-      "avg_volume": 41504935,
+      "avg_volume": 41537495,
       "currency": "USD",
       "day_pct": -4.07,
-      "dollar_volume": 12266035641,
+      "dollar_volume": 12275325188,
       "month_base": 279.84,
       "month_pct": 1.39,
       "name": "Alphabet Inc.",
@@ -1153,10 +1153,10 @@
       "week_pct": -4.07
     },
     {
-      "avg_volume": 145321584,
+      "avg_volume": 145449050,
       "currency": "USD",
       "day_pct": -7.02,
-      "dollar_volume": 9874419431,
+      "dollar_volume": 9881542637,
       "month_base": 65.76,
       "month_pct": -15.65,
       "name": "Intel Corporation",
@@ -1165,10 +1165,10 @@
       "week_pct": -7.02
     },
     {
-      "avg_volume": 27276015,
+      "avg_volume": 27281900,
       "currency": "USD",
       "day_pct": -3.92,
-      "dollar_volume": 8982216279,
+      "dollar_volume": 8984213777,
       "month_base": 326.08,
       "month_pct": 2.24,
       "name": "Broadcom Inc.",
@@ -1177,10 +1177,10 @@
       "week_pct": -3.92
     },
     {
-      "avg_volume": 27188952,
+      "avg_volume": 27197300,
       "currency": "USD",
       "day_pct": -3.85,
-      "dollar_volume": 7975368462,
+      "dollar_volume": 7977753902,
       "month_base": 278.22,
       "month_pct": 1.09,
       "name": "Alphabet Inc.",
@@ -1189,10 +1189,10 @@
       "week_pct": -3.85
     },
     {
-      "avg_volume": 14823624,
+      "avg_volume": 14828240,
       "currency": "USD",
       "day_pct": -6.34,
-      "dollar_volume": 5888662192,
+      "dollar_volume": 5890428274,
       "month_base": 406.13,
       "month_pct": -8.05,
       "name": "Taiwan Semiconductor Manufactur",
@@ -1201,10 +1201,10 @@
       "week_pct": -6.34
     },
     {
-      "avg_volume": 30370733,
+      "avg_volume": 30381535,
       "currency": "USD",
       "day_pct": -7.27,
-      "dollar_volume": 5428652690,
+      "dollar_volume": 5430295778,
       "month_base": 196.4,
       "month_pct": -25.99,
       "name": "Marvell Technology, Inc.",
@@ -1213,10 +1213,10 @@
       "week_pct": -7.27
     },
     {
-      "avg_volume": 41736202,
+      "avg_volume": 41741805,
       "currency": "USD",
       "day_pct": -4.99,
-      "dollar_volume": 5281301593,
+      "dollar_volume": 5281982307,
       "month_base": 130.67,
       "month_pct": -8.86,
       "name": "Oracle Corporation",
@@ -1225,10 +1225,10 @@
       "week_pct": -4.99
     },
     {
-      "avg_volume": 6435065,
+      "avg_volume": 6436410,
       "currency": "USD",
       "day_pct": -8.48,
-      "dollar_volume": 4530533311,
+      "dollar_volume": 4531303649,
       "month_base": 840.7,
       "month_pct": -35.05,
       "name": "Lumentum Holdings Inc.",
@@ -1237,10 +1237,10 @@
       "week_pct": -8.48
     },
     {
-      "avg_volume": 24289859,
+      "avg_volume": 24294495,
       "currency": "USD",
       "day_pct": -4.52,
-      "dollar_volume": 4334120715,
+      "dollar_volume": 4334888543,
       "month_base": 184.11,
       "month_pct": -12.88,
       "name": "Palantir Technologies Inc.",
@@ -1249,10 +1249,10 @@
       "week_pct": -4.52
     },
     {
-      "avg_volume": 3038734,
+      "avg_volume": 3045385,
       "currency": "USD",
       "day_pct": -0.82,
-      "dollar_volume": 4174570801,
+      "dollar_volume": 4184092409,
       "month_base": 1417.54,
       "month_pct": 1.0,
       "name": "Eli Lilly and Company",
@@ -1261,10 +1261,10 @@
       "week_pct": -0.82
     },
     {
-      "avg_volume": 71096208,
+      "avg_volume": 71121135,
       "currency": "USD",
       "day_pct": -6.12,
-      "dollar_volume": 3908722696,
+      "dollar_volume": 3910017012,
       "month_base": 54.87,
       "month_pct": -9.09,
       "name": "CoreWeave, Inc.",
@@ -1273,10 +1273,10 @@
       "week_pct": -6.12
     },
     {
-      "avg_volume": 18356204,
+      "avg_volume": 18363215,
       "currency": "USD",
       "day_pct": -7.66,
-      "dollar_volume": 3658348440,
+      "dollar_volume": 3659667312,
       "month_base": 203.17,
       "month_pct": -12.74,
       "name": "Bloom Energy Corporation",
@@ -1285,10 +1285,10 @@
       "week_pct": -7.66
     },
     {
-      "avg_volume": 4345818,
+      "avg_volume": 4345915,
       "currency": "USD",
       "day_pct": -4.93,
-      "dollar_volume": 3616600737,
+      "dollar_volume": 3616675147,
       "month_base": 857.87,
       "month_pct": -10.99,
       "name": "GE Vernova Inc.",
@@ -1297,10 +1297,10 @@
       "week_pct": -4.93
     },
     {
-      "avg_volume": 6071606,
+      "avg_volume": 6071785,
       "currency": "USD",
       "day_pct": -5.54,
-      "dollar_volume": 3575597301,
+      "dollar_volume": 3575686872,
       "month_base": 644.58,
       "month_pct": -22.59,
       "name": "Seagate Technology Holdings PLC",
@@ -1309,10 +1309,10 @@
       "week_pct": -5.54
     },
     {
-      "avg_volume": 14264779,
+      "avg_volume": 14266835,
       "currency": "USD",
       "day_pct": -3.63,
-      "dollar_volume": 3218383637,
+      "dollar_volume": 3218841142,
       "month_base": 221.72,
       "month_pct": -2.91,
       "name": "Moderna, Inc.",
@@ -1321,10 +1321,10 @@
       "week_pct": -3.63
     },
     {
-      "avg_volume": 8523444,
+      "avg_volume": 8527965,
       "currency": "USD",
       "day_pct": -5.47,
-      "dollar_volume": 3194467536,
+      "dollar_volume": 3196064689,
       "month_base": 390.09,
       "month_pct": -10.21,
       "name": "Applied Materials, Inc.",
@@ -1333,10 +1333,10 @@
       "week_pct": -5.47
     },
     {
-      "avg_volume": 13877594,
+      "avg_volume": 13883610,
       "currency": "USD",
       "day_pct": -6.68,
-      "dollar_volume": 3147991421,
+      "dollar_volume": 3149259764,
       "month_base": 239.11,
       "month_pct": -11.83,
       "name": "Lam Research Corporation",
@@ -1345,10 +1345,10 @@
       "week_pct": -6.68
     },
     {
-      "avg_volume": 7052736,
+      "avg_volume": 7052955,
       "currency": "USD",
       "day_pct": 0.16,
-      "dollar_volume": 2944916069,
+      "dollar_volume": 2945009378,
       "month_base": 413.59,
       "month_pct": 3.11,
       "name": "Visa Inc.",
@@ -1357,10 +1357,10 @@
       "week_pct": 0.16
     },
     {
-      "avg_volume": 45858834,
+      "avg_volume": 45867980,
       "currency": "USD",
       "day_pct": -2.25,
-      "dollar_volume": 2943667438,
+      "dollar_volume": 2944228158,
       "month_base": 62.08,
       "month_pct": -2.14,
       "name": "Netflix, Inc.",
@@ -1369,10 +1369,10 @@
       "week_pct": -2.25
     },
     {
-      "avg_volume": 5192914,
+      "avg_volume": 5193405,
       "currency": "USD",
       "day_pct": -0.02,
-      "dollar_volume": 2926805044,
+      "dollar_volume": 2927096252,
       "month_base": 542.49,
       "month_pct": 9.28,
       "name": "Berkshire Hathaway Inc. New",
@@ -1381,10 +1381,10 @@
       "week_pct": -0.02
     },
     {
-      "avg_volume": 8785532,
+      "avg_volume": 8792705,
       "currency": "USD",
       "day_pct": -4.98,
-      "dollar_volume": 2898465276,
+      "dollar_volume": 2900488087,
       "month_base": 366.11,
       "month_pct": -23.27,
       "name": "Western Digital Corporation",
@@ -1393,10 +1393,10 @@
       "week_pct": -4.98
     },
     {
-      "avg_volume": 7344216,
+      "avg_volume": 7346300,
       "currency": "USD",
       "day_pct": -6.96,
-      "dollar_volume": 2877236497,
+      "dollar_volume": 2877935074,
       "month_base": 424.3,
       "month_pct": -24.45,
       "name": "Dell Technologies Inc.",
@@ -1405,10 +1405,10 @@
       "week_pct": -6.96
     },
     {
-      "avg_volume": 9203708,
+      "avg_volume": 9204095,
       "currency": "USD",
       "day_pct": -3.09,
-      "dollar_volume": 2720777347,
+      "dollar_volume": 2720891207,
       "month_base": 300.84,
       "month_pct": -2.2,
       "name": "Texas Instruments Incorporated",
@@ -1417,10 +1417,10 @@
       "week_pct": -3.09
     },
     {
-      "avg_volume": 21873171,
+      "avg_volume": 21892575,
       "currency": "USD",
       "day_pct": 0.25,
-      "dollar_volume": 2716208736,
+      "dollar_volume": 2718700130,
       "month_base": 123.51,
       "month_pct": 3.97,
       "name": "Walmart Inc.",
@@ -1429,22 +1429,22 @@
       "week_pct": 0.25
     },
     {
-      "avg_volume": 1697268,
+      "avg_volume": 1697400,
       "currency": "USD",
       "day_pct": -5.91,
-      "dollar_volume": 2584004087,
+      "dollar_volume": 2584189618,
       "month_base": 1565.9,
       "month_pct": -10.16,
       "name": "ASML Holding N.V. - New York Re",
-      "price": 1406.785,
+      "price": 1406.79,
       "symbol": "ASML",
       "week_pct": -5.91
     },
     {
-      "avg_volume": 2409571,
+      "avg_volume": 2415215,
       "currency": "USD",
       "day_pct": 0.68,
-      "dollar_volume": 2507395413,
+      "dollar_volume": 2513681139,
       "month_base": 1012.28,
       "month_pct": 10.02,
       "name": "Costco Wholesale Corporation",
@@ -1453,10 +1453,10 @@
       "week_pct": 0.68
     },
     {
-      "avg_volume": 14256708,
+      "avg_volume": 14337785,
       "currency": "USD",
       "day_pct": -2.18,
-      "dollar_volume": 2486494872,
+      "dollar_volume": 2500024240,
       "month_base": 187.25,
       "month_pct": -10.88,
       "name": "ExxonMobil Holdings Corporation",
@@ -1465,10 +1465,10 @@
       "week_pct": -2.18
     },
     {
-      "avg_volume": 3860922,
+      "avg_volume": 3861060,
       "currency": "USD",
       "day_pct": -4.95,
-      "dollar_volume": 2419284275,
+      "dollar_volume": 2419363117,
       "month_base": 622.75,
       "month_pct": -8.39,
       "name": "Caterpillar, Inc.",
@@ -1477,10 +1477,10 @@
       "week_pct": -4.95
     },
     {
-      "avg_volume": 19864107,
+      "avg_volume": 19948340,
       "currency": "USD",
       "day_pct": -2.82,
-      "dollar_volume": 2359902345,
+      "dollar_volume": 2368275358,
       "month_base": 105.12,
       "month_pct": -5.47,
       "name": "ServiceNow, Inc.",
@@ -1489,10 +1489,10 @@
       "week_pct": -2.82
     },
     {
-      "avg_volume": 13815046,
+      "avg_volume": 13816400,
       "currency": "USD",
       "day_pct": -2.29,
-      "dollar_volume": 2353164898,
+      "dollar_volume": 2353393133,
       "month_base": 164.79,
       "month_pct": 2.26,
       "name": "QUALCOMM Incorporated",
@@ -1501,10 +1501,10 @@
       "week_pct": -2.29
     },
     {
-      "avg_volume": 17685317,
+      "avg_volume": 17697265,
       "currency": "USD",
       "day_pct": -7.7,
-      "dollar_volume": 2338331890,
+      "dollar_volume": 2339620655,
       "month_base": 130.51,
       "month_pct": -21.06,
       "name": "Strategy Inc",
@@ -1513,10 +1513,10 @@
       "week_pct": -7.7
     },
     {
-      "avg_volume": 14660807,
+      "avg_volume": 14691515,
       "currency": "USD",
       "day_pct": -5.49,
-      "dollar_volume": 2210424062,
+      "dollar_volume": 2214844722,
       "month_base": 157.91,
       "month_pct": -8.83,
       "name": "KLA Corporation",
@@ -1525,10 +1525,10 @@
       "week_pct": -5.49
     },
     {
-      "avg_volume": 6437636,
+      "avg_volume": 6438105,
       "currency": "USD",
       "day_pct": -2.31,
-      "dollar_volume": 2184842780,
+      "dollar_volume": 2185001434,
       "month_base": 337.04,
       "month_pct": 0.35,
       "name": "JP Morgan Chase & Co.",
@@ -1537,10 +1537,10 @@
       "week_pct": -2.31
     },
     {
-      "avg_volume": 9028219,
+      "avg_volume": 9036505,
       "currency": "USD",
       "day_pct": -1.5,
-      "dollar_volume": 2161874196,
+      "dollar_volume": 2163737417,
       "month_base": 250.43,
       "month_pct": -10.87,
       "name": "CrowdStrike Holdings, Inc.",
@@ -1549,10 +1549,10 @@
       "week_pct": -1.5
     },
     {
-      "avg_volume": 6110608,
+      "avg_volume": 6112295,
       "currency": "USD",
       "day_pct": -1.91,
-      "dollar_volume": 2123738088,
+      "dollar_volume": 2124278216,
       "month_base": 365.87,
       "month_pct": -13.61,
       "name": "Palo Alto Networks, Inc.",
@@ -1561,10 +1561,10 @@
       "week_pct": -1.91
     },
     {
-      "avg_volume": 3245348,
+      "avg_volume": 3247855,
       "currency": "USD",
       "day_pct": 0.08,
-      "dollar_volume": 2083529507,
+      "dollar_volume": 2085188712,
       "month_base": 638.01,
       "month_pct": 3.71,
       "name": "Mastercard Incorporated",
@@ -1573,10 +1573,10 @@
       "week_pct": 0.08
     },
     {
-      "avg_volume": 20325344,
+      "avg_volume": 20410290,
       "currency": "USD",
       "day_pct": -1.17,
-      "dollar_volume": 2069707955,
+      "dollar_volume": 2077740661,
       "month_base": 104.51,
       "month_pct": -9.56,
       "name": "Cisco Systems, Inc.",
@@ -1585,10 +1585,10 @@
       "week_pct": -1.17
     },
     {
-      "avg_volume": 9694797,
+      "avg_volume": 9699385,
       "currency": "USD",
       "day_pct": -6.75,
-      "dollar_volume": 2057379404,
+      "dollar_volume": 2058353734,
       "month_base": 210.32,
       "month_pct": -3.28,
       "name": "Coherent Corp.",
@@ -1597,10 +1597,10 @@
       "week_pct": -6.75
     },
     {
-      "avg_volume": 7411852,
+      "avg_volume": 7419880,
       "currency": "USD",
       "day_pct": -1.12,
-      "dollar_volume": 2024933113,
+      "dollar_volume": 2027201452,
       "month_base": 273.2,
       "month_pct": 3.42,
       "name": "Johnson & Johnson",
@@ -1609,10 +1609,10 @@
       "week_pct": -1.12
     },
     {
-      "avg_volume": 4897862,
+      "avg_volume": 4898965,
       "currency": "USD",
       "day_pct": 1.12,
-      "dollar_volume": 1997132646,
+      "dollar_volume": 1997587207,
       "month_base": 406.97,
       "month_pct": 1.24,
       "name": "UnitedHealth Group Incorporated",
@@ -1621,10 +1621,10 @@
       "week_pct": 1.12
     },
     {
-      "avg_volume": 4897453,
+      "avg_volume": 4897660,
       "currency": "USD",
       "day_pct": -3.72,
-      "dollar_volume": 1945913395,
+      "dollar_volume": 1945992750,
       "month_base": 417.11,
       "month_pct": -8.14,
       "name": "Analog Devices, Inc.",
@@ -1633,10 +1633,10 @@
       "week_pct": -3.72
     },
     {
-      "avg_volume": 2145374,
+      "avg_volume": 2148385,
       "currency": "USD",
       "day_pct": -2.73,
-      "dollar_volume": 1927788525,
+      "dollar_volume": 1930473175,
       "month_base": 894.55,
       "month_pct": -0.34,
       "name": "Goldman Sachs Group, Inc. (The)",
@@ -1645,10 +1645,10 @@
       "week_pct": -2.73
     },
     {
-      "avg_volume": 5864016,
+      "avg_volume": 5864375,
       "currency": "USD",
       "day_pct": 1.5,
-      "dollar_volume": 1901735770,
+      "dollar_volume": 1901885000,
       "month_base": 228.5,
       "month_pct": 81.72,
       "name": "Applovin Corporation",
@@ -1657,10 +1657,10 @@
       "week_pct": 1.5
     },
     {
-      "avg_volume": 10623240,
+      "avg_volume": 10625000,
       "currency": "USD",
       "day_pct": -3.66,
-      "dollar_volume": 1846199992,
+      "dollar_volume": 1846495506,
       "month_base": 171.55,
       "month_pct": -3.69,
       "name": "Boeing Company (The)",
@@ -1669,10 +1669,10 @@
       "week_pct": -3.66
     },
     {
-      "avg_volume": 8123913,
+      "avg_volume": 8125375,
       "currency": "USD",
       "day_pct": -1.25,
-      "dollar_volume": 1805072090,
+      "dollar_volume": 1805389495,
       "month_base": 235.52,
       "month_pct": -7.8,
       "name": "Chevron Corporation",
@@ -1681,10 +1681,10 @@
       "week_pct": -1.25
     },
     {
-      "avg_volume": 8638475,
+      "avg_volume": 8640615,
       "currency": "USD",
       "day_pct": -6.63,
-      "dollar_volume": 1798289815,
+      "dollar_volume": 1798717602,
       "month_base": 232.5,
       "month_pct": -18.85,
       "name": "Vertiv Holdings, LLC",
@@ -1693,10 +1693,10 @@
       "week_pct": -6.63
     },
     {
-      "avg_volume": 18367316,
+      "avg_volume": 18368445,
       "currency": "USD",
       "day_pct": 0.23,
-      "dollar_volume": 1747313658,
+      "dollar_volume": 1747425751,
       "month_base": 94.08,
       "month_pct": 5.74,
       "name": "Coca-Cola Company (The)",
@@ -1705,10 +1705,10 @@
       "week_pct": 0.23
     },
     {
-      "avg_volume": 34453516,
+      "avg_volume": 34454995,
       "currency": "USD",
       "day_pct": -1.84,
-      "dollar_volume": 1736949097,
+      "dollar_volume": 1737023810,
       "month_base": 50.01,
       "month_pct": 0.14,
       "name": "Bank of America Corporation",
@@ -1717,10 +1717,10 @@
       "week_pct": -1.84
     },
     {
-      "avg_volume": 5537091,
+      "avg_volume": 5537230,
       "currency": "USD",
       "day_pct": -2.0,
-      "dollar_volume": 1720506888,
+      "dollar_volume": 1720552104,
       "month_base": 301.8,
       "month_pct": 7.75,
       "name": "GE Aerospace",
@@ -1729,10 +1729,10 @@
       "week_pct": -2.0
     },
     {
-      "avg_volume": 19737013,
+      "avg_volume": 19743465,
       "currency": "USD",
       "day_pct": -7.45,
-      "dollar_volume": 1711511477,
+      "dollar_volume": 1712002842,
       "month_base": 84.99,
       "month_pct": -15.21,
       "name": "Robinhood Markets, Inc.",
@@ -1741,10 +1741,10 @@
       "week_pct": -7.45
     },
     {
-      "avg_volume": 10221711,
+      "avg_volume": 10270325,
       "currency": "USD",
       "day_pct": 1.9,
-      "dollar_volume": 1681630611,
+      "dollar_volume": 1690041745,
       "month_base": 161.57,
       "month_pct": 7.09,
       "name": "Procter & Gamble Company (The)",
@@ -1753,10 +1753,10 @@
       "week_pct": 1.9
     },
     {
-      "avg_volume": 8684267,
+      "avg_volume": 8684540,
       "currency": "USD",
       "day_pct": -5.21,
-      "dollar_volume": 1559664546,
+      "dollar_volume": 1559715537,
       "month_base": 168.86,
       "month_pct": 10.75,
       "name": "Arista Networks, Inc.",
@@ -1765,10 +1765,10 @@
       "week_pct": -5.21
     },
     {
-      "avg_volume": 6702585,
+      "avg_volume": 6702615,
       "currency": "USD",
       "day_pct": -1.38,
-      "dollar_volume": 1540308756,
+      "dollar_volume": 1540315222,
       "month_base": 229.17,
       "month_pct": -6.26,
       "name": "Salesforce, Inc.",
@@ -1777,10 +1777,10 @@
       "week_pct": -1.38
     },
     {
-      "avg_volume": 2204658,
+      "avg_volume": 2204970,
       "currency": "USD",
       "day_pct": -1.27,
-      "dollar_volume": 1531707363,
+      "dollar_volume": 1531922816,
       "month_base": 697.0,
       "month_pct": -0.81,
       "name": "Thermo Fisher Scientific Inc",
@@ -1789,10 +1789,10 @@
       "week_pct": -1.27
     },
     {
-      "avg_volume": 4497158,
+      "avg_volume": 4523310,
       "currency": "USD",
       "day_pct": -0.34,
-      "dollar_volume": 1520772690,
+      "dollar_volume": 1529860859,
       "month_base": 329.2,
       "month_pct": 5.56,
       "name": "Home Depot, Inc. (The)",
@@ -1801,10 +1801,10 @@
       "week_pct": -0.34
     },
     {
-      "avg_volume": 5179180,
+      "avg_volume": 5181590,
       "currency": "USD",
       "day_pct": -0.16,
-      "dollar_volume": 1503504246,
+      "dollar_volume": 1504214038,
       "month_base": 294.89,
       "month_pct": -0.12,
       "name": "AbbVie Inc.",
@@ -1813,10 +1813,10 @@
       "week_pct": -0.16
     },
     {
-      "avg_volume": 48306823,
+      "avg_volume": 48328605,
       "currency": "USD",
       "day_pct": -6.87,
-      "dollar_volume": 1473157148,
+      "dollar_volume": 1473740749,
       "month_base": 32.95,
       "month_pct": -24.05,
       "name": "Super Micro Computer, Inc.",
@@ -1825,10 +1825,10 @@
       "week_pct": -6.87
     },
     {
-      "avg_volume": 5527176,
+      "avg_volume": 5527190,
       "currency": "USD",
       "day_pct": 0.99,
-      "dollar_volume": 1469859615,
+      "dollar_volume": 1469863501,
       "month_base": 258.12,
       "month_pct": 6.41,
       "name": "McDonald's Corporation",
@@ -1837,10 +1837,10 @@
       "week_pct": 0.99
     },
     {
-      "avg_volume": 5687363,
+      "avg_volume": 5687750,
       "currency": "USD",
       "day_pct": -4.11,
-      "dollar_volume": 1442445759,
+      "dollar_volume": 1442544194,
       "month_base": 259.61,
       "month_pct": -2.09,
       "name": "NXP Semiconductors N.V.",
@@ -1849,10 +1849,10 @@
       "week_pct": -4.11
     },
     {
-      "avg_volume": 1124371,
+      "avg_volume": 1124375,
       "currency": "USD",
       "day_pct": -5.5,
-      "dollar_volume": 1415845421,
+      "dollar_volume": 1415850283,
       "month_base": 1211.63,
       "month_pct": 8.45,
       "name": "Monolithic Power Systems, Inc.",
@@ -1861,10 +1861,10 @@
       "week_pct": -5.5
     },
     {
-      "avg_volume": 5547204,
+      "avg_volume": 5547215,
       "currency": "USD",
       "day_pct": -1.11,
-      "dollar_volume": 1400315223,
+      "dollar_volume": 1400318046,
       "month_base": 258.24,
       "month_pct": -4.08,
       "name": "Accenture plc",
@@ -1873,10 +1873,10 @@
       "week_pct": -1.11
     },
     {
-      "avg_volume": 9554994,
+      "avg_volume": 9555550,
       "currency": "USD",
       "day_pct": -2.23,
-      "dollar_volume": 1399496658,
+      "dollar_volume": 1399577035,
       "month_base": 149.52,
       "month_pct": -3.38,
       "name": "Merck & Company, Inc.",
@@ -1885,10 +1885,10 @@
       "week_pct": -2.23
     },
     {
-      "avg_volume": 9504369,
+      "avg_volume": 9504515,
       "currency": "USD",
       "day_pct": 0.68,
-      "dollar_volume": 1325836093,
+      "dollar_volume": 1325857406,
       "month_base": 137.34,
       "month_pct": 6.62,
       "name": "Pepsico, Inc.",
@@ -1897,10 +1897,10 @@
       "week_pct": 0.68
     },
     {
-      "avg_volume": 10772114,
+      "avg_volume": 10787490,
       "currency": "USD",
       "day_pct": -6.93,
-      "dollar_volume": 1295238364,
+      "dollar_volume": 1296876065,
       "month_base": 123.31,
       "month_pct": -13.9,
       "name": "Corning Incorporated",
@@ -1909,10 +1909,10 @@
       "week_pct": -6.93
     },
     {
-      "avg_volume": 18853576,
+      "avg_volume": 18856950,
       "currency": "USD",
       "day_pct": 0.43,
-      "dollar_volume": 1283185415,
+      "dollar_volume": 1283421216,
       "month_base": 65.25,
       "month_pct": 7.26,
       "name": "Uber Technologies, Inc.",
@@ -1921,10 +1921,10 @@
       "week_pct": 0.43
     },
     {
-      "avg_volume": 8265473,
+      "avg_volume": 8270815,
       "currency": "USD",
       "day_pct": 0.49,
-      "dollar_volume": 1282028791,
+      "dollar_volume": 1282818407,
       "month_base": 157.49,
       "month_pct": -6.15,
       "name": "Shopify Inc.",
@@ -1933,10 +1933,10 @@
       "week_pct": 0.49
     },
     {
-      "avg_volume": 4311691,
+      "avg_volume": 4311865,
       "currency": "USD",
       "day_pct": -4.0,
-      "dollar_volume": 1257438425,
+      "dollar_volume": 1257489539,
       "month_base": 280.7,
       "month_pct": 4.59,
       "name": "Cloudflare, Inc.",
@@ -1945,10 +1945,10 @@
       "week_pct": -4.0
     },
     {
-      "avg_volume": 4158830,
+      "avg_volume": 4158870,
       "currency": "USD",
       "day_pct": -3.59,
-      "dollar_volume": 1251697142,
+      "dollar_volume": 1251708462,
       "month_base": 306.08,
       "month_pct": -8.34,
       "name": "Snowflake Inc.",
@@ -1957,10 +1957,10 @@
       "week_pct": -3.59
     },
     {
-      "avg_volume": 8468780,
+      "avg_volume": 8472195,
       "currency": "USD",
       "day_pct": -6.12,
-      "dollar_volume": 1235633121,
+      "dollar_volume": 1236063650,
       "month_base": 143.54,
       "month_pct": -16.51,
       "name": "Coinbase Global, Inc.",
@@ -1969,10 +1969,10 @@
       "week_pct": -6.12
     },
     {
-      "avg_volume": 15768872,
+      "avg_volume": 15768905,
       "currency": "USD",
       "day_pct": -3.58,
-      "dollar_volume": 1231292409,
+      "dollar_volume": 1231294917,
       "month_base": 79.3,
       "month_pct": -4.88,
       "name": "Amphenol Corporation",
@@ -1981,10 +1981,10 @@
       "week_pct": -3.58
     },
     {
-      "avg_volume": 7750539,
+      "avg_volume": 7750610,
       "currency": "USD",
       "day_pct": -1.28,
-      "dollar_volume": 1229603248,
+      "dollar_volume": 1229614417,
       "month_base": 148.13,
       "month_pct": 6.35,
       "name": "Booking Holdings Inc. Common St",
@@ -1993,10 +1993,10 @@
       "week_pct": -1.28
     },
     {
-      "avg_volume": 2654969,
+      "avg_volume": 2658830,
       "currency": "USD",
       "day_pct": -0.72,
-      "dollar_volume": 1218477154,
+      "dollar_volume": 1220262056,
       "month_base": 466.01,
       "month_pct": -0.79,
       "name": "Amgen Inc.",
@@ -2005,10 +2005,10 @@
       "week_pct": -0.72
     },
     {
-      "avg_volume": 4864040,
+      "avg_volume": 4868720,
       "currency": "USD",
       "day_pct": -1.87,
-      "dollar_volume": 1216680177,
+      "dollar_volume": 1217815100,
       "month_base": 257.81,
       "month_pct": -5.93,
       "name": "International Business Machines",
@@ -2017,10 +2017,10 @@
       "week_pct": -1.87
     },
     {
-      "avg_volume": 3166682,
+      "avg_volume": 3166740,
       "currency": "USD",
       "day_pct": -2.66,
-      "dollar_volume": 1214966915,
+      "dollar_volume": 1214988323,
       "month_base": 399.66,
       "month_pct": -7.49,
       "name": "Valero Energy Corporation",
@@ -2029,10 +2029,10 @@
       "week_pct": -2.66
     },
     {
-      "avg_volume": 2700389,
+      "avg_volume": 2700640,
       "currency": "USD",
       "day_pct": -1.32,
-      "dollar_volume": 1211118464,
+      "dollar_volume": 1211228208,
       "month_base": 432.01,
       "month_pct": 1.33,
       "name": "Intuitive Surgical, Inc.",
@@ -2041,10 +2041,10 @@
       "week_pct": -1.32
     },
     {
-      "avg_volume": 741536,
+      "avg_volume": 741630,
       "currency": "USD",
       "day_pct": -1.97,
-      "dollar_volume": 1202053893,
+      "dollar_volume": 1202191990,
       "month_base": 1624.53,
       "month_pct": -10.0,
       "name": "MercadoLibre, Inc.",
@@ -2053,10 +2053,10 @@
       "week_pct": -1.97
     },
     {
-      "avg_volume": 4459748,
+      "avg_volume": 4459785,
       "currency": "USD",
       "day_pct": -7.07,
-      "dollar_volume": 1198391718,
+      "dollar_volume": 1198400252,
       "month_base": 274.37,
       "month_pct": -15.48,
       "name": "Teradyne, Inc.",
@@ -2065,10 +2065,10 @@
       "week_pct": -7.07
     },
     {
-      "avg_volume": 6395474,
+      "avg_volume": 6395615,
       "currency": "USD",
       "day_pct": -2.66,
-      "dollar_volume": 1189969045,
+      "dollar_volume": 1189995266,
       "month_base": 184.3,
       "month_pct": 0.69,
       "name": "Morgan Stanley",
@@ -2077,10 +2077,10 @@
       "week_pct": -2.66
     },
     {
-      "avg_volume": 92703728,
+      "avg_volume": 92710635,
       "currency": "USD",
       "day_pct": -4.08,
-      "dollar_volume": 1174837375,
+      "dollar_volume": 1174926462,
       "month_base": 11.61,
       "month_pct": 9.22,
       "name": "Nu Holdings Ltd.",
@@ -2089,10 +2089,10 @@
       "week_pct": -4.08
     },
     {
-      "avg_volume": 26148649,
+      "avg_volume": 26148830,
       "currency": "USD",
       "day_pct": -0.04,
-      "dollar_volume": 1174769487,
+      "dollar_volume": 1174777896,
       "month_base": 44.73,
       "month_pct": 3.6,
       "name": "Verizon Communications Inc.",
@@ -2101,10 +2101,10 @@
       "week_pct": -0.04
     },
     {
-      "avg_volume": 3196219,
+      "avg_volume": 3196255,
       "currency": "USD",
       "day_pct": -4.56,
-      "dollar_volume": 1158916677,
+      "dollar_volume": 1158928872,
       "month_base": 369.97,
       "month_pct": -8.94,
       "name": "Eaton Corporation, PLC",
@@ -2113,10 +2113,10 @@
       "week_pct": -4.56
     },
     {
-      "avg_volume": 5835328,
+      "avg_volume": 5836725,
       "currency": "USD",
       "day_pct": -8.12,
-      "dollar_volume": 1154369993,
+      "dollar_volume": 1154627772,
       "month_base": 205.97,
       "month_pct": -15.01,
       "name": "Arm Holdings plc",
@@ -2125,10 +2125,10 @@
       "week_pct": -8.12
     },
     {
-      "avg_volume": 13422347,
+      "avg_volume": 13422375,
       "currency": "USD",
       "day_pct": 0.26,
-      "dollar_volume": 1131746544,
+      "dollar_volume": 1131748934,
       "month_base": 83.71,
       "month_pct": 1.95,
       "name": "NextEra Energy, Inc.",
@@ -2137,10 +2137,10 @@
       "week_pct": 0.26
     },
     {
-      "avg_volume": 9147929,
+      "avg_volume": 9166470,
       "currency": "USD",
       "day_pct": -2.17,
-      "dollar_volume": 1119130927,
+      "dollar_volume": 1121380346,
       "month_base": 122.64,
       "month_pct": -1.08,
       "name": "Citigroup, Inc.",
@@ -2149,10 +2149,10 @@
       "week_pct": -2.17
     },
     {
-      "avg_volume": 5638353,
+      "avg_volume": 5638425,
       "currency": "USD",
       "day_pct": -1.86,
-      "dollar_volume": 1107731943,
+      "dollar_volume": 1107745907,
       "month_base": 199.8,
       "month_pct": -2.46,
       "name": "RTX Corporation",
@@ -2161,10 +2161,10 @@
       "week_pct": -1.86
     },
     {
-      "avg_volume": 10926492,
+      "avg_volume": 10931100,
       "currency": "USD",
       "day_pct": -3.98,
-      "dollar_volume": 1104471111,
+      "dollar_volume": 1104893305,
       "month_base": 98.04,
       "month_pct": -7.57,
       "name": "Alibaba Group Holding Limited",
@@ -2173,10 +2173,10 @@
       "week_pct": -3.98
     },
     {
-      "avg_volume": 50951431,
+      "avg_volume": 50952645,
       "currency": "USD",
       "day_pct": 0.81,
-      "dollar_volume": 1104074821,
+      "dollar_volume": 1104101966,
       "month_base": 21.41,
       "month_pct": 4.44,
       "name": "AT&T Inc.",
@@ -2185,10 +2185,10 @@
       "week_pct": 0.81
     },
     {
-      "avg_volume": 15973042,
+      "avg_volume": 15981155,
       "currency": "USD",
       "day_pct": -4.93,
-      "dollar_volume": 1088767733,
+      "dollar_volume": 1089243485,
       "month_base": 77.34,
       "month_pct": -24.18,
       "name": "Microchip Technology Incorporat",
@@ -2197,10 +2197,10 @@
       "week_pct": -4.93
     },
     {
-      "avg_volume": 1858026,
+      "avg_volume": 1858105,
       "currency": "USD",
       "day_pct": -0.15,
-      "dollar_volume": 1088074458,
+      "dollar_volume": 1088122907,
       "month_base": 593.44,
       "month_pct": 3.08,
       "name": "Spotify Technology S.A.",
@@ -2209,10 +2209,10 @@
       "week_pct": -0.15
     },
     {
-      "avg_volume": 6028089,
+      "avg_volume": 6029475,
       "currency": "USD",
       "day_pct": -1.01,
-      "dollar_volume": 1082173029,
+      "dollar_volume": 1082408302,
       "month_base": 178.99,
       "month_pct": -5.15,
       "name": "DoorDash, Inc.",
@@ -2221,10 +2221,10 @@
       "week_pct": -1.01
     },
     {
-      "avg_volume": 6453003,
+      "avg_volume": 6454115,
       "currency": "USD",
       "day_pct": -0.3,
-      "dollar_volume": 1067341009,
+      "dollar_volume": 1067527299,
       "month_base": 170.68,
       "month_pct": -1.82,
       "name": "Gilead Sciences, Inc.",
@@ -2234,14 +2234,14 @@
     }
   ],
   "universe_size": 536,
-  "updated": "2026-11-16T22:57:12+00:00",
+  "updated": "2026-11-17T04:45:39+00:00",
   "week": "2026-11-16",
   "week_gainers": [
     {
-      "avg_volume": 4045071,
+      "avg_volume": 4045810,
       "currency": "USD",
       "day_pct": 8.72,
-      "dollar_volume": 237385875,
+      "dollar_volume": 237433137,
       "month_base": 57.04,
       "month_pct": 12.11,
       "name": "Tyson Foods, Inc.",
@@ -2250,10 +2250,10 @@
       "week_pct": 8.72
     },
     {
-      "avg_volume": 6027538,
+      "avg_volume": 6028285,
       "currency": "USD",
       "day_pct": 4.91,
-      "dollar_volume": 425764416,
+      "dollar_volume": 425817683,
       "month_base": 68.45,
       "month_pct": 9.23,
       "name": "Centene Corporation",
@@ -2262,10 +2262,10 @@
       "week_pct": 4.91
     },
     {
-      "avg_volume": 13190077,
+      "avg_volume": 13190120,
       "currency": "USD",
       "day_pct": 4.12,
-      "dollar_volume": 455944415,
+      "dollar_volume": 455946054,
       "month_base": 33.94,
       "month_pct": 11.81,
       "name": "Tractor Supply Company",
@@ -2274,10 +2274,10 @@
       "week_pct": 4.12
     },
     {
-      "avg_volume": 1424429,
+      "avg_volume": 1425235,
       "currency": "USD",
       "day_pct": 3.86,
-      "dollar_volume": 611629451,
+      "dollar_volume": 611989354,
       "month_base": 420.07,
       "month_pct": 6.24,
       "name": "Elevance Health, Inc.",
@@ -2286,10 +2286,10 @@
       "week_pct": 3.86
     },
     {
-      "avg_volume": 6630719,
+      "avg_volume": 6638160,
       "currency": "USD",
       "day_pct": 3.34,
-      "dollar_volume": 289119468,
+      "dollar_volume": 289460842,
       "month_base": 42.43,
       "month_pct": 9.45,
       "name": "Southwest Airlines Company",
@@ -2298,10 +2298,10 @@
       "week_pct": 3.34
     },
     {
-      "avg_volume": 28787129,
+      "avg_volume": 28787220,
       "currency": "USD",
       "day_pct": 3.25,
-      "dollar_volume": 377586044,
+      "dollar_volume": 377587286,
       "month_base": 13.18,
       "month_pct": 3.79,
       "name": "Pacific Gas & Electric Co.",
@@ -2310,10 +2310,10 @@
       "week_pct": 3.25
     },
     {
-      "avg_volume": 3021216,
+      "avg_volume": 3021220,
       "currency": "USD",
       "day_pct": 2.97,
-      "dollar_volume": 179160904,
+      "dollar_volume": 179161171,
       "month_base": 58.79,
       "month_pct": 5.41,
       "name": "Edison International",
@@ -2322,10 +2322,10 @@
       "week_pct": 2.97
     },
     {
-      "avg_volume": 4678581,
+      "avg_volume": 4698020,
       "currency": "USD",
       "day_pct": 2.81,
-      "dollar_volume": 101090483,
+      "dollar_volume": 101531938,
       "month_base": 21.28,
       "month_pct": 6.72,
       "name": "Hormel Foods Corporation",
@@ -2334,10 +2334,10 @@
       "week_pct": 2.81
     },
     {
-      "avg_volume": 8302343,
+      "avg_volume": 8302900,
       "currency": "USD",
       "day_pct": 2.68,
-      "dollar_volume": 286250661,
+      "dollar_volume": 286269819,
       "month_base": 34.29,
       "month_pct": 2.77,
       "name": "General Mills, Inc.",
@@ -2349,7 +2349,7 @@
       "avg_volume": 1416800,
       "currency": "USD",
       "day_pct": 2.55,
-      "dollar_volume": 683646742,
+      "dollar_volume": 683646512,
       "month_base": 473.19,
       "month_pct": 8.16,
       "name": "HCA Healthcare, Inc.",
@@ -2358,10 +2358,10 @@
       "week_pct": 2.55
     },
     {
-      "avg_volume": 1567204,
+      "avg_volume": 1567205,
       "currency": "USD",
       "day_pct": 2.5,
-      "dollar_volume": 671629932,
+      "dollar_volume": 671630163,
       "month_base": 414.5,
       "month_pct": 11.28,
       "name": "Humana Inc.",
@@ -2370,10 +2370,10 @@
       "week_pct": 2.5
     },
     {
-      "avg_volume": 1278249,
+      "avg_volume": 1278320,
       "currency": "USD",
       "day_pct": 2.38,
-      "dollar_volume": 255827465,
+      "dollar_volume": 255842475,
       "month_base": 196.3,
       "month_pct": 8.39,
       "name": "Verisk Analytics, Inc.",
@@ -2382,10 +2382,10 @@
       "week_pct": 2.38
     },
     {
-      "avg_volume": 2781831,
+      "avg_volume": 2781830,
       "currency": "USD",
       "day_pct": 2.2,
-      "dollar_volume": 197071800,
+      "dollar_volume": 197071701,
       "month_base": 69.76,
       "month_pct": 5.38,
       "name": "Brown & Brown, Inc.",
@@ -2397,7 +2397,7 @@
       "avg_volume": 1156625,
       "currency": "USD",
       "day_pct": 2.15,
-      "dollar_volume": 151351528,
+      "dollar_volume": 151351494,
       "month_base": 129.9,
       "month_pct": 4.34,
       "name": "The J.M. Smucker Company",
@@ -2406,10 +2406,10 @@
       "week_pct": 2.15
     },
     {
-      "avg_volume": 8012442,
+      "avg_volume": 8012740,
       "currency": "USD",
       "day_pct": 2.14,
-      "dollar_volume": 841820106,
+      "dollar_volume": 841852505,
       "month_base": 103.67,
       "month_pct": 4.87,
       "name": "Starbucks Corporation",
@@ -2418,10 +2418,10 @@
       "week_pct": 2.14
     },
     {
-      "avg_volume": 775203,
+      "avg_volume": 775205,
       "currency": "USD",
       "day_pct": 1.92,
-      "dollar_volume": 145161739,
+      "dollar_volume": 145162075,
       "month_base": 176.05,
       "month_pct": 12.35,
       "name": "Universal Health Services, Inc.",
@@ -2430,10 +2430,10 @@
       "week_pct": 1.92
     },
     {
-      "avg_volume": 10221711,
+      "avg_volume": 10270325,
       "currency": "USD",
       "day_pct": 1.9,
-      "dollar_volume": 1681630611,
+      "dollar_volume": 1690041745,
       "month_base": 161.57,
       "month_pct": 7.09,
       "name": "Procter & Gamble Company (The)",
@@ -2442,10 +2442,10 @@
       "week_pct": 1.9
     },
     {
-      "avg_volume": 20411522,
+      "avg_volume": 20412245,
       "currency": "USD",
       "day_pct": 1.87,
-      "dollar_volume": 648451599,
+      "dollar_volume": 648477595,
       "month_base": 31.89,
       "month_pct": 12.7,
       "name": "Chipotle Mexican Grill, Inc.",
@@ -2457,7 +2457,7 @@
       "avg_volume": 3682935,
       "currency": "USD",
       "day_pct": 1.86,
-      "dollar_volume": 354370212,
+      "dollar_volume": 354370202,
       "month_base": 92.4,
       "month_pct": 3.82,
       "name": "Xylem Inc.",
@@ -2466,10 +2466,10 @@
       "week_pct": 1.86
     },
     {
-      "avg_volume": 2838874,
+      "avg_volume": 2838890,
       "currency": "USD",
       "day_pct": 1.81,
-      "dollar_volume": 326192220,
+      "dollar_volume": 326194057,
       "month_base": 112.12,
       "month_pct": 5.04,
       "name": "Paychex, Inc.",
@@ -2480,10 +2480,10 @@
   ],
   "week_losers": [
     {
-      "avg_volume": 12093086,
+      "avg_volume": 12101035,
       "currency": "USD",
       "day_pct": -8.58,
-      "dollar_volume": 12476981520,
+      "dollar_volume": 12483761936,
       "month_base": 1150.89,
       "month_pct": -29.7,
       "name": "Sandisk Corporation",
@@ -2492,10 +2492,10 @@
       "week_pct": -8.58
     },
     {
-      "avg_volume": 6435065,
+      "avg_volume": 6436410,
       "currency": "USD",
       "day_pct": -8.48,
-      "dollar_volume": 4530533311,
+      "dollar_volume": 4531303649,
       "month_base": 840.7,
       "month_pct": -35.05,
       "name": "Lumentum Holdings Inc.",
@@ -2504,10 +2504,10 @@
       "week_pct": -8.48
     },
     {
-      "avg_volume": 21428055,
+      "avg_volume": 21441880,
       "currency": "USD",
       "day_pct": -8.41,
-      "dollar_volume": 664528204,
+      "dollar_volume": 664912211,
       "month_base": 30.04,
       "month_pct": -11.95,
       "name": "IonQ, Inc.",
@@ -2516,10 +2516,10 @@
       "week_pct": -8.41
     },
     {
-      "avg_volume": 30471489,
+      "avg_volume": 30474810,
       "currency": "USD",
       "day_pct": -8.37,
-      "dollar_volume": 159527495,
+      "dollar_volume": 159542446,
       "month_base": 5.62,
       "month_pct": -24.02,
       "name": "NuScale Power Corporation",
@@ -2528,10 +2528,10 @@
       "week_pct": -8.37
     },
     {
-      "avg_volume": 3220685,
+      "avg_volume": 3220755,
       "currency": "USD",
       "day_pct": -8.19,
-      "dollar_volume": 954339965,
+      "dollar_volume": 954358059,
       "month_base": 320.72,
       "month_pct": -19.69,
       "name": "Ciena Corporation",
@@ -2540,10 +2540,10 @@
       "week_pct": -8.19
     },
     {
-      "avg_volume": 5835328,
+      "avg_volume": 5836725,
       "currency": "USD",
       "day_pct": -8.12,
-      "dollar_volume": 1154369993,
+      "dollar_volume": 1154627772,
       "month_base": 205.97,
       "month_pct": -15.01,
       "name": "Arm Holdings plc",
@@ -2552,10 +2552,10 @@
       "week_pct": -8.12
     },
     {
-      "avg_volume": 17685317,
+      "avg_volume": 17697265,
       "currency": "USD",
       "day_pct": -7.7,
-      "dollar_volume": 2338331890,
+      "dollar_volume": 2339620655,
       "month_base": 130.51,
       "month_pct": -21.06,
       "name": "Strategy Inc",
@@ -2564,10 +2564,10 @@
       "week_pct": -7.7
     },
     {
-      "avg_volume": 18356204,
+      "avg_volume": 18363215,
       "currency": "USD",
       "day_pct": -7.66,
-      "dollar_volume": 3658348440,
+      "dollar_volume": 3659667312,
       "month_base": 203.17,
       "month_pct": -12.74,
       "name": "Bloom Energy Corporation",
@@ -2576,10 +2576,10 @@
       "week_pct": -7.66
     },
     {
-      "avg_volume": 30698455,
+      "avg_volume": 30710755,
       "currency": "USD",
       "day_pct": -7.62,
-      "dollar_volume": 24740468770,
+      "dollar_volume": 24749694436,
       "month_base": 884.74,
       "month_pct": -18.73,
       "name": "Micron Technology, Inc.",
@@ -2588,10 +2588,10 @@
       "week_pct": -7.62
     },
     {
-      "avg_volume": 9970735,
+      "avg_volume": 9970755,
       "currency": "USD",
       "day_pct": -7.59,
-      "dollar_volume": 490737379,
+      "dollar_volume": 490738294,
       "month_base": 42.99,
       "month_pct": 7.28,
       "name": "Roblox Corporation",
@@ -2600,10 +2600,10 @@
       "week_pct": -7.59
     },
     {
-      "avg_volume": 19737013,
+      "avg_volume": 19743465,
       "currency": "USD",
       "day_pct": -7.45,
-      "dollar_volume": 1711511477,
+      "dollar_volume": 1712002842,
       "month_base": 84.99,
       "month_pct": -15.21,
       "name": "Robinhood Markets, Inc.",
@@ -2612,10 +2612,10 @@
       "week_pct": -7.45
     },
     {
-      "avg_volume": 30370733,
+      "avg_volume": 30381535,
       "currency": "USD",
       "day_pct": -7.27,
-      "dollar_volume": 5428652690,
+      "dollar_volume": 5430295778,
       "month_base": 196.4,
       "month_pct": -25.99,
       "name": "Marvell Technology, Inc.",
@@ -2624,10 +2624,10 @@
       "week_pct": -7.27
     },
     {
-      "avg_volume": 4459748,
+      "avg_volume": 4459785,
       "currency": "USD",
       "day_pct": -7.07,
-      "dollar_volume": 1198391718,
+      "dollar_volume": 1198400252,
       "month_base": 274.37,
       "month_pct": -15.48,
       "name": "Teradyne, Inc.",
@@ -2636,10 +2636,10 @@
       "week_pct": -7.07
     },
     {
-      "avg_volume": 145321584,
+      "avg_volume": 145449050,
       "currency": "USD",
       "day_pct": -7.02,
-      "dollar_volume": 9874419431,
+      "dollar_volume": 9881542637,
       "month_base": 65.76,
       "month_pct": -15.65,
       "name": "Intel Corporation",
@@ -2648,10 +2648,10 @@
       "week_pct": -7.02
     },
     {
-      "avg_volume": 7344216,
+      "avg_volume": 7346300,
       "currency": "USD",
       "day_pct": -6.96,
-      "dollar_volume": 2877236497,
+      "dollar_volume": 2877935074,
       "month_base": 424.3,
       "month_pct": -24.45,
       "name": "Dell Technologies Inc.",
@@ -2660,10 +2660,10 @@
       "week_pct": -6.96
     },
     {
-      "avg_volume": 10772114,
+      "avg_volume": 10787490,
       "currency": "USD",
       "day_pct": -6.93,
-      "dollar_volume": 1295238364,
+      "dollar_volume": 1296876065,
       "month_base": 123.31,
       "month_pct": -13.9,
       "name": "Corning Incorporated",
@@ -2672,10 +2672,10 @@
       "week_pct": -6.93
     },
     {
-      "avg_volume": 48306823,
+      "avg_volume": 48328605,
       "currency": "USD",
       "day_pct": -6.87,
-      "dollar_volume": 1473157148,
+      "dollar_volume": 1473740749,
       "month_base": 32.95,
       "month_pct": -24.05,
       "name": "Super Micro Computer, Inc.",
@@ -2684,10 +2684,10 @@
       "week_pct": -6.87
     },
     {
-      "avg_volume": 12531703,
+      "avg_volume": 12532560,
       "currency": "USD",
       "day_pct": -6.84,
-      "dollar_volume": 779208876,
+      "dollar_volume": 779256166,
       "month_base": 62.47,
       "month_pct": -11.65,
       "name": "Freeport-McMoRan, Inc.",
@@ -2696,10 +2696,10 @@
       "week_pct": -6.84
     },
     {
-      "avg_volume": 18925294,
+      "avg_volume": 18934145,
       "currency": "USD",
       "day_pct": -6.76,
-      "dollar_volume": 1059620476,
+      "dollar_volume": 1060155325,
       "month_base": 54.73,
       "month_pct": 4.82,
       "name": "Rocket Lab Corporation",
@@ -2708,10 +2708,10 @@
       "week_pct": -6.76
     },
     {
-      "avg_volume": 9694797,
+      "avg_volume": 9699385,
       "currency": "USD",
       "day_pct": -6.75,
-      "dollar_volume": 2057379404,
+      "dollar_volume": 2058353734,
       "month_base": 210.32,
       "month_pct": -3.28,
       "name": "Coherent Corp.",
