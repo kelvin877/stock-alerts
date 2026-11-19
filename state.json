@@ -19,6 +19,10 @@
     "price": 89.9021,
     "triggered_at": "2026-11-18T17:58:13+00:00"
   },
+  "mwcu7s477iewa4": {
+    "price": 145.39,
+    "triggered_at": "2026-11-19T21:51:46+00:00"
+  },
   "mwcuceesa91nn6": {
     "price": 765.03,
     "triggered_at": "2026-11-16T18:47:17+00:00"
@@ -30,5 +34,13 @@
   "mwcusqqguig1fr": {
     "price": 698.67,
     "triggered_at": "2026-11-17T19:21:27+00:00"
+  },
+  "mwcuub8s63gg5l": {
+    "price": 348.39,
+    "triggered_at": "2026-11-19T21:51:46+00:00"
+  },
+  "mwcvdg99ogonps": {
+    "price": 319.7,
+    "triggered_at": "2026-11-19T21:51:46+00:00"
   }
 }
