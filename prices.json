@@ -167,18 +167,18 @@
     },
     "HIVE.TO": {
       "currency": "CAD",
-      "day_high": 1.81,
-      "day_low": 1.635,
+      "day_high": 1.87,
+      "day_low": 1.83,
       "exchange": "Toronto",
       "name": "HIVE DIGITAL TECHNOLOGIES LTD",
       "prev_close": 1.78,
-      "price": 1.78,
-      "regular": 1.78,
-      "time": 1795640400
+      "price": 1.845,
+      "regular": 1.845,
+      "time": 1795722681
     },
     "IBM": {
       "currency": "USD",
-      "day_high": 246.05,
+      "day_high": 246.24,
       "day_low": 232.17,
       "exchange": "NYSE",
       "name": "International Business Machines",
@@ -233,7 +233,7 @@
     },
     "META": {
       "currency": "USD",
-      "day_high": 611.03,
+      "day_high": 611.055,
       "day_low": 567.75,
       "exchange": "NasdaqGS",
       "name": "Meta Platforms, Inc.",
@@ -266,7 +266,7 @@
     },
     "MU": {
       "currency": "USD",
-      "day_high": 604.94,
+      "day_high": 604.945,
       "day_low": 548.13,
       "exchange": "NasdaqGS",
       "name": "Micron Technology, Inc.",
@@ -441,5 +441,5 @@
       "time": 1795654739
     }
   },
-  "updated": "2026-11-26T10:49:22+00:00"
+  "updated": "2026-11-26T19:51:26+00:00"
 }
