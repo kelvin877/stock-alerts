@@ -9,7 +9,7 @@
       "prev_close": 354.07,
       "price": 355.1,
       "regular": 355.58,
-      "time": 1795654797
+      "time": 1795654740
     },
     "AMD": {
       "currency": "USD",
@@ -20,7 +20,7 @@
       "prev_close": 413.27,
       "price": 413.81,
       "regular": 406.03,
-      "time": 1795654795
+      "time": 1795654740
     },
     "AMZN": {
       "currency": "USD",
@@ -31,7 +31,7 @@
       "prev_close": 252.29,
       "price": 246.7652,
       "regular": 244.43,
-      "time": 1795654790
+      "time": 1795654740
     },
     "APLD": {
       "currency": "USD",
@@ -42,7 +42,7 @@
       "prev_close": 12.22,
       "price": 12.7751,
       "regular": 12.29,
-      "time": 1795654789
+      "time": 1795654740
     },
     "AVGO": {
       "currency": "USD",
@@ -53,7 +53,7 @@
       "prev_close": 301.08,
       "price": 304.0,
       "regular": 300.86,
-      "time": 1795654790
+      "time": 1795654740
     },
     "AXTI": {
       "currency": "USD",
@@ -64,7 +64,7 @@
       "prev_close": 31.58,
       "price": 33.08,
       "regular": 31.98,
-      "time": 1795654790
+      "time": 1795654740
     },
     "BE": {
       "currency": "USD",
@@ -75,7 +75,7 @@
       "prev_close": 156.41,
       "price": 157.71,
       "regular": 152.89,
-      "time": 1795654794
+      "time": 1795654740
     },
     "BRK-B": {
       "currency": "USD",
@@ -86,7 +86,7 @@
       "prev_close": 577.21,
       "price": 580.0,
       "regular": 579.32,
-      "time": 1795654788
+      "time": 1795654740
     },
     "CLSK": {
       "currency": "USD",
@@ -97,7 +97,7 @@
       "prev_close": 5.115,
       "price": 5.27,
       "regular": 5.18,
-      "time": 1795654778
+      "time": 1795654740
     },
     "COST": {
       "currency": "USD",
@@ -108,7 +108,7 @@
       "prev_close": 1091.71,
       "price": 1088.06,
       "regular": 1086.81,
-      "time": 1795652994
+      "time": 1795652940
     },
     "CRDO": {
       "currency": "USD",
@@ -119,7 +119,7 @@
       "prev_close": 106.46,
       "price": 109.0719,
       "regular": 106.795,
-      "time": 1795654763
+      "time": 1795654740
     },
     "CRWD": {
       "currency": "USD",
@@ -130,7 +130,7 @@
       "prev_close": 210.86,
       "price": 209.01,
       "regular": 209.3,
-      "time": 1795654276
+      "time": 1795654260
     },
     "CRWV": {
       "currency": "USD",
@@ -141,7 +141,7 @@
       "prev_close": 42.605,
       "price": 43.5599,
       "regular": 42.57,
-      "time": 1795654791
+      "time": 1795654740
     },
     "GEV": {
       "currency": "USD",
@@ -152,7 +152,7 @@
       "prev_close": 720.65,
       "price": 721.0,
       "regular": 715.0,
-      "time": 1795654777
+      "time": 1795654740
     },
     "GOOG": {
       "currency": "USD",
@@ -163,7 +163,7 @@
       "prev_close": 276.58,
       "price": 272.8,
       "regular": 270.98,
-      "time": 1795654779
+      "time": 1795654740
     },
     "HIVE.TO": {
       "currency": "CAD",
@@ -178,14 +178,14 @@
     },
     "IBM": {
       "currency": "USD",
-      "day_high": 246.05,
+      "day_high": 246.24,
       "day_low": 232.17,
       "exchange": "NYSE",
       "name": "International Business Machines",
       "prev_close": 235.62,
       "price": 243.88,
       "regular": 243.47,
-      "time": 1795653580
+      "time": 1795653540
     },
     "INTC": {
       "currency": "USD",
@@ -196,7 +196,7 @@
       "prev_close": 54.8,
       "price": 54.85,
       "regular": 54.47,
-      "time": 1795654799
+      "time": 1795654740
     },
     "IREN": {
       "currency": "USD",
@@ -207,7 +207,7 @@
       "prev_close": 12.95,
       "price": 13.33,
       "regular": 12.85,
-      "time": 1795654787
+      "time": 1795654740
     },
     "JNJ": {
       "currency": "USD",
@@ -218,7 +218,7 @@
       "prev_close": 276.46,
       "price": 274.01,
       "regular": 273.94,
-      "time": 1795654610
+      "time": 1795654560
     },
     "JPM": {
       "currency": "USD",
@@ -229,18 +229,18 @@
       "prev_close": 317.1,
       "price": 318.44,
       "regular": 316.74,
-      "time": 1795654727
+      "time": 1795654680
     },
     "META": {
       "currency": "USD",
-      "day_high": 611.03,
+      "day_high": 611.055,
       "day_low": 567.75,
       "exchange": "NasdaqGS",
       "name": "Meta Platforms, Inc.",
       "prev_close": 589.82,
       "price": 612.39,
       "regular": 609.89,
-      "time": 1795654798
+      "time": 1795654740
     },
     "MRNA": {
       "currency": "USD",
@@ -251,7 +251,7 @@
       "prev_close": 227.38,
       "price": 222.9999,
       "regular": 220.84,
-      "time": 1795654592
+      "time": 1795654560
     },
     "MSFT": {
       "currency": "USD",
@@ -262,18 +262,18 @@
       "prev_close": 496.13,
       "price": 492.1477,
       "regular": 489.93,
-      "time": 1795654769
+      "time": 1795654740
     },
     "MU": {
       "currency": "USD",
-      "day_high": 604.94,
+      "day_high": 604.945,
       "day_low": 548.13,
       "exchange": "NasdaqGS",
       "name": "Micron Technology, Inc.",
       "prev_close": 630.073,
       "price": 615.26,
       "regular": 601.25,
-      "time": 1795654799
+      "time": 1795654740
     },
     "NBIS": {
       "currency": "USD",
@@ -284,7 +284,7 @@
       "prev_close": 87.2961,
       "price": 88.24,
       "regular": 84.99,
-      "time": 1795654796
+      "time": 1795654740
     },
     "NOW": {
       "currency": "USD",
@@ -295,7 +295,7 @@
       "prev_close": 91.74,
       "price": 92.522,
       "regular": 92.16,
-      "time": 1795654789
+      "time": 1795654740
     },
     "NVDA": {
       "currency": "USD",
@@ -306,7 +306,7 @@
       "prev_close": 155.38,
       "price": 151.22,
       "regular": 149.3,
-      "time": 1795654799
+      "time": 1795654740
     },
     "NVTS": {
       "currency": "USD",
@@ -317,7 +317,7 @@
       "prev_close": 6.51,
       "price": 7.02,
       "regular": 6.8,
-      "time": 1795654763
+      "time": 1795654740
     },
     "O": {
       "currency": "USD",
@@ -328,7 +328,7 @@
       "prev_close": 59.55,
       "price": 60.16,
       "regular": 60.25,
-      "time": 1795654785
+      "time": 1795654740
     },
     "ORCL": {
       "currency": "USD",
@@ -339,7 +339,7 @@
       "prev_close": 109.5,
       "price": 105.841,
       "regular": 103.88,
-      "time": 1795654792
+      "time": 1795654740
     },
     "PLTR": {
       "currency": "USD",
@@ -350,7 +350,7 @@
       "prev_close": 161.18,
       "price": 165.7,
       "regular": 163.59,
-      "time": 1795654759
+      "time": 1795654740
     },
     "RIOT": {
       "currency": "USD",
@@ -361,7 +361,7 @@
       "prev_close": 16.34,
       "price": 16.91,
       "regular": 16.65,
-      "time": 1795654789
+      "time": 1795654740
     },
     "SNOW": {
       "currency": "USD",
@@ -372,7 +372,7 @@
       "prev_close": 271.09,
       "price": 271.99,
       "regular": 267.72,
-      "time": 1795654703
+      "time": 1795654680
     },
     "SOFI": {
       "currency": "USD",
@@ -383,7 +383,7 @@
       "prev_close": 12.86,
       "price": 13.29,
       "regular": 13.07,
-      "time": 1795654795
+      "time": 1795654740
     },
     "SPCX": {
       "currency": "USD",
@@ -394,7 +394,7 @@
       "prev_close": 125.81,
       "price": 128.96,
       "regular": 127.44,
-      "time": 1795654799
+      "time": 1795654740
     },
     "TSLA": {
       "currency": "USD",
@@ -405,7 +405,7 @@
       "prev_close": 384.68,
       "price": 383.23,
       "regular": 380.14,
-      "time": 1795654799
+      "time": 1795654740
     },
     "TSM": {
       "currency": "USD",
@@ -416,7 +416,7 @@
       "prev_close": 349.2,
       "price": 347.2,
       "regular": 342.34,
-      "time": 1795654798
+      "time": 1795654740
     },
     "V": {
       "currency": "USD",
@@ -427,7 +427,7 @@
       "prev_close": 416.78,
       "price": 425.18,
       "regular": 424.39,
-      "time": 1795654797
+      "time": 1795654740
     },
     "VRT": {
       "currency": "USD",
@@ -438,8 +438,8 @@
       "prev_close": 173.82,
       "price": 176.75,
       "regular": 173.37,
-      "time": 1795654739
+      "time": 1795654680
     }
   },
-  "updated": "2026-11-27T05:45:15+00:00"
+  "updated": "2026-11-27T11:07:45+00:00"
 }
