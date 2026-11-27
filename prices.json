@@ -178,7 +178,7 @@
     },
     "IBM": {
       "currency": "USD",
-      "day_high": 246.24,
+      "day_high": 246.05,
       "day_low": 232.17,
       "exchange": "NYSE",
       "name": "International Business Machines",
@@ -233,7 +233,7 @@
     },
     "META": {
       "currency": "USD",
-      "day_high": 611.055,
+      "day_high": 611.03,
       "day_low": 567.75,
       "exchange": "NasdaqGS",
       "name": "Meta Platforms, Inc.",
@@ -266,7 +266,7 @@
     },
     "MU": {
       "currency": "USD",
-      "day_high": 604.945,
+      "day_high": 604.94,
       "day_low": 548.13,
       "exchange": "NasdaqGS",
       "name": "Micron Technology, Inc.",
@@ -441,5 +441,5 @@
       "time": 1795654739
     }
   },
-  "updated": "2026-11-27T05:44:29+00:00"
+  "updated": "2026-11-27T05:45:15+00:00"
 }
