@@ -43,7 +43,7 @@
   ],
   "alerts": [
     {
-      "id": "mwct714g75vud3",
+      "id": "mwyk3qiroh54mg",
       "symbol": "NVDA",
       "condition": "below",
       "price": 160,
